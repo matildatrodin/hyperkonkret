@@ -1,5 +1,5 @@
 # hyperkonkret
 
 npm-paket:
-react
+react,
 react-dom
