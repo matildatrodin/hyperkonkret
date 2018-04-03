@@ -36,7 +36,10 @@ class App extends Component {
                       <img src={logo} className="App-logo" alt="logo"/>
                       <h1 className="App-title">Welcome to React everyone</h1>
                   </header>
-
+                  <div id={"menu"}>
+                      <button>Om oss</button>
+                      <button>Kontakt</button>
+                  </div>
 
 
                   <p className="App-intro">
@@ -54,6 +57,7 @@ class App extends Component {
                       <img src={logo} className="App-logo" alt="logo"/>
                       <h1 className="App-title">Welcome to React everyone</h1>
                   </header>
+
                   <p className="App-intro">
                       Click to sign out!
                   </p>
