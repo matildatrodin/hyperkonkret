@@ -1,6 +1,7 @@
 .Side {
     text-align: center;
     height: 100%;
+    width: 300px;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
