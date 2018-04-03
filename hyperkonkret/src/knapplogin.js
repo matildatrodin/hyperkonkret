@@ -23,7 +23,7 @@ export class Knapp extends React.Component{
 
     render(){
         return(
-            <button onClick={this.handleClick}>
+            <button className="App-button-login" onClick={this.handleClick}>
                 {this.props.name}
             </button>
 
