@@ -5,7 +5,7 @@ import './side.css';
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
-class Side extends React.Component {
+class SideLogin extends React.Component {
 
     constructor(props) {
         super(props);
@@ -40,7 +40,7 @@ class Side extends React.Component {
     render() {
         var sidebarContent =
             <b>
-                <div id={"sideMenu"} className="Side">
+                <div id={"sideMenuLogin"} className="Side">
                     <img src={profile} className="Side-logo" alt="profile"/>
                     <br/>
                     <button className="Side-button">Progress</button>
@@ -65,4 +65,4 @@ class Side extends React.Component {
     }
 };
 
-export default Side;
+export default SideLogin;
