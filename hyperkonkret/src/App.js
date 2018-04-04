@@ -9,7 +9,8 @@ import SideLogin from './sidebarLogin';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {alt: 1};
+
+        /*this.state =  1;
         this.changeState = this.changeState.bind(this);
     }
 
@@ -25,17 +26,32 @@ class App extends Component {
                 alt: 1
             })
 
-        }
+        }*/
 
+    }
+    render(){
+        return (
+            <div className ="App-body">
+                <Side/>
+                <header className = "App-header">
+                    <img src={logo} className="App-logo" alt="logo"/>
+                    <h1 className="App-title">Hyperkonkret!</h1>
+                </header>
+                <br/>
+                <Login className="App-button-login"/>
+                <button className="App-button-register">Registrera</button>
+                <footer className="App-footer">Hej jag är en footer tjoho</footer>
+            </div>
+        )
     }
 
 
-    render() {
+   /* render() {
 
         if (this.state.alt == 1) {
             return (
                 <div className="App-body">
-                <Side/>
+                    <button onClick={this.showSideBar}>Show sidebar!</button>
                     <header className="App-header">
                         <img src={logo} className="App-logo" alt="logo"/>
                         <h1 className="App-title">Hyperkonkret!</h1>
@@ -60,7 +76,7 @@ class App extends Component {
                 </div>
             );
         }
-    }
+    }*/
 }
 
 export default App;
