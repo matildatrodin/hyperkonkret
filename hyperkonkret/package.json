@@ -3,13 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "1-liners": "^0.4.0",
     "react": "^16.2.0",
+    "react-burger-menu": "^2.4.2",
     "react-dom": "^16.2.0",
+    "react-google-login": "^3.1.0",
     "react-google-login-component": "^0.9.3",
+    "react-hammerjs": "^1.0.1",
     "react-icons-kit": "^1.0.7",
+    "react-motion": "^0.5.2",
+    "react-motion-drawer": "^3.1.0",
+    "react-router": "^4.2.0",
     "react-scripts": "1.1.1",
     "react-sidebar": "^2.3.2",
-    "react-sidenav": "^2.1.2"
+    "react-sidenav": "^2.1.2",
+    "react-toggle-state": "^0.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
