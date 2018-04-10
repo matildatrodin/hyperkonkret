@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Login from './Login';
-import { Knapp }from './knapplogin.js';
-import Side from './sidebar';
-import SideLogin from './sidebarLogin';
+/*import SideBar from "./sidebarTest";*/
+import SideBar from "./sidebar";
 
-class App extends Component {
+class App extends React.Component {
     constructor(props) {
         super(props);
 
-        /*this.state =  1;
+       /* this.state =  1;
         this.changeState = this.changeState.bind(this);
     }
 
@@ -29,16 +28,32 @@ class App extends Component {
         }*/
 
     }
+
+    /*render(){
+        const{ main, nav } = this.props;
+        return (
+            <div className="App-body">
+                <SideBar>
+                <div>
+                    {nav}
+                </div>
+                <div>
+                    {main}
+                </div>
+                </SideBar>
+            </div>
+        )
+    }*/
     render(){
         return (
             <div className ="App-body">
-                <Side/>
+                <SideBar/>
                 <header className = "App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">Hyperkonkret!</h1>
                 </header>
+                <Login/>
                 <br/>
-                <Login className="App-button-login"/>
                 <button className="App-button-register">Registrera</button>
                 <footer className="App-footer">Hej jag är en footer tjoho</footer>
             </div>
