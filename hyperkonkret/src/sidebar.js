@@ -1,65 +1,34 @@
 import React from 'react';
 import Sidebar from 'react-sidebar';
 import './side.css';
+import Login from "./Login"
+import PropTypes from 'prop-types';
+import {slide as Menu} from 'react-burger-menu';
 
-const mql = window.matchMedia(`(min-width: 800px)`);
+class SideBar extends React.Component {
+    showSettings(event) {
+        event.preventDefault();
 
-class Side extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            mql: mql,
-            docked: props.docked,
-            open: props.open
-        }
-
-        this.mediaQueryChanged = this.mediaQueryChanged.bind(this);
-        this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
     }
 
-    onSetSidebarOpen(open) {
-        this.setState({sidebarOpen: open});
-    }
-
-    componentWillMount() {
-        mql.addListener(this.mediaQueryChanged);
-        this.setState({mql: mql, sidebarDocked: mql.matches});
-    }
-
-    componentWillUnmount() {
-        this.state.mql.removeListener(this.mediaQueryChanged);
-    }
-
-    mediaQueryChanged() {
-        this.setState({sidebarDocked: this.state.mql.matches});
-    }
+    isMenuOpen(state) {
+        return state.isOpen;
+    };
 
     render() {
-        var sidebarContent =
-            <b>
-                <div id={"sideMenu"} className="Side">
-                    <header className="Side-header">Hyperkonkret-logga-här</header>
-                    <br/>
-                    <button className="Side-button">Om Hyperkonkret</button>
-                    <button className="Side-button">Kontakta oss</button>
-                </div>
-            </b>;
-        var sidebarProps = {
-            sidebar: this.state.sidebarOpen,
-            docked: this.state.sidebarDocked,
-            onSetOpen: this.onSetSidebarOpen
-        };
-
         return (
-            <Sidebar sidebar={sidebarContent}
-                     open={this.state.sidebarOpen}
-                     docked={this.state.sidebarDocked}
-                     onSetOpen={this.onSetSidebarOpen}>
-            </Sidebar>
+            <Menu onStateChange={this.isMenuOpen}>
+                <a id="home" className="menu-intem" href="/">Home</a>
+                <a id="about" className="menu-item" href="/about">About</a>
+                <a id="contact" className="menu-item" href="/contact">Contact</a>
+                <a onClick={this.showSettings} className="menu-item--small" href="">Settings</a>
+            </Menu>
         );
     }
-};
+}
 
-export default Side;
+export default SideBar;
+
+
+
+

@@ -1,15 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Login from './Login';
-/*import SideBar from "./sidebarTest";*/
-import SideBar from "./sidebar";
+import { Knapp } from './knapplogin';
+import SideBar from './sidebar';
+import SideLogin from './sidebarLogin';
+import Drawer from 'react-motion-drawer';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
 
-       /* this.state =  1;
+        this.state =  {alt: 1};
         this.changeState = this.changeState.bind(this);
     }
 
@@ -25,25 +26,12 @@ class App extends React.Component {
                 alt: 1
             })
 
-        }*/
+        }
 
     }
 
-    /*render(){
-        const{ main, nav } = this.props;
-        return (
-            <div className="App-body">
-                <SideBar>
-                <div>
-                    {nav}
-                </div>
-                <div>
-                    {main}
-                </div>
-                </SideBar>
-            </div>
-        )
-    }*/
+    /*
+
     render(){
         return (
             <div className ="App-body">
@@ -60,13 +48,13 @@ class App extends React.Component {
         )
     }
 
-
-   /* render() {
+*/
+    render() {
 
         if (this.state.alt == 1) {
             return (
                 <div className="App-body">
-                    <button onClick={this.showSideBar}>Show sidebar!</button>
+                    <SideBar/>
                     <header className="App-header">
                         <img src={logo} className="App-logo" alt="logo"/>
                         <h1 className="App-title">Hyperkonkret!</h1>
@@ -91,7 +79,7 @@ class App extends React.Component {
                 </div>
             );
         }
-    }*/
+    }
 }
 
 export default App;
