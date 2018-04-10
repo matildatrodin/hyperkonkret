@@ -6,3 +6,4 @@ react,
 react-dom,
 react-google-login-component,
 react-sidebar
+react-burger-menu
