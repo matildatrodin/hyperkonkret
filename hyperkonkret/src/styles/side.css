@@ -9,7 +9,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-    background: #373a47;
+    background: white;
 }
 
 /* Position and sizing of clickable cross button */
@@ -20,12 +20,13 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-    background: #bdc3c7;
+    background: white;
 }
 
 /* General sidebar styles */
 .bm-menu {
-    background: #373a47;
+    height: 100%;
+    background: grey;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
 }
@@ -37,7 +38,7 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-    color: #b8b7ad;
+    color: white;
     padding: 0.8em;
 }
 

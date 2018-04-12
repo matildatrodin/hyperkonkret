@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "1-liners": "^0.4.0",
+    "history": "^1.17.0",
     "react": "^16.2.0",
     "react-burger-menu": "^2.4.2",
     "react-dom": "^16.2.0",
@@ -14,6 +15,7 @@
     "react-motion": "^0.5.2",
     "react-motion-drawer": "^3.1.0",
     "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "react-sidebar": "^2.3.2",
     "react-sidenav": "^2.1.2",

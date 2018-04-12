@@ -1,55 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Knapp } from './knapplogin';
-import SideBar from './sidebar';
-import SideLogin from './sidebarLogin';
-import Drawer from 'react-motion-drawer';
+import React, { PropTypes } from 'react';
+import logo from './images/logo.svg';
+import './styles/App.css';
+import { Knapp } from './components/modules/knapp';
+import { Login } from './components/modules/Login';
+import SideBar from './components/modules/sidebar';
+/*import SideBarLogin from './sidebarLogin';*/
 
 class App extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {currentState: false};
+        this.loginState = this.loginState.bind(this);
 
-        this.state =  {alt: 1};
-        this.changeState = this.changeState.bind(this);
+        /*  this.state =  {alt: 1};
+          this.changeState = this.changeState.bind(this);*/
     }
 
-    changeState(oldState) {
-        if (oldState == 1) {
-            this.setState({
-                alt: 2
-            })
-
-        }
-        else {
-            this.setState({
-                alt: 1
-            })
-
-        }
-
+    loginState(newState){
+        this.setState({currentState: newState});
     }
 
-    /*
+    /*  changeState(oldState) {
+          if (oldState == 1) {
+              this.setState({
+                  alt: 2
+              })
 
-    render(){
+          }
+          else {
+              this.setState({
+                  alt: 1
+              })
+
+          }
+
+      }*/
+
+
+    render() {
+
         return (
-            <div className ="App-body">
-                <SideBar/>
-                <header className = "App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">Hyperkonkret!</h1>
-                </header>
-                <Login/>
+            <div className="App-body">
+                <SideBar loginState={this.state.currentState}/>
                 <br/>
-                <button className="App-button-register">Registrera</button>
-                <footer className="App-footer">Hej jag är en footer tjoho</footer>
+                <Login name={"Logga in"} onClick={this.loginState}/>
             </div>
         )
     }
+}
 
-*/
-    render() {
+
+ /*   render() {
 
         if (this.state.alt == 1) {
             return (
@@ -69,7 +70,7 @@ class App extends React.Component {
         if (this.state.alt == 2) {
             return (
                 <div className="App-body">
-                    <SideLogin/>
+                    <SideBarLogin/>
                     <header className="App-header">
                         <img src={logo} className="App-logo" alt="logo"/>
                         <h1 className="App-title">Välkommen!</h1>
@@ -79,8 +80,7 @@ class App extends React.Component {
                 </div>
             );
         }
-    }
-}
+    }*/
 
 export default App;
 

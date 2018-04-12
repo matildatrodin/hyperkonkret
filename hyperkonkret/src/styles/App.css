@@ -9,7 +9,7 @@
 }
 
 .App-header {
-  background-image: url("./bild2.jpg");
+  background-image: url("../images/bild2.jpg");
   background-color: #ccc;
   height: 200px;
   padding: 20px;
@@ -34,7 +34,7 @@
   font-weight: bold;
   color: #444444;
   padding: 20px;
-  width: auto;
+  width: 100px;
   text-align: center;
   overflow: hidden;
   cursor: pointer;
@@ -56,7 +56,7 @@
 
 .App-body {
   text-align: center;
-  background-image: url("./bild2.jpg");
+  background-image: url("../images/bild2.jpg");
   height: 900px;
 }
 
