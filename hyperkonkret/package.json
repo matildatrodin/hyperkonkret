@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "1-liners": "^0.4.0",
+    "bootstrap": "^4.1.0",
     "history": "^1.17.0",
     "react": "^16.2.0",
     "react-burger-menu": "^2.4.2",
@@ -19,7 +20,8 @@
     "react-scripts": "1.1.1",
     "react-sidebar": "^2.3.2",
     "react-sidenav": "^2.1.2",
-    "react-toggle-state": "^0.2.1"
+    "react-toggle-state": "^0.2.1",
+    "reactstrap": "^5.0.0-beta.3"
   },
   "scripts": {
     "start": "react-scripts start",

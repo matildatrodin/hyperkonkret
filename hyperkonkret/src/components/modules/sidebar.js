@@ -54,13 +54,13 @@ class SideBar extends React.Component {
         var sidebarContent =
             <div id={"SideBar"} className="Side">
                 <br/>
-                <Knapp name="Om oss" className="App-button-login" onClick={this.changeState} alternative={2}/>
+                <Knapp name="Om oss" onClick={this.changeState} alternative={2}/>
                 <br/>
-                <Knapp name="Kontakt" className="App-button-login" onClick={this.changeState} alternative={3} />
+                <Knapp name="Kontakt" onClick={this.changeState} alternative={3} />
                 <br/>
-                <Knapp name="Progress" className="App-button-login" onClick={this.changeState} alternative={4} />
+                <Knapp name="Progress" onClick={this.changeState} alternative={4} />
                 <br/>
-                <Knapp name="Kurser" className="App-button-login" onClick={this.changeState} alternative={5} />
+                <Knapp name="Kurser" onClick={this.changeState} alternative={5} />
                 <br/>
                 { addLoginButton }
             </div>;

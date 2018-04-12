@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 import ReactDOM from 'react-dom';
 import '../../styles/index.css';
 import App from '../../App';
@@ -22,9 +23,9 @@ export class Knapp extends React.Component{
 
     render(){
         return(
-            <button className="App-button-login" onClick={this.handleClick}>
+            <Button onClick={this.handleClick}>
                 {this.props.name}
-            </button>
+            </Button>
 
         );
     }

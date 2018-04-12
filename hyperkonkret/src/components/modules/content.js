@@ -3,6 +3,7 @@ import '../../styles/App.css';
 import logo from '../../images/logo.svg';
 import { Footer } from './footer';
 import { Header } from './header';
+import { FirstPage} from "../pages/firstPage";
 
 
 export class Content extends React.Component {
@@ -17,6 +18,7 @@ export class Content extends React.Component {
             return (
                 <div>
                     <Header/>
+                    <FirstPage/>
                     <Footer/>
                 </div>
             );

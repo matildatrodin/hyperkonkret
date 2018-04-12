@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/index.css';
+import { Button } from 'reactstrap';
 
 
 export class Login extends React.Component{
@@ -21,9 +22,9 @@ export class Login extends React.Component{
         if(this.state.display){
             return(
                 <div>
-                    <button className="App-button-login" onClick={this.changeState}>
+                    <Button onClick={this.changeState}>
                         {this.props.name}
-                    </button>
+                    </Button>
                     <br/>
                 </div>
 
