@@ -7,3 +7,7 @@ react-dom,
 react-google-login-component,
 react-sidebar,
 reactstrap
+
+## För att köra appen
+
+Ställ dig i mappen src i kommandotolken och skriv "npm start" - voilá!
