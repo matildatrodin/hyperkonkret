@@ -4,7 +4,7 @@ import logo from '../../images/logo.svg';
 import { Footer } from './footer';
 import { Header } from './header';
 import { FirstPage} from "../pages/firstPage";
-
+import { Course } from "../pages/course";
 
 export class Content extends React.Component {
     constructor(props) {
@@ -53,6 +53,7 @@ export class Content extends React.Component {
                     <header className="App-header">
                         <img src={logo} className="App-logo" alt="logo"/>
                         <h1 className="App-title">Kurser</h1>
+                        <Course />
                     </header>
                     <Footer/>
                 </div>
