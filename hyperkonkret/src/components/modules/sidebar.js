@@ -58,7 +58,7 @@ class SideBar extends React.Component {
                 <br/>
                 <Knapp name="Kontakt" onClick={this.changeState} alternative={3} />
                 <br/>
-                <Knapp name="Progress" onClick={this.changeState} alternative={4} />
+                <Knapp name="Teacher" onClick={this.changeState} alternative={4} />
                 <br/>
                 <Knapp name="Kurser" onClick={this.changeState} alternative={5} />
                 <br/>
