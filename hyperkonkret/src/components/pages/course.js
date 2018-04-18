@@ -10,6 +10,10 @@ export class Course extends React.Component {
 
 
     render() {
-        return(<QuizApp totalQuestions={10}/>)
+        return(<div>
+            <body id={"card"}>
+                <QuizApp totalQuestions={10} />
+            </body>
+        </div>);
     }
 }
