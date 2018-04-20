@@ -91,22 +91,22 @@ class QuizApp extends Component {
 
     switch (tries) {
       case 0: {
-        praise = '1st Try!';
+        praise = 'Wow, första försöket!';
         points = '+10';
         break;
       }
       case 1: {
-        praise = '2nd Try!';
+        praise = 'Snyggt!';
         points = '+5';
         break;
       }
       case 2: {
-        praise = 'Correct!';
+        praise = 'Bra jobbat!';
         points = '+2';
         break;
       }
       default: {
-        praise = 'Correct!';
+        praise = 'Korrekt!';
         points = '+1';
       }
     }
@@ -142,6 +142,7 @@ class QuizApp extends Component {
     });
   }
 
+  //måste ändra så att denna funktion gör rätt!
   restartQuiz() {
     window.location.reload();
   }
@@ -158,7 +159,7 @@ class QuizApp extends Component {
         />
       );
     } else return (
-      <div>
+      <div id={"card"}>
         <Quiz
           step={step}
           questions={questions}

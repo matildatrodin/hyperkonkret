@@ -1,6 +1,7 @@
 import QuizApp from '../../quiz/src/components/QuizApp';
 import React from 'react';
-import '../../quiz/src/style.css';
+/*import '../../quiz/src/style.css';
+import '../../styles/App.css';*/
 
 export class Course extends React.Component {
     constructor(props) {
@@ -10,6 +11,9 @@ export class Course extends React.Component {
 
 
     render() {
-        return(<QuizApp totalQuestions={10}/>)
+        return(
+            <div>
+                <QuizApp totalQuestions={10} />
+            </div>);
     }
 }

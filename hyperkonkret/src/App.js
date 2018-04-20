@@ -4,6 +4,8 @@ import './styles/App.css';
 import { Knapp } from './components/modules/knapp';
 import { Login } from './components/modules/Login';
 import SideBar from './components/modules/sidebar';
+import {Header} from "./components/modules/header";
+import {Footer} from "./components/modules/footer";
 /*import SideBarLogin from './sidebarLogin';*/
 
 class App extends React.Component {

@@ -6,20 +6,32 @@ html, body, #app, div[data-reactroot] {
   height: 100%;
 }
 
+#card{
+  height: auto;
+  width: 80%;
+  margin: auto;
+}
+
+.wrapper{
+  background: white;
+  border: 3px solid steelblue;
+}
+
+/*
 body {
   width: 100%;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 9px;
+  font-size: 1em;
   background: rgb(249,219,61);
   color: #222;
   margin: 0;
   padding: 0;
   overflow-y: scroll;
-}
+}*/
 
 h1 {
   font-weight: normal;
-  font-size: 2.25em;
+  font-size: 2em;
   text-transform: uppercase;
   letter-spacing: -1px;
   text-align: center;
@@ -27,14 +39,17 @@ h1 {
 
 h2 {
   font-size: 1.25em;
-  margin: 0 0 15px;
+  margin: 0 0 5%;
 }
+
 
 header {
   display: flex;
+    height: 5%;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 2%;
+  background: white;
 }
 
 p {
@@ -51,23 +66,51 @@ code {
   font-weight: 100;
   pointer-events: none;
   background: rgba(0,0,0,.09);
-  padding: 3px 4px;
-  margin: 0 2px;
+  padding: 1% 1%;
+  margin: 0 1%;
+}
+
+.quiz-name{
+    display: inline-block;
+    *display: inline;
+    width: 100%;
+    background: blue;
+    padding: 0 0 0;
+    text-align: left;
+}
+
+.quiztitel{
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 15%;
+}
+
+.question-title{
+  font-size: 1.2em;
+  padding-bottom: 5%;
 }
 
 .score-container, .question-count {
-  width: 250px;
+  width: 10%;
+  font-size: 0.7em;
   text-align: center;
+    display: inline-block;
+    *display: inline;
+    background: white;
+    border: 2px auto darkblue;
+    float: right;
 }
 
 .score-container h2, .question-count h2 {
   margin-bottom: 0;
+    margin-top: 0;
   font-size: 2em;
   font-weight: 400;
 }
 
 .score, .question-number {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 100;
 }
 
@@ -77,11 +120,13 @@ code {
 
 .questions {
   width: 85%;
-  margin: 35px auto 0;
+  margin: 5% auto 0;
+  font-size: 1em;
 }
 
 .question {
-  font-size: 2em;
+  font-size: 1em;
+  margin-bottom: 10%;
 }
 
 .question-answers {
@@ -133,14 +178,14 @@ code {
 }
 
 .results-total {
-  margin-top: 15px;
+  margin-top: 5%;
   font-size: 1.1em;
 }
 
 .results-container a {
   position: relative;
-  padding: 15px 30px;
-  margin-top: 30px;
+  padding: 5% 10%;
+  margin-top: 10%;
   border: 3px solid #111;
   background: none;
   cursor: pointer;
@@ -183,19 +228,17 @@ code {
 }
 
 .correct-modal {
-  font-size: 5em;
+  font-size: 0.5em;
   text-align: center;
-  width: 100%;
-  background: rgb(252, 235, 148);
+  width: 10%;
+  height: 10%;
+  background-color: white;
   padding: 5%;
-  will-change: transform;
-  transform: scale(4);
+/*  will-change: transform;
+  transform: scale(4);*/
   z-index: 2;
-  opacity: 1;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 200px;
   overflow: auto;
   margin: auto;
   position: absolute;
@@ -203,14 +246,13 @@ code {
   left: 0;
   bottom: 0;
   right: 0;
-  backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   display: none;
 }
 
 .correct-modal.modal-enter {
   display: flex;
-  animation: modal-enter 2.3s ease-in both;
+  animation: modal-enter 5s;
 }
 
 .praise, .points {
@@ -220,27 +262,16 @@ code {
 
 @keyframes modal-enter {
   0 {
-    visibility: visible;
-    opacity: 1;
   }
-  50% {
-    transform: scale(1);
-    opacity: 1;
+  25% {
   }
-  85% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  99% {
-    opacity: .5;
-    transform: scale(1);
+  75% {
   }
   100% {
-    display: none;
-    transform: scale(1);
   }
 }
 
+/*
 @media (min-width: 600px) {
   body {
     font-size: 12px;
@@ -249,7 +280,7 @@ code {
 
 @media (min-width: 900px) {
   body {
-    font-size: 14px;
+    font-size: 2em;
   }
 
   h1 {
@@ -257,7 +288,7 @@ code {
   }
 
   header {
-    padding: 50px 0 30px;
+    padding: 5% 0 10%;
   }
 
   .questions {
@@ -275,7 +306,7 @@ code {
 
 @media (min-width: 1400px) {
   body {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .correct-modal {
@@ -287,4 +318,4 @@ code {
   body {
     overflow: hidden;
   }
-}
+}*/
