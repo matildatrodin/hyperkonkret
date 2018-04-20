@@ -127,6 +127,8 @@ code {
 .question {
   font-size: 1em;
   margin-bottom: 10%;
+  display: none;
+  animation: slide-in .4s ease;
 }
 
 .question-answers {
@@ -155,10 +157,6 @@ code {
   100% { opacity: 1; transform: none; }
 }
 
-.question {
-  display: none;
-  animation: slide-in .4s ease;
-}
 
 .question:first-child {
   display: block;
@@ -174,7 +172,8 @@ code {
   height: 100%;
   font-size: 1.75em;
   line-height: 1.75em;
-  animation: slide-in .4s ease;
+  /*animation: slide-in .4s ease;*/
+  class: animated infinite bounce;
 }
 
 .results-total {
@@ -184,10 +183,10 @@ code {
 
 .results-container a {
   position: relative;
-  padding: 5% 10%;
-  margin-top: 10%;
-  border: 3px solid #111;
-  background: none;
+  padding: 1% 1%;
+  margin-top: 5%;
+  border:3px solid #111;
+  background: white;
   cursor: pointer;
   font-size: .75em;
   transition: background .2s;
@@ -228,14 +227,12 @@ code {
 }
 
 .correct-modal {
-  font-size: 0.5em;
+  font-size: 3em;
   text-align: center;
-  width: 10%;
-  height: 10%;
+  width: 75%;
+  height: 20%;
   background-color: white;
   padding: 5%;
-/*  will-change: transform;
-  transform: scale(4);*/
   z-index: 2;
   align-items: center;
   justify-content: center;
@@ -252,8 +249,8 @@ code {
 
 .correct-modal.modal-enter {
   display: flex;
-  animation: modal-enter 5s;
-}
+  animation: zoomIn 5s;
+}*/
 
 .praise, .points {
   backface-visibility: hidden;
@@ -261,16 +258,18 @@ code {
 }
 
 @keyframes modal-enter {
-  0 {
-  }
-  25% {
-  }
-  75% {
-  }
-  100% {
-  }
-}
 
+}
+@-webkit-keyframes zoomIn{
+  0%{opacity:0;
+    -webkit-transform:scale3d(.3,.3,.3);
+    transform:scale3d(.3,.3,.3)}50%{opacity:1}}
+
+@keyframes zoomIn{
+  0%{opacity:1;
+  -webkit-transform:scale3d(.3,.3,.3);
+  transform:scale3d(.3,.3,.3)}
+  50%{opacity:1}}.zoomIn{-webkit-animation-name:zoomIn;animation-name:zoomIn}
 /*
 @media (min-width: 600px) {
   body {
