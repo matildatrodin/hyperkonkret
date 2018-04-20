@@ -7,17 +7,17 @@ html, body, #app, div[data-reactroot] {
 }
 
 #card{
-  height: 80%;
+  height: auto;
   width: 80%;
   margin: auto;
-  border: 3px outset lightgrey;
-  border-radius: 10px;
 }
 
 .wrapper{
-    background: grey;
+  background: white;
+  border: 3px solid steelblue;
 }
 
+/*
 body {
   width: 100%;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -27,7 +27,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: scroll;
-}
+}*/
 
 h1 {
   font-weight: normal;
@@ -42,13 +42,14 @@ h2 {
   margin: 0 0 5%;
 }
 
+
 header {
   display: flex;
     height: 5%;
   justify-content: space-between;
   align-items: center;
   padding-top: 2%;
-    background: pink;
+  background: white;
 }
 
 p {
@@ -78,20 +79,27 @@ code {
     text-align: left;
 }
 
-.hejsan{
+.quiztitel{
     text-align: left;
     padding-top: 2%;
     padding-bottom: 2%;
-    padding-left: 10%;
+    padding-left: 15%;
+}
+
+.question-title{
+  font-size: 1.2em;
+  padding-bottom: 5%;
 }
 
 .score-container, .question-count {
   width: 10%;
+  font-size: 0.7em;
   text-align: center;
     display: inline-block;
     *display: inline;
-    background: green;
-    float: left;
+    background: white;
+    border: 2px auto darkblue;
+    float: right;
 }
 
 .score-container h2, .question-count h2 {
@@ -113,10 +121,12 @@ code {
 .questions {
   width: 85%;
   margin: 5% auto 0;
+  font-size: 1em;
 }
 
 .question {
-  font-size: 2em;
+  font-size: 1em;
+  margin-bottom: 10%;
 }
 
 .question-answers {
@@ -218,19 +228,17 @@ code {
 }
 
 .correct-modal {
-  font-size: 5em;
+  font-size: 0.5em;
   text-align: center;
-  width: 100%;
-  background: rgb(252, 235, 148);
+  width: 10%;
+  height: 10%;
+  background-color: white;
   padding: 5%;
-  will-change: transform;
-  transform: scale(4);
+/*  will-change: transform;
+  transform: scale(4);*/
   z-index: 2;
-  opacity: 1;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50%;
   overflow: auto;
   margin: auto;
   position: absolute;
@@ -238,14 +246,13 @@ code {
   left: 0;
   bottom: 0;
   right: 0;
-  backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   display: none;
 }
 
 .correct-modal.modal-enter {
   display: flex;
-  animation: modal-enter 2.3s ease-in both;
+  animation: modal-enter 5s;
 }
 
 .praise, .points {
@@ -255,26 +262,15 @@ code {
 
 @keyframes modal-enter {
   0 {
-    visibility: visible;
-    opacity: 1;
   }
-  50% {
-    transform: scale(1);
-    opacity: 1;
+  25% {
   }
-  85% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  99% {
-    opacity: .5;
-    transform: scale(1);
+  75% {
   }
   100% {
-    display: none;
-    transform: scale(1);
   }
 }
+
 /*
 @media (min-width: 600px) {
   body {

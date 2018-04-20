@@ -17,48 +17,30 @@ export class Content extends React.Component {
         if (this.props.displayAlt == 1) {
             return (
                 <div>
-                    <Header/>
                     <FirstPage/>
-                    <Footer/>
                 </div>
             );
         }
         if (this.props.displayAlt== 2) {
             return (
                 <div>
-                    <Header/>
-                    <Footer/>
                 </div>
             );
         }
         if (this.props.displayAlt== 3) {
             return (
                 <div>
-                    <Header/>
-                    <Footer/>
                 </div>
             );
         }
         if (this.props.displayAlt == 4) {
             return (
                 <div>
-                    <Header/>
-                    <Footer/>
                 </div>
             );
         }
         if (this.props.displayAlt == 5) {
-            return (
-                <div>
-                    <header className="App-header">
-                        <img src={logo} className="App-logo" alt="logo"/>
-                    </header>
-                    <body>
-                        <Course />
-                    </body>
-                    <Footer/>
-                </div>
-            );
+            return (<Course />);
         }
         else{
             return(

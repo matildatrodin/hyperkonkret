@@ -1,21 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import QuestionList from './QuestionList';
+import '../style.css';
 
 const Quiz = ({ step, questions, totalQuestions, score, handleAnswerClick }) => {
   return (
     <div className="wrapper">
       <header>
-          <div className="quiz-name">
               <div className="question-count">
-                  <h2>Question</h2>
                   <div className="question-number">{step}</div>
                   <div className="description">of <span>{totalQuestions}</span></div>
               </div>
-
-              <h1 className="hejsan">Quiz</h1>
-
-          </div>
       </header>
 
       <div className="questions">
