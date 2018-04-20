@@ -1,10 +1,12 @@
 import React from 'react';
 import '../../styles/App.css';
+import '../../styles/teacherPage.css';
 import logo from '../../images/logo.svg';
 import { Footer } from './footer';
 import { Header } from './header';
 import { FirstPage} from "../pages/firstPage";
 import { Course } from "../pages/course";
+import TeacherPage from "../pages/teacherPage";
 
 export class Content extends React.Component {
     constructor(props) {
@@ -36,6 +38,9 @@ export class Content extends React.Component {
         if (this.props.displayAlt == 4) {
             return (
                 <div>
+                    <Header/>
+                    <TeacherPage className="TeacherPage-Body"/>
+                    <Footer/>
                 </div>
             );
         }
