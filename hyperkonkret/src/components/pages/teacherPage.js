@@ -3,7 +3,7 @@ import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Col, CardColumns, Row, Container, CardDeck, CardLink } from 'reactstrap';
 import '../../images/bild2.jpg';
 import '../../styles/teacherPage.css';
-import Course from './coursePage';
+import CoursePage from './coursePage';
 
 const items = [
     {
@@ -41,7 +41,7 @@ export default class TeacherPage extends React.Component {
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's
                                 content.</CardText>
-                            <CardLink href="/course">
+                            <CardLink href={"/course" + course.id}>
                             <Button>Button</Button>
                             </CardLink>
                         </CardBody>
