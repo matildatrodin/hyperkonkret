@@ -14,7 +14,7 @@ export default class CoursePage extends React.Component {
                 <h3>Hejsansvejsan här ligger alla kursens quizzz</h3>h3>
                     <Button>Skapa quiz</Button>
 
-                <CardDeck id="1">
+                <CardDeck>
                     <Card>
                         <CardImg/>
                         <CardBody>
