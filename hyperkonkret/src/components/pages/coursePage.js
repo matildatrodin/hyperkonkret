@@ -6,6 +6,8 @@ import '../../styles/teacherPage.css';
 
 export default class CoursePage extends React.Component {
 
+    
+
     render() {
         return (
             <div>
@@ -20,7 +22,7 @@ export default class CoursePage extends React.Component {
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's
                                 content.</CardText>
-                            <CardLink href={}>
+                            <CardLink >
                                 <Button>Button</Button>
                             </CardLink>
                         </CardBody>
@@ -32,7 +34,7 @@ export default class CoursePage extends React.Component {
                             <CardSubtitle>Card subtitle</CardSubtitle>
                             <CardText>Some quick example text to build on the card title and make up the bulk of the card's
                                 content.</CardText>
-                            <CardLink href={}>
+                            <CardLink >
                                 <Button>Button</Button>
                             </CardLink>
                         </CardBody>
