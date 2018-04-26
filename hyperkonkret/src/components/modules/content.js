@@ -7,6 +7,7 @@ import { Header } from './header';
 import { FirstPage} from "../pages/firstPage";
 import { Course } from "../pages/course";
 import TeacherPage from "../pages/teacherPage";
+import CreateQuiz from '../pages/createQuiz';
 
 export class Content extends React.Component {
     constructor(props) {
@@ -26,6 +27,7 @@ export class Content extends React.Component {
         if (this.props.displayAlt== 2) {
             return (
                 <div>
+                    <CreateQuiz/>
                 </div>
             );
         }
