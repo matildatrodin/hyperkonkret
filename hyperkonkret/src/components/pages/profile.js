@@ -1,7 +1,9 @@
 import React from 'react';
 import '../../styles/profile.css';
 import Heck from '../../images/heck.png';
-import { Line, Circle } from 'rc-progress';
+import { Line } from 'rc-progress';
+import { user } from '../user-data';
+import { course } from '../course-data';
 
 /* Vi kommer här behöva implementera props, så att vi varje gång vi öppnar profilen
 skickar med id för kurs och quiz och får ut data på hur långt
@@ -12,76 +14,61 @@ Vi kommer också behöva göra en funktion som visar så många kurser just den 
 
 Det kan vi inte riktigt göra förrän vi har back-end*/
 
-const user = {
-    name: 'Matilda',
+const users = {
     image: require('../../images/heck.png')
 };
 
-const quiz = {
-    id: 'Väsande'
-};
-
-const course = {
-    name: 'Ormlivet',
-    creator: 'Maggan',
-    quizName: quiz.id
-};
 
 
 export default class Profile extends React.Component {
 
     constructor(props) {
         super(props);
-    };
+        this.state = {
+            users: []
+        }
+    }
+
+
+    /* denna funktion kommer användas sen när vi fått ett API */
+    componentDidMount() {
+        let self = this;
+        fetch('/user', {method: 'GET'}).then(function(response) {
+            if (response.status >= 400) {
+                throw new Error("Bad response from server")
+            }
+            return response.json();
+        }).then(function(data) {
+            self.setState({users: data});
+        }).catch(err => {
+            console.log('caught it!', err);
+        })
+    }
 
 
     render() {
 
         return(
             <div className='Profile'>
-                <img src={user.image} className='Profile-img'/>
-                <p className='Profile-name'>{user.name}</p>
+                <img src={users.image} className='Profile-img'/>
+                <p className='Profile-name'>{user.username}</p>
                 <div>
                     <h2 className='Progress-title'>Framsteg</h2>
                 </div>
                 <div className='Profile-progress-body'>
+                    {/*{this.state.users.map(user => */ } {/* detta ska med när vi har API*/}
                     <div className='Profile-progress-box'>
-                        <h3>{course.name}</h3>
-                        <h6>Skapad av {course.creator}</h6>
+                        <h3>{course.title}</h3>
+                        <h6>Skapad av {course.created_by}</h6>
                         <br/>
                         <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">{course.quizName}</p>
+                        <p align="left">Väsande</p>
                         <Line className='Profile-progress-bar' percent="60" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
                         <p align="left">Coolhet</p>
                         <Line className='Profile-progress-bar' percent="100" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
                         <p align="left">Ålande</p>
                     </div>
-                    <div className='Profile-progress-box'>
-                        <h3>Slytherinlära</h3>
-                        <h6>Skapad av Kjelle</h6>
-                        <br/>
-                        <Line className='Profile-progress-bar' percent="10" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Slipsknut</p>
-                        <Line className='Profile-progress-bar' percent="80" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Pappa betalar</p>
-                        <Line className='Profile-progress-bar' percent="40" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Muggel-hat</p>
-                        <Line className='Profile-progress-bar' percent="50" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Swag</p>
-                    </div>
-                    <div className='Profile-progress-box'>
-                        <h3>Taco-fredag</h3>
-                        <h6>Skapad av Sussie</h6>
-                        <br/>
-                        <Line className='Profile-progress-bar' percent="40" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Perfekt guacca</p>
-                        <Line className='Profile-progress-bar' percent="60" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Skära tomat med slö kniv</p>
-                        <Line className='Profile-progress-bar' percent="10" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Gräddfil eller kräm fräsch?</p>
-                        <Line className='Profile-progress-bar' percent="80" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Mediumsås</p>
-                    </div>
+                    { /* )} */} {/* detta ska med när vi har API*/}
                 </div>
             </div>
         )

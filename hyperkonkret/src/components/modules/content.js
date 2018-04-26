@@ -7,7 +7,7 @@ import { Header } from './header';
 import { FirstPage} from "../pages/firstPage";
 import { Course } from "../pages/course";
 import TeacherPage from "../pages/teacherPage";
-
+import CreateQuiz from "../pages/createQuiz";
 import Profile from "../pages/profile";
 
 
@@ -44,7 +44,7 @@ export class Content extends React.Component {
             return (
                 <div>
                     <Header/>
-                    <TeacherPage className="TeacherPage-Body"/>
+                    <TeacherPage/>
                     <Footer/>
                 </div>
             );
