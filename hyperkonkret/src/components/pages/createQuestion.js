@@ -1,15 +1,21 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-var i = 2;
+import CreateAnswer from './createAnswer';
+
 export default class CreateQuestion extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            modal: false
+            modal: false,
+            answers: [
+                { id: 0 },
+                { id: 1 }
+            ],
+            nextId: 2
         };
 
         this.toggle = this.toggle.bind(this);
-        this.numberOfAswers = this.numberOfAswers.bind(this);
+        this.removeAnswer = this.removeAnswer.bind(this);
         this.addAnswer = this.addAnswer.bind(this);
     }
 
@@ -20,28 +26,25 @@ export default class CreateQuestion extends React.Component {
     }
 
 
-    addAnswer(e){
-        i++;
-        console.log(i);
-        e.preventDefault();
-
-
+    addAnswer(){
+        var next = this.state.nextId;
+        this.setState({answers: this.state.answers.concat([{id: next}])});
+        this.setState({nextId: next+1});
     }
 
 
 
-    numberOfAswers(){
-        for(var n=0; n< {i} ; n++){
-            return(
-                <FormGroup check>
-                    <Label check>
-                        <Input type="radio" name="radio1" />{' '}
-                        <Input type="textarea" name="text" id="exampleText" />
-                    </Label>
-                </FormGroup>
-            );
-
+    removeAnswer(ind){
+        console.log("id: " + ind);
+        this.state.answers.splice(ind, 1);
+        for(var n=(ind); n < this.state.nextId; n++){
+            var current = this.state.answers[n];
+            var currentId = current.id;
+            console.log("current: " + current + " n: " + n + " id: " + currentId);
+            this.state.answers[n].setState({id: (currentId-1)});
         }
+        var next = this.state.nextId;
+        this.setState({nextId: next-1});
     }
 
 
@@ -69,23 +72,11 @@ export default class CreateQuestion extends React.Component {
                             </FormGroup>
                             <FormGroup tag="fieldset" id="answers">
                                 <label>Svarsalternativ</label>
-                                {this.numberOfAswers()}
-                                <FormGroup check>
-                                    <Label check>
-                                        <Input type="radio" name="radio1" />{' '}
-                                        <Input type="textarea" name="text" id="exampleText" />
-                                    </Label>
-                                </FormGroup>
-                                <FormGroup check>
-                                    <Label check>
-                                        <Input type="radio" name="radio1" />{' '}
-                                        <Input type="textarea" name="text" id="exampleText" />
-                                    </Label>
-                                </FormGroup>
+
+                                <CreateAnswer list={this.state.answers} remove={this.removeAnswer}/>
                                 <FormGroup>
-                                    <button onClick={(e) => {this.addAnswer(e)}}>Lägg till svar</button>
+                                    <Button color="primary" onClick={this.addAnswer}>Lägg till svar</Button>
                                 </FormGroup>
-                                <h1>{i}</h1>
                             </FormGroup>
                         </Form>
                     </ModalBody>
