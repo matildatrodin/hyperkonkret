@@ -7,8 +7,6 @@ react-dom,
 react-google-login-component,
 react-sidebar,
 reactstrap,
-react-dnd,
-react-dnd-html5-backend,
 rc-progress,
 react-icons,
 react-router-dom
