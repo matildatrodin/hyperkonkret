@@ -39,7 +39,7 @@ export default class Profile extends React.Component {
             }
             return response.json();
         }).then(function(data) {
-            self.setState({users: data});
+            self.setState({user: data});
         }).catch(err => {
             console.log('caught it!', err);
         })
