@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { QuizApp } from './QuizApp';
+import { QuizApp } from '../../../components/modules/QuizApp';
 import PropTypes from 'prop-types';
 import { exerciseexample } from './exerciseexample';
 import { questionexample } from './questionexample';

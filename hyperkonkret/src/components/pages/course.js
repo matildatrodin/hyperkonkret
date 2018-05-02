@@ -1,7 +1,8 @@
-import QuizApp from '../modules/QuizApp';
+import { QuizApp } from '../modules/QuizApp';
 import React from 'react';
 /*import '../../quiz/src/style.css';
 import '../../styles/App.css';*/
+import { GetQuiz } from '../../quiz/src/components/getQuiz';
 
 export class Course extends React.Component {
 
@@ -9,12 +10,12 @@ export class Course extends React.Component {
         super();//ta in props för vilken kurs/quiz som ska visas?
 
         this.state = {
-            show: 0
+            show: 1
         }
     }
 
     componentWillMount(){
-        this.state.show = this.props.id;
+        this.state.show = 1;
     }
 
 

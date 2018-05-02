@@ -9,7 +9,6 @@
     "babel-preset-stage-1": "^6.24.1",
     "bootstrap": "^4.0.0-alpha.4",
     "dragula": "^3.7.2",
-
     "history": "^1.17.0",
     "rc-progress": "^2.2.5",
     "react": "^16.0.0",
