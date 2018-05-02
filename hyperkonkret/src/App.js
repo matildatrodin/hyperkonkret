@@ -47,7 +47,6 @@ class App extends React.Component {
                 <div className="App-body">
                     <SideBar loginState={this.state.currentState}/>
                     <br/>
-                    <Login name={"Logga in"} onClick={this.loginState}/>
                 </div>
             </Router>
         )

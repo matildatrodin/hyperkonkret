@@ -3,7 +3,7 @@ import Sidebar from 'react-sidebar';
 import '../../styles/side.css';
 import '../../styles/App.css';
 import {slide as Menu} from 'react-burger-menu';
-import {Header} from "./header";
+import { Header } from "./header";
 import { Link } from 'react-router-dom';
 import Routes from './routes';
 
@@ -25,27 +25,21 @@ class SideBar extends React.Component {
 
         var sidebarContent =
 
-          <div id={"Sidebar"} className="Side">
-                  <li>
-                      <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                      <Link to="/about">Om oss</Link>
-                  </li>
-                  <li>
-                      <Link to="/contact">Kontakta oss</Link>
-                  </li>
-                  <li>
-                      <Link to="/profile">Profil</Link>
-                  </li>
-                  <li>
-                      <Link to="/teacher">Lärare</Link>
-                  </li>
-                  <li>
-                      <Link to="/course">Kurs</Link>
-                  </li>
-                  <li>
-                      <Link to="/createquiz">Skapa quiz</Link>
+          <div id={"Sidebar"}>
+                  <li className="bm-item-list">
+                      <Link to="/" className="Link" style={{textDecoration: 'none'}}>Home</Link>
+                      <br/>
+                      <Link to="/about" className="Link" style={{textDecoration: 'none'}}>Om oss</Link>
+                      <br/>
+                      <Link to="/contact" className="Link" style={{textDecoration: 'none'}}>Kontakta oss</Link>
+                      <br/>
+                      <Link to="/profile" className="Link" style={{textDecoration: 'none'}}>Profil</Link>
+                      <br/>
+                      <Link to="/teacher" className="Link" style={{textDecoration: 'none'}}>Lärare</Link>
+                      <br/>
+                      <Link to="/course" className="Link" style={{textDecoration: 'none'}}>Kurs</Link>
+                      <br/>
+                      <Link to="/createquiz" className="Link" style={{textDecoration: 'none'}}>Skapa quiz</Link>
                   </li>
 
           </div>;

@@ -6,7 +6,7 @@ export const user =
         id: 1,
         username: 'snake',
         password: 'hej',
-        email: 'email',
+        email: 'matildatrodin@gmail.com',
         firstname: 'Matilda',
         lastname: 'Trodin',
         usertype: 'Elev',
