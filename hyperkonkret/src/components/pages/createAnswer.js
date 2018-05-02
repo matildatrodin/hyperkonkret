@@ -12,7 +12,6 @@ export default class CreateAnswer extends React.Component {
                         <Label check>
                             <Input type="radio" name="radio1"/>{' '}
                             <Input type="textarea" name="text" id={el.id}/>
-                            {console.log("id:" + el.id)};
                             <Button onClick={() => this.props.remove(el.id)}>x</Button>
                         </Label>
                     </FormGroup>
@@ -20,4 +19,3 @@ export default class CreateAnswer extends React.Component {
             </div>);
     }
 }
-

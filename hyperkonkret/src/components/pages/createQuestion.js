@@ -35,16 +35,16 @@ export default class CreateQuestion extends React.Component {
 
 
     removeAnswer(ind){
-        console.log("id: " + ind);
         this.state.answers.splice(ind, 1);
-        for(var n=(ind); n < this.state.nextId; n++){
-            var current = this.state.answers[n];
-            var currentId = current.id;
-            console.log("current: " + current + " n: " + n + " id: " + currentId);
-            this.state.answers[n].setState({id: (currentId-1)});
-        }
+        for(var n=(ind); n < (this.state.nextId - 1); n++){
+            var currentId = this.state.answers[n].id;
+            var newId = currentId-1;
+            this.state.answers[n].id = newId;
+            this.forceUpdate();
+}
         var next = this.state.nextId;
         this.setState({nextId: next-1});
+
     }
 
 
