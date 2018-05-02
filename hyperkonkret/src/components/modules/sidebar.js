@@ -7,6 +7,8 @@ import { Login } from './Login';
 import PropTypes from 'prop-types';
 import {slide as Menu} from 'react-burger-menu';
 import { Content } from './content';
+import {Header} from "./header";
+import {Footer} from "./footer";
 
 class SideBar extends React.Component {
     showSettings(event) {
@@ -56,7 +58,7 @@ class SideBar extends React.Component {
                 <br/>
                 <Knapp name="Om oss" onClick={this.changeState} alternative={2}/>
                 <br/>
-                <Knapp name="Kontakt" onClick={this.changeState} alternative={3} />
+                <Knapp name="Profil" onClick={this.changeState} alternative={3} />
                 <br/>
                 <Knapp name="Teacher" onClick={this.changeState} alternative={4} />
                 <br/>
@@ -70,7 +72,9 @@ class SideBar extends React.Component {
                 <Menu onStateChange={this.isMenuOpen}>
                     { sidebarContent }
                 </Menu>
+                <Header/>
                 <Content displayAlt={this.state.display}/>
+                {/*<Footer/>*/}
             </div>
 
         );

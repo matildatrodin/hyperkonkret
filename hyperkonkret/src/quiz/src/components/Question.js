@@ -6,7 +6,7 @@ const Question = ({ question, answers, handleAnswerClick }) => {
   return (
     <li className="question">
       <h2 className="question-title">
-        {question}
+          {question}
       </h2>
       <ol className="question-answers">
         {answers.map((answer, index) => {
