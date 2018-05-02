@@ -1,4 +1,4 @@
-import QuizApp from '../../quiz/src/components/QuizApp';
+import QuizApp from '../modules/QuizApp';
 import React from 'react';
 /*import '../../quiz/src/style.css';
 import '../../styles/App.css';*/

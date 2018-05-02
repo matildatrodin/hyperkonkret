@@ -6,9 +6,10 @@ react,
 react-dom,
 react-google-login-component,
 react-sidebar,
-reactstrap
-react-dnd
-npm install --save react-dnd-html5-backend
+reactstrap,
+rc-progress,
+react-icons,
+react-router-dom
 
 ## För att köra appen
 

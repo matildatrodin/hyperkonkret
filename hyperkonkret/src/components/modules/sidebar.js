@@ -2,79 +2,69 @@ import React from 'react';
 import Sidebar from 'react-sidebar';
 import '../../styles/side.css';
 import '../../styles/App.css';
-import { Knapp } from "./knapp";
-import { Login } from './Login';
-import PropTypes from 'prop-types';
 import {slide as Menu} from 'react-burger-menu';
-import { Content } from './content';
-import {Header} from "./header";
-import {Footer} from "./footer";
+import { Header } from "./header";
+import { Link } from 'react-router-dom';
+import Routes from './routes';
+import '../../images/profil.png';
+
+
+const user = {
+    image: require('../../images/profil.png')
+};
 
 class SideBar extends React.Component {
-    showSettings(event) {
-        event.preventDefault();
-
-    }
-
-    isMenuOpen(state) {
-        return state.isOpen;
-    };
 
     constructor(props) {
         super(props);
-
         this.state = {
-            display: 1
-        };
-
-        this.changeState = this.changeState.bind(this);
+            menuOpen: false
+        }
     }
 
-        changeState(pressedButton){
-
-            if (pressedButton >= 2 || pressedButton <= 5) {
-                this.setState({
-                    display: pressedButton
-                })
-
-            }
-            else {
-                console.log("sideBar.changeState is in an else statement....");
-
-            }
-        }
-
-    logOut(state){
+    handleStateChange (state) {
+        this.setState({menuOpen: state.isOpen})
     };
 
-    render() {
-        if (this.props.loginState){
-            var addLoginButton = <Login name={"Logga ut"} onClick={this.logOut}/>;
-        }
+    closeMenu () {
+        this.setState({menuOpen: false})
+    }
 
+    toggleMenu () {
+        this.setState({menuOpen: !this.state.menuOpen})
+    }
+
+    render() {
 
         var sidebarContent =
-            <div id={"SideBar"} className="Side">
-                <br/>
-                <Knapp name="Om oss" onClick={this.changeState} alternative={2}/>
-                <br/>
-                <Knapp name="Profil" onClick={this.changeState} alternative={3} />
-                <br/>
-                <Knapp name="Teacher" onClick={this.changeState} alternative={4} />
-                <br/>
-                <Knapp name="Kurser" onClick={this.changeState} alternative={5} />
-                <br/>
-                { addLoginButton }
-            </div>;
+
+          <div id={"Sidebar"}>
+              <img src={user.image} className="Profile-img-side"/>
+                  <li className="bm-item-list">
+                      <Link to="/" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Home</Link>
+                      <br/>
+                      <Link to="/profile" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Profil</Link>
+                      <br/>
+                      <Link to="/teacher" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Lärare</Link>
+                      <br/>
+                      <Link to="/course" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Kurs</Link>
+                      <br/>
+                      <Link to="/createquiz" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Skapa quiz</Link>
+                      <br/>
+                      <Link to="/about" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Om oss</Link>
+                      <br/>
+                      <Link to="/contact" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Kontakta oss</Link>
+                  </li>
+
+          </div>;
 
         return (
             <div>
-                <Menu onStateChange={this.isMenuOpen}>
+                <Menu isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
                     { sidebarContent }
                 </Menu>
+                <Routes/>
                 <Header/>
-                <Content displayAlt={this.state.display}/>
-                {/*<Footer/>*/}
             </div>
 
         );
@@ -82,18 +72,6 @@ class SideBar extends React.Component {
 }
 
 export default SideBar;
-
-/*<BrowserRouter>
-    <div>
-        <Link to="/">Home</Link>{' '}
-        <Link to="/about">About</Link>{' '}
-
-        <Switch>
-            <Route exact path="/" component={TestSida}/>
-            <Route exact path="/about" component={TestSidaIgen}/>
-        </Switch>
-    </div>
-</BrowserRouter>*/
 
 
 

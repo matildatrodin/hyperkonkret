@@ -15,14 +15,22 @@
 
 .Profile-name {
     padding-top: 20px;
-    color: #FFFFFF;
+    color: grey;
     font-family: sans-serif;
     font-size: 30px;
 
 }
 
+.Profile-properties {
+    font-weight: normal;
+    color: grey;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
 .Progress-title {
-    color: white;
+    color: grey;
     text-align: left;
     margin-left: 12%;
     margin-top: 5%;
@@ -38,9 +46,11 @@
 .Profile-progress-box {
     border-radius: 2%;
     text-align: left;
+    color: grey;
     padding: 2%;
     margin-left: 2%;
     width: 30%;
+    min-width: 300px;
     background-color: white;
     height: 100%;
 }

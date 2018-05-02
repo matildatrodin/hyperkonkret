@@ -9,26 +9,28 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-    background: white;
+    background: grey;
 }
 
-/* Position and sizing of clickable cross button */
+/* Position and sizing of clickable cross button
 .bm-cross-button {
     height: 24px;
     width: 24px;
 }
 
-/* Color/shape of close button cross */
+Color/shape of close button cross
 .bm-cross {
     background: white;
 }
-
+*/
 /* General sidebar styles */
 .bm-menu {
     height: 100%;
-    background: grey;
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
+    background-color: white;
+    padding: 2.5em;
+    font-size: 20px;
+    color: white;
+    width: 80%;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -38,11 +40,26 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-    color: white;
-    padding: 0.8em;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+
 }
 
 /* Styling of overlay */
 .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.Link:any-link {
+    color: grey;
+    text-decoration: none;
+}
+
+.Profile-img-side {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20%;
+    margin-top: 10%;
+    width: 100px;
 }

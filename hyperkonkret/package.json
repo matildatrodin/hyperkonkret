@@ -9,16 +9,19 @@
     "babel-preset-stage-1": "^6.24.1",
     "bootstrap": "^4.0.0-alpha.4",
     "dragula": "^3.7.2",
+
     "history": "^1.17.0",
     "rc-progress": "^2.2.5",
     "react": "^16.0.0",
     "react-bootstrap": "^0.32.1",
     "react-burger-menu": "^2.4.2",
+    "react-collapsible": "^2.2.0",
     "react-dom": "^16.0.0",
     "react-dragula": "^1.1.17",
     "react-google-login": "^3.1.0",
     "react-google-login-component": "^0.9.3",
     "react-hammerjs": "^1.0.1",
+    "react-icons": "^2.2.7",
     "react-icons-kit": "^1.0.7",
     "react-motion": "^0.5.2",
     "react-motion-drawer": "^3.1.0",
@@ -28,7 +31,7 @@
     "react-sidebar": "^2.3.2",
     "react-sidenav": "^2.1.2",
     "react-toggle-state": "^0.2.1",
-    "reactstrap": "^5.0.0-beta.3"
+    "reactstrap": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

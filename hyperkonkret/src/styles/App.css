@@ -6,7 +6,7 @@ html, body {
 .App {
   text-align: center;
   height: 100%;
-  background-image: url("../images/bild2.jpg");
+  background-color: lightgrey;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,7 +36,7 @@ html, body {
 
 .App-body {
   text-align: center;
-  background: url("../images/bild2.jpg");
+  background-color: whitesmoke;
   min-height: 100%;
   height: auto;
   position: fixed;
