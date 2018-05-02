@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { QuizApp } from '../../../components/modules/QuizApp';
+import { QuizApp } from './QuizApp';
 import PropTypes from 'prop-types';
-import { exerciseexample } from './exerciseexample';
-import { questionexample } from './questionexample';
+import { exerciseexample } from '../data/exerciseexample';
+import { questionexample } from '../data/questionexample';
 
 
 export class GetQuiz extends React.Component{

@@ -2,7 +2,7 @@ import { QuizApp } from '../modules/QuizApp';
 import React from 'react';
 /*import '../../quiz/src/style.css';
 import '../../styles/App.css';*/
-import { GetQuiz } from '../../quiz/src/components/getQuiz';
+import { GetQuiz } from '../modules/getQuiz';
 
 export class Course extends React.Component {
 

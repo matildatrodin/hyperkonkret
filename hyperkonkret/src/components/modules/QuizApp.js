@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Quiz from './Quiz';
 import Modal from './Modal';
 import Results from './Results';
-import '../../quiz/src/components/getQuiz';
+import './getQuiz';
 
 export class QuizApp extends Component {
   constructor() {
@@ -179,5 +179,3 @@ QuizApp.defaultProps = {
 QuizApp.propTypes = {
   totalQuestions: PropTypes.number.isRequired
 };
-
-
