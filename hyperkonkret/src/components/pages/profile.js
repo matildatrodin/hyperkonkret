@@ -2,8 +2,8 @@ import React from 'react';
 import '../../styles/profile.css';
 import Heck from '../../images/heck.png';
 import { Line } from 'rc-progress';
-import { user } from '../user-data';
-import { course } from '../course-data';
+import { user } from '../data/user-data';
+import { course } from '../data/course-data';
 
 /* Vi kommer här behöva implementera props, så att vi varje gång vi öppnar profilen
 skickar med id för kurs och quiz och får ut data på hur långt
