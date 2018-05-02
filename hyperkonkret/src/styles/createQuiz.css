@@ -1,0 +1,13 @@
+.quiz{
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.descrip{
+    overflow: hidden;
+    padding-right: .5em;
+}
+
+.removeDescription{
+    float: right;
+}

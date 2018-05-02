@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import Quiz from './Quiz';
 import Modal from './Modal';
 import Results from './Results';
-import shuffleQuestions from '../helpers/shuffleQuestions';
-import { questions } from '../data/quiz-data';
+import '../../quiz/src/components/getQuiz';
 
-class QuizApp extends Component {
+export class QuizApp extends Component {
   constructor() {
     super();
 
@@ -29,9 +28,9 @@ class QuizApp extends Component {
   }
 
   componentWillMount() {
-    const { totalQuestions } = this.props;
-    const maxQuestions = Math.min(totalQuestions, questions.length);
-    const QUESTIONS = shuffleQuestions(questions, maxQuestions);
+    const { totalQuestions } = this.props.quiz.length;
+    const maxQuestions = this.props.quiz.length;
+    const QUESTIONS = this.props.quiz;
 
     this.setState({
       questions: QUESTIONS,
@@ -172,13 +171,13 @@ class QuizApp extends Component {
     );
   }
 }
-
+/*
 QuizApp.defaultProps = {
-  totalQuestions: questions.length
-};
+  totalQuestions: this.props.quiz.length
+}; */
 
 QuizApp.propTypes = {
   totalQuestions: PropTypes.number.isRequired
 };
 
-export default QuizApp;
+

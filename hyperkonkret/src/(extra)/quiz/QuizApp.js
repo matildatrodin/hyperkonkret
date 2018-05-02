@@ -4,11 +4,12 @@ import Quiz from './Quiz';
 import Modal from './Modal';
 import Results from './Results';
 import shuffleQuestions from '../helpers/shuffleQuestions';
-import { questions } from '../data/quiz-data';
+import { exerciseexample } from './exerciseexample';
+import { questionexample } from './questionexample';
 
-class QuizApp extends Component {
-  constructor() {
-    super();
+export class QuizApp extends Component {
+  constructor(props) {
+    super(props);
 
     this.state = {
       questions:  [],
@@ -28,10 +29,12 @@ class QuizApp extends Component {
     this.showModal = this.showModal.bind(this);
   }
 
-  componentWillMount() {
-    const { totalQuestions } = this.props;
-    const maxQuestions = Math.min(totalQuestions, questions.length);
-    const QUESTIONS = shuffleQuestions(questions, maxQuestions);
+  componentWillMount(){
+    const { totalQuestions } = this.props.totalQuestions;
+    const maxQuestions = questionexample.length;
+    const QUESTIONS = this.props.quiz;
+
+
 
     this.setState({
       questions: QUESTIONS,
@@ -48,6 +51,7 @@ class QuizApp extends Component {
     const { questions, step, userAnswers } = this.state;
     const isCorrect = questions[0].correct === e.target.textContent;
     const currentStep = step - 1;
+
     const tries = userAnswers[currentStep].tries;
 
     if (isCorrect && e.target.nodeName === 'LI') {
@@ -149,7 +153,6 @@ class QuizApp extends Component {
 
   render() {
     const { step, questions, userAnswers, maxQuestions, score, modal } = this.state;
-
     if (step >= maxQuestions + 1) {
       return (
         <Results
@@ -172,13 +175,12 @@ class QuizApp extends Component {
     );
   }
 }
-
+/*
 QuizApp.defaultProps = {
   totalQuestions: questions.length
-};
+}; */
 
 QuizApp.propTypes = {
   totalQuestions: PropTypes.number.isRequired
 };
 
-export default QuizApp;
