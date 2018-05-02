@@ -21,6 +21,14 @@
 
 }
 
+.Profile-properties {
+    float: left;
+    color: white;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
 .Progress-title {
     color: white;
     text-align: left;

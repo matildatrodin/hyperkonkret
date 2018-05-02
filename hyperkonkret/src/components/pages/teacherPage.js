@@ -26,7 +26,37 @@ const teacher = {
 }
 
 
+
 export default class TeacherPage extends React.Component {
+
+  /*  componentDidMount() {
+        let self = this;
+        fetch('/course', {method: 'GET'}).then(function(response) {
+            if (response.status >= 400) {
+                throw new Error("Bad response from server")
+            }
+            return response.json();
+        }).then(function(data) {
+            self.setState({course: data});
+        }).catch(err => {
+            console.log('caught it!', err);
+        })
+    }
+
+      componentDidMount() {
+        let self = this;
+        fetch('/user', {method: 'GET'}).then(function(response) {
+            if (response.status >= 400) {
+                throw new Error("Bad response from server")
+            }
+            return response.json();
+        }).then(function(data) {
+            self.setState({user: data});
+        }).catch(err => {
+            console.log('caught it!', err);
+        })
+    }*/
+
 
     constructor(props) {
         super(props);

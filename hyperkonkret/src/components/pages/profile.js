@@ -52,6 +52,9 @@ export default class Profile extends React.Component {
             <div className='Profile'>
                 <img src={users.image} className='Profile-img'/>
                 <p className='Profile-name'>{user.username}</p>
+                <p className='Profile-properties'>{user.usertype}</p>
+                <p className='Profile-properties'>Senast inloggad: {user.last_login}</p>
+                <p className='Profile-properties'>{user.email}</p>
                 <div>
                     <h2 className='Progress-title'>Framsteg</h2>
                 </div>

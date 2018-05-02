@@ -10,7 +10,7 @@ export const user =
         firstname: 'Matilda',
         lastname: 'Trodin',
         usertype: 'Elev',
-        last_login: 'One week',
+        last_login: '6 dagar',
         login_count: '3',
         created_at: '180101',
         updated_at: '180102'
