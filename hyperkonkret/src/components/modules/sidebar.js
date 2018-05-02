@@ -6,47 +6,61 @@ import {slide as Menu} from 'react-burger-menu';
 import { Header } from "./header";
 import { Link } from 'react-router-dom';
 import Routes from './routes';
+import '../../images/profil.png';
+
+
+const user = {
+    image: require('../../images/profil.png')
+};
 
 class SideBar extends React.Component {
 
-    isMenuOpen(state) {
-        return state.isOpen;
-    };
-
     constructor(props) {
         super(props);
+        this.state = {
+            menuOpen: false
+        }
+    }
+
+    handleStateChange (state) {
+        this.setState({menuOpen: state.isOpen})
+    };
+
+    closeMenu () {
+        this.setState({menuOpen: false})
+    }
+
+    toggleMenu () {
+        this.setState({menuOpen: !this.state.menuOpen})
     }
 
     render() {
 
-     /*   if (this.props.loginState){
-            var addLoginButton = <Login name={"Logga ut"} onClick={this.logOut}/>;
-        }*/
-
         var sidebarContent =
 
           <div id={"Sidebar"}>
+              <img src={user.image} className="Profile-img-side"/>
                   <li className="bm-item-list">
-                      <Link to="/" className="Link" style={{textDecoration: 'none'}}>Home</Link>
+                      <Link to="/" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Home</Link>
                       <br/>
-                      <Link to="/about" className="Link" style={{textDecoration: 'none'}}>Om oss</Link>
+                      <Link to="/profile" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Profil</Link>
                       <br/>
-                      <Link to="/contact" className="Link" style={{textDecoration: 'none'}}>Kontakta oss</Link>
+                      <Link to="/teacher" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Lärare</Link>
                       <br/>
-                      <Link to="/profile" className="Link" style={{textDecoration: 'none'}}>Profil</Link>
+                      <Link to="/course" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Kurs</Link>
                       <br/>
-                      <Link to="/teacher" className="Link" style={{textDecoration: 'none'}}>Lärare</Link>
+                      <Link to="/createquiz" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Skapa quiz</Link>
                       <br/>
-                      <Link to="/course" className="Link" style={{textDecoration: 'none'}}>Kurs</Link>
+                      <Link to="/about" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Om oss</Link>
                       <br/>
-                      <Link to="/createquiz" className="Link" style={{textDecoration: 'none'}}>Skapa quiz</Link>
+                      <Link to="/contact" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Kontakta oss</Link>
                   </li>
 
           </div>;
 
         return (
             <div>
-                <Menu onStateChange={this.isMenuOpen}>
+                <Menu isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
                     { sidebarContent }
                 </Menu>
                 <Routes/>
