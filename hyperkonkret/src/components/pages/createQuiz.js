@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import '../../styles/teacherPage.css';
+import '../../styles/createQuiz.css';
 import CreateQuestion from "./createQuestion";
 
 

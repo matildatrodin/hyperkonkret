@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import CreateAnswer from './createAnswer';
 import CreateDescription from "./createDescription";
+import '../../styles/createQuiz.css';
+
 
 export default class CreateQuestion extends React.Component {
     constructor(props) {
@@ -89,11 +91,9 @@ export default class CreateQuestion extends React.Component {
                             </FormGroup>
                             <FormGroup tag="fieldset" id="descriptions">
                                 <Label for="exampleText">Beskrivning av fråga - Hyperkonkret</Label>
-                                <FormGroup id="descrip">
+                                <FormGroup>
                                     <CreateDescription list={this.state.descriptions} remove={this.removeDescription}/>
-                                        <FormGroup>
-                                            <Button color="primary" onClick={this.addDescription}>Lägg till frågebeskrivning</Button>
-                                        </FormGroup>
+                                    <Button color="primary" onClick={this.addDescription}>Lägg till frågebeskrivning</Button>
                                 </FormGroup>
                             </FormGroup>
                             <FormGroup>
@@ -104,7 +104,6 @@ export default class CreateQuestion extends React.Component {
                             </FormGroup>
                             <FormGroup tag="fieldset" id="answers">
                                 <label>Svarsalternativ</label>
-
                                 <CreateAnswer list={this.state.answers} remove={this.removeAnswer}/>
                                 <Button color="primary" onClick={this.addAnswer}>Lägg till svar</Button>
                             </FormGroup>
