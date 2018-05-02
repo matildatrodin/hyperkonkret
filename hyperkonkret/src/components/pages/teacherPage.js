@@ -1,11 +1,14 @@
 import React from 'react';
 import { ListGroupItem, Collapse } from 'reactstrap';
 import '../../images/bild2.jpg';
+import Teacher from '../../images/teacher.jpg'
 import '../../styles/teacherPage.css';
 import CoursePage from './coursePage';
 import { Line } from 'rc-progress';
 import FaAngleDown from 'react-icons/lib/fa/angle-down';
 import FaAngleUp from 'react-icons/lib/fa/angle-up';
+import { Button } from 'react-bootstrap';
+import {user} from "../data/user-data";
 
 const items = [
     {
@@ -21,8 +24,13 @@ const course = {
 };
 
 const teacher = {
-    name: 'Maggan',
-    image: require('../../images/teacher.jpg')
+    username: 'Maggan',
+    image: require('../../images/teacher.jpg'),
+    usertype: 'Lärare',
+    firstname: 'Margareta',
+    lastname: 'Jansson',
+    email: 'maggan77@gmail.com',
+    last_login: '4 timmar'
 }
 
 
@@ -72,20 +80,41 @@ export default class TeacherPage extends React.Component {
 
         return (
                 <div className="Teacher">
-                    <img src={teacher.image} className="Teacher-img"/>
-                    <h2 className="Teacher-name">{teacher.name}</h2>
+                    <div className="Teacher-body">
+                    <div style={{backgroundImage: "url(" +  Teacher  + ")"}} className="Teacher-img"/>
+                        <br/>
+                    <h2 className="Teacher-name">{teacher.username}</h2>
+                    <br/>
+                        <p className='Teacher-properties'>{teacher.usertype}</p>
+                        <p className='Teacher-properties' style={{fontWeight: 'bold'}}>{teacher.firstname} {teacher.lastname}</p>
+                        <p className='Teacher-properties'>{teacher.email}</p>
+                        <p className='Teacher-properties'>Senast inloggad: {teacher.last_login}</p>
+                        <br/>
                     <div className="Course-title" onClick={this.toggle}>
                         <h3 align="left">{course.name}<FaAngleUp className={this.state.collapse ? "Arrow-down" : "Arrow-up"}/></h3>
                     </div>
                         <Collapse isOpen={this.state.collapse}>
                             <div className="Course-body">
                                 <div className="Course-box">
-                                    <h6>{course.quizName}</h6>
                                     <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
                                     <p align="left">{course.quizName}</p>
+                                    <div align="right">
+                                        <Button className="Course-edit-button">Redigera</Button>
+                                    </div>
+                                    <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
+                                    <p align="left">{course.quizName}</p>
+                                    <div align="right">
+                                        <Button className="Course-edit-button">Redigera</Button>
+                                    </div>
+                                    <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
+                                    <p align="left">{course.quizName}</p>
+                                    <div align="right">
+                                        <Button className="Course-edit-button">Redigera</Button>
+                                    </div>
                                 </div>
                             </div>
                         </Collapse>
+                    </div>
                 </div>
         )
     }

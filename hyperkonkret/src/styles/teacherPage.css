@@ -3,9 +3,26 @@
     width: 100%;
 }
 
+.Teacher-body {
+    max-width: 100%;
+}
+
+
 .Teacher-img {
-    width: 300px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 200px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 200px;
+    -moz-background-clip: padding;
+    border-radius: 200px;
+    background-clip: padding-box;
+    margin: 7px 0 0 5px;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
+
+
 }
 
 .Teacher-table {
@@ -14,9 +31,20 @@
 
 .Teacher-name {
     padding-top: 20px;
-    color: #FFFFFF;
+    color: grey;
     font-family: sans-serif;
     font-size: 30px;
+    display: inline-block;
+
+}
+
+.Teacher-properties {
+    font-weight: normal;
+    color: grey;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    position: relative;
+
 
 }
 
@@ -31,49 +59,62 @@
 }
 
 .Course-title {
-    width: 100%;
-    margin-left: 2%;
+    margin-left: 10%;
     margin-right: 2%;
-    color: white;
+    color: grey;
 }
 
 .Course-title-button {
     alignment: left;
+    color: grey;
 }
 
 .Course-body {
     width: 100%;
-    background-color: white;
 }
 
 .Progress-title {
     color: white;
     text-align: left;
-    margin-left: 12%;
-    margin-top: 5%;
 }
 
 .Progress-body {
-    display: flex;
-    margin-left: 10%;
     margin-top: 2%;
     margin-right: 10%;
 }
 
 .Course-box {
-    border-radius: 2%;
     text-align: left;
-    padding: 2%;
-    margin-left: 2%;
-    width: 30%;
-    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 300px;
+    width: 50%;
     height: 100%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, .2);
+}
+
+.Course-edit-button {
+    background-color: grey;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 2%;
+    text-decoration: none;
+    font-size: 10px;
+
+}
+
+.Course-edit-button:hover {
+    background-color: #92dbe8;
+    color: white;
+
 }
 
 .Progress-bar {
     padding-right: 2%;
     width: 100%;
-    margin: auto;
 }
 
 .quiz{
