@@ -2,6 +2,8 @@ import { QuizApp } from '../modules/QuizApp';
 import React from 'react';
 /*import '../../quiz/src/style.css';
 import '../../styles/App.css';*/
+import { Button } from 'reactstrap';
+
 import { GetQuiz } from '../modules/getQuiz';
 
 export class Course extends React.Component {
@@ -10,7 +12,7 @@ export class Course extends React.Component {
         super();//ta in props för vilken kurs/quiz som ska visas?
 
         this.state = {
-            show: 1
+            show: 2
         }
     }
 
@@ -28,10 +30,7 @@ export class Course extends React.Component {
             this.setState({ show: 1 });
 
         }
-
-
     }
-
 
     render() {
         if(this.state.show == 1){

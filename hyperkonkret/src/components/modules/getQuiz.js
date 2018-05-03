@@ -4,6 +4,7 @@ import { QuizApp } from './QuizApp';
 import PropTypes from 'prop-types';
 import { exerciseexample } from '../data/exerciseexample';
 import { questionexample } from '../data/questionexample';
+import {DragAndDrop} from './DragAndDrop';
 
 
 export class GetQuiz extends React.Component{
@@ -11,8 +12,8 @@ export class GetQuiz extends React.Component{
         super(props);
 
     this.state = {
-            quizId: this.props.id
-
+            quizId: this.props.id,
+            quizType: 2
         };
     };
 
@@ -34,6 +35,7 @@ render(){
     let questionsUnsorted = [];
     let questions = [];//ska bli array med questions som passar QuizApp
     let correct = "";
+    let theQuiz = null;
 
     for(let i = 0; i < questionexample.length; i++){
         let answers = [];
@@ -59,14 +61,14 @@ render(){
     }
 
     //eventuellt sortera frågor
+    if (this.state.quizType == 1){
+      theQuiz = <QuizApp totalQuestions={2} quiz={questionsUnsorted}/>
+    }
+    if (this.state.quizType == 2){
+      theQuiz = <DragAndDrop totalQuestions={2} quiz={questionsUnsorted}/>
+    }
 
-
-    return(
-        <div>
-            <QuizApp totalQuestions={2} quiz={questionsUnsorted}/>
-
-        </div>
-    );
+    return(theQuiz);
 
 }
 

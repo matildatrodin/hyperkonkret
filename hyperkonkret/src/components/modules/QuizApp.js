@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Quiz from './Quiz';
 import Modal from './Modal';
 import Results from './Results';
-import './getQuiz';
+//import './getQuiz';
 
 export class QuizApp extends Component {
   constructor() {

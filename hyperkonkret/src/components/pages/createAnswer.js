@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-
 export default class CreateAnswer extends React.Component {
 
     render(){
@@ -12,8 +11,8 @@ export default class CreateAnswer extends React.Component {
                         <Label check>
                             <Input type="radio" name="radio1"/>{' '}
                             <Input type="textarea" name="text" id={el.id}/>
+                            </Label>
                             <Button onClick={() => this.props.remove(el.id)}>x</Button>
-                        </Label>
                     </FormGroup>
         ))}
             </div>);
