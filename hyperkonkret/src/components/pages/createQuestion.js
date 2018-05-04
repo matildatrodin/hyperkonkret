@@ -79,7 +79,7 @@ export default class CreateQuestion extends React.Component {
 
     render(){
         return(
-            <h1>
+            <div>
                 <Button color="danger" onClick={this.toggle}>Lägg till fråga</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Lägg till fråga</ModalHeader>
@@ -87,13 +87,13 @@ export default class CreateQuestion extends React.Component {
                         <Form className="quiz">
                             <FormGroup>
                                 <Label>Fråga</Label>
-                                <Input type="text" name="header" />
+                                <Input style={{height: '100px'}}type="text" name="header" />
                             </FormGroup>
                             <FormGroup tag="fieldset" id="descriptions">
                                 <Label for="exampleText">Beskrivning av fråga - Hyperkonkret</Label>
                                 <FormGroup>
                                     <CreateDescription list={this.state.descriptions} remove={this.removeDescription}/>
-                                    <Button color="primary" onClick={this.addDescription}>Lägg till frågebeskrivning</Button>
+                                    <Button style={{marginTop: '10px', marginLeft: '20px', fontSize: '12px'}} color="primary" onClick={this.addDescription}>Lägg till frågebeskrivning</Button>
                                 </FormGroup>
                             </FormGroup>
                             <FormGroup>
@@ -105,16 +105,16 @@ export default class CreateQuestion extends React.Component {
                             <FormGroup tag="fieldset" id="answers">
                                 <label>Svarsalternativ</label>
                                 <CreateAnswer list={this.state.answers} remove={this.removeAnswer}/>
-                                <Button color="primary" onClick={this.addAnswer}>Lägg till svar</Button>
+                                <Button style={{marginTop: '5px', marginLeft: '20px', fontSize: '12px'}} color="primary" onClick={this.addAnswer}>Lägg till svar</Button>
                             </FormGroup>
                         </Form>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Skapa fråga</Button>
+                        <Button color="success" onClick={this.toggle}>Skapa fråga</Button>
                         <Button color="secondary" onClick={this.toggle}>Avbryt</Button>
                     </ModalFooter>
                 </Modal>
-            </h1>
+            </div>
         );
     }
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import FaClose from 'react-icons/lib/fa/close';
+import '../../styles/createQuiz.css'
 
 export default class CreateDescription extends React.Component {
 
@@ -12,8 +14,8 @@ export default class CreateDescription extends React.Component {
                         <Label check>
                             Beskrivning {el.id + 1}
                             <Input type="textarea" name="text" id={el.id}/>
-                            <Button onClick={() => this.props.remove(el.id)}>x</Button>
-                        </Label>
+                            </Label>
+                            <button className="remove-desc-button" onClick={() => this.props.remove(el.id)}><FaClose/></button>
                     </FormGroup>
                 ))}
             </div>);

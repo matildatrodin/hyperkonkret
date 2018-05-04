@@ -1,5 +1,7 @@
 import React from 'react';
+import '../../styles/createQuiz.css'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import FaClose from 'react-icons/lib/fa/close';
 export default class CreateAnswer extends React.Component {
 
     render(){
@@ -12,7 +14,7 @@ export default class CreateAnswer extends React.Component {
                             <Input type="radio" name="radio1"/>{' '}
                             <Input type="textarea" name="text" id={el.id}/>
                             </Label>
-                            <Button onClick={() => this.props.remove(el.id)}>x</Button>
+                            <button className="remove-answer-button" onClick={() => this.props.remove(el.id)}><FaClose/></button>
                     </FormGroup>
         ))}
             </div>);

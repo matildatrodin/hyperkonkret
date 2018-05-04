@@ -1,13 +1,46 @@
 .quiz{
-    padding-right: 20%;
-    padding-left: 20%;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 .descrip{
     overflow: hidden;
     padding-right: .5em;
+    background-color: red;
 }
 
 .removeDescription{
     float: right;
+}
+
+.remove-answer-button {
+    background-color: transparent;
+    color: dimgrey;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 180px;
+    border-radius: 10%;
+    float: right;
+    width: 20px;
+    height: 20px;
+
+}
+
+.remove-desc-button {
+    background-color: transparent;
+    color: dimgrey;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 35px;
+    margin-right: 180px;
+    border-radius: 10%;
+    float: right;
+    width: 20px;
+    height: 20px;
+
 }
