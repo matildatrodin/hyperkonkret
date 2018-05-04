@@ -9,7 +9,8 @@ react-sidebar,
 reactstrap,
 rc-progress,
 react-icons,
-react-router-dom
+react-router-dom,
+react-dragula
 
 ## För att köra appen
 
