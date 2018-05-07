@@ -11,6 +11,7 @@ const QuestionList = ({ questions, handleAnswerClick }) => {
             key={question.question.props.children.toString()}
             question={question.question}
             answers={question.answers}
+            concrete={question.concrete}
             handleAnswerClick={handleAnswerClick}
           />
         );

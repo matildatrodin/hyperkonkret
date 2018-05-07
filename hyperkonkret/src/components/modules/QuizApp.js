@@ -148,7 +148,6 @@ export class QuizApp extends Component {
 
   render() {
     const { step, questions, userAnswers, maxQuestions, score, modal } = this.state;
-
     if (step >= maxQuestions + 1) {
       return (
         <Results

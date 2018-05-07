@@ -13,7 +13,7 @@ export class GetQuiz extends React.Component{
 
     this.state = {
             quizId: this.props.id,
-            quizType: 2
+            quizType: 1
         };
     };
 
@@ -39,7 +39,7 @@ render(){
 
     for(let i = 0; i < questionexample.length; i++){
         let answers = [];
-
+        let concrete = questionexample[i].concrete;
         let answerArray = questionexample[i].answer.split("\n");
 
         for(let n = 0; n < answerArray.length; n++){  //parse answer-string
@@ -51,11 +51,12 @@ render(){
             };
         }
 
-
+        console.log("concrete: " + concrete);
         questionsUnsorted.push({
             "question": <span>{questionexample[i].question}</span>,
             "answers": answers,
-            "correct": correct
+            "correct": correct,
+            "concrete": concrete
         });
 
     }
