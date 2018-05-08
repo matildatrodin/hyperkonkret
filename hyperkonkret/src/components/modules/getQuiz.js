@@ -31,12 +31,14 @@ export class GetQuiz extends React.Component{
     }
 
     createMultipleChoice(questionArray){
+        console.log(questionArray);
+
         let correct = "";
         let questionsUnsorted = [];
-        for(let i = 0; i < questionexample.length; i++){
+        for(let i = 0; i < questionArray.length; i++){
             let answers = [];
-            let concrete = questionexample[i].concrete;
-            let answerArray = questionexample[i].answer.split("\n");
+            let concrete = questionArray[i].concrete;
+            let answerArray = questionArray[i].answer.split("\n");
 
             for(let n = 0; n < answerArray.length; n++){  //parse answer-string
                 let arr = this.answerOption(answerArray[n]);
@@ -47,16 +49,14 @@ export class GetQuiz extends React.Component{
                 };
             }
 
-            console.log("concrete: " + concrete);
             questionsUnsorted.push({
-                "question": <span>{questionexample[i].question}</span>,
+                "question": <span>{questionArray[i].question}</span>,
                 "answers": answers,
                 "correct": correct,
                 "concrete": concrete
             });
 
         }
-        console.log("i flervalsufnk" + questionsUnsorted);
         return questionsUnsorted;
     }
 
@@ -77,8 +77,6 @@ render(){
         for (let i = 0; i < questionexample.length; i++) {
             if (questionexample[i].type == "multiple-choice") {
                 multipleChoiceQuestions.push(questionexample[i]);
-                console.log(questionexample[i]);
-                console.log(multipleChoiceQuestions[i]);
             }
 
         }
@@ -89,12 +87,15 @@ render(){
     else if (this.state.quizType == 2){
         for(let i = 0 ; i < questionexample.length; i++){
             if(questionexample[i].type == "match"){
+                console.log("dragndrop: " + questionexample[i].type );
+
                 questionsUnsorted.push(questionexample[i]);
             }
 
         }
 
     }
+    console.log(questionsUnsorted);
 
     //eventuellt sortera frågor
     if (this.state.quizType == 1){
