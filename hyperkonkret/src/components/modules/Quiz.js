@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import QuestionList from './QuestionList';
 import '../../styles/quiz.css';
 
-const Quiz = ({ step, questions, totalQuestions, score, handleAnswerClick }) => {
+const Quiz = ({ step, questions, totalQuestions, score, type, handleAnswerClick }) => {
   return (
     <div className="wrapper">
       <header>
@@ -16,6 +16,7 @@ const Quiz = ({ step, questions, totalQuestions, score, handleAnswerClick }) => 
       <div className="questions">
         <QuestionList
           questions={questions}
+          type={type}
           handleAnswerClick={handleAnswerClick}
         />
       </div>

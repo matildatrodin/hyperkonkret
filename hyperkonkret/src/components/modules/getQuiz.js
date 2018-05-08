@@ -82,7 +82,7 @@ render(){
         }
 
         questionsUnsorted = this.createMultipleChoice(multipleChoiceQuestions);
-
+        return(<QuizApp totalQuestions={2} quiz={questionsUnsorted} type={this.state.quizType}/>)
     }
     else if (this.state.quizType == 2){
         for(let i = 0 ; i < questionexample.length; i++){
@@ -93,19 +93,8 @@ render(){
             }
 
         }
-
+        return(<QuizApp totalQuestions={2} quiz={questionsUnsorted} type={this.state.quizType}/>)
     }
-    console.log(questionsUnsorted);
-
-    //eventuellt sortera frågor
-    if (this.state.quizType == 1){
-      theQuiz = <QuizApp totalQuestions={2} quiz={questionsUnsorted}/>
-    }
-    if (this.state.quizType == 2){
-      theQuiz = <DragAndDrop totalQuestions={2} quiz={questionsUnsorted}/>
-    }
-
-    return(theQuiz);
 
 }
 

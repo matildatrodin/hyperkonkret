@@ -36,15 +36,16 @@ position: center;
 border: 3px solid steelblue;
 }
 
-#drag-elements {
+#drag-elements, #drag-elements2 {
   float: left;
   align-content: center;
+  background-color: green;
 }
 
-#drop-target{
+#drop-target, #drop-target2{
   float: right;
-  width: 20em;
-  height: 20em;
+  background-color: red;
+
 }
 
 #el{

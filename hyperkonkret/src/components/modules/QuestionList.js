@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Question from './Question';
+import {DragAndDrop} from './DragAndDrop';
 
-const QuestionList = ({ questions, handleAnswerClick }) => {
+const QuestionList = ({ questions, type, handleAnswerClick}) => {
+
+  if (type==1){ // Flervalsfrågor är type 1
   return (
     <div className="question-list">
       {questions.map(question => {
@@ -19,10 +22,10 @@ const QuestionList = ({ questions, handleAnswerClick }) => {
     </div>
   );
 }
+else if (type==2){ // Drag and drop är type 2
+  return(<DragAndDrop questions={questions}/>)
+}
 
-QuestionList.propTypes = {
-  questions: PropTypes.array.isRequired,
-  handleAnswerClick: PropTypes.func.isRequired
-};
+}
 
 export default QuestionList;

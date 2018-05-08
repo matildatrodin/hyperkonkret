@@ -163,6 +163,7 @@ export class QuizApp extends Component {
           questions={questions}
           totalQuestions={maxQuestions}
           score={score}
+          type={this.props.type}
           handleAnswerClick={this.handleAnswerClick}
         />
         { modal.state === 'show' && <Modal modal={modal} /> }
