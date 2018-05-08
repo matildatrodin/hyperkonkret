@@ -12,17 +12,35 @@ constructor() {
 
   this.state = {
     maxQuestions: 0,
-    questions: []
+    answers1: [],
+      answers2: []
   }
 };
 
-componentDidMount(){
-  Dragula([$('drag-elements'), $('drop-target')], {
-    revertOnSpill: true
-  })
-  Dragula([$('drag-elements2'), $('drop-target2')], {
-    revertOnSpill: true
-  })
+componentDidMount() {
+    Dragula([$('drag-elements'), $('drop-target')], {
+        revertOnSpill: true
+    })
+    Dragula([$('drag-elements2'), $('drop-target2')], {
+        revertOnSpill: true
+    })
+
+    let ans1 = [];
+    let ans2 = [];
+
+    for (let n= 0 ; n < this.props.questions.length ; n ++) {
+
+        let answerArray = this.props.questions[n].answer.split("\n");
+        for (let i = 0; i < answerArray.length; i++) {
+            let answerDivided = answerArray[i].split("[=]");
+            ans1.push(answerDivided[0]);
+            ans2.push(answerDivided[1]);
+        }
+}
+    this.setState({
+       answers1: ans1,
+       answer2: ans2
+    });
 }
 
 render() {
