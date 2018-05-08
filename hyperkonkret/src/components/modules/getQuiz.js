@@ -26,39 +26,65 @@ export class GetQuiz extends React.Component{
         return array;
     };
 
+    answerOptionDragNDrop(string){
+        var array = string.split("[=]");
+        return array;
+    }
+
+    createMultipleChoice(questionArray){
+        let correct = "";
+        let questionsUnsorted = [];
+        for(let i = 0; i < questionexample.length; i++){
+            let answers = [];
+            let concrete = questionexample[i].concrete;
+            let answerArray = questionexample[i].answer.split("\n");
+
+            for(let n = 0; n < answerArray.length; n++){  //parse answer-string
+                let arr = this.answerOption(answerArray[n]);
+                let answerAlternative = <span>{arr[1]}</span>;
+                answers.push(answerAlternative);
+                if(arr[0] == 1){
+                    correct = "" + arr[1];
+                };
+            }
+
+            console.log("concrete: " + concrete);
+            questionsUnsorted.push({
+                "question": <span>{questionexample[i].question}</span>,
+                "answers": answers,
+                "correct": correct,
+                "concrete": concrete
+            });
+
+        }
+        return questionsUnsorted;
+    }
+
+    createDragAndDrop(questionArray){
+
+
+    }
 
 
 render(){
     let quiz = exerciseexample; // hämta quiz-objekt från databas
     let exerciseId = exerciseexample.id; //hämta questions fr databas som har detta id som exercise id
     let nrOfQuestions = questionexample.length;//antal element i array av questions hämtad fr databas
-    let questionsUnsorted = [];
     let questions = [];//ska bli array med questions som passar QuizApp
-    let correct = "";
     let theQuiz = null;
+    let questionsUnsorted = [];
 
-    for(let i = 0; i < questionexample.length; i++){
-        let answers = [];
-        let concrete = questionexample[i].concrete;
-        let answerArray = questionexample[i].answer.split("\n");
+    if(this.quizType == 1){
+        questionsUnsorted = this.createMultipleChoice(questionexample);
 
-        for(let n = 0; n < answerArray.length; n++){  //parse answer-string
-            let arr = this.answerOption(answerArray[n]);
-            let answerAlternative = <span>{arr[1]}</span>;
-            answers.push(answerAlternative);
-            if(arr[0] == 1){
-                correct = "" + arr[1];
-            };
+    }
+    else if (this.quizType == 2){
+        for(let i = 0 ; i < questionexample.length; i++){
+            if(questionexample[i].type == "match"){
+                questionsUnsorted.push(questionexample[i]);
+            }
+
         }
-
-        console.log("concrete: " + concrete);
-        questionsUnsorted.push({
-            "question": <span>{questionexample[i].question}</span>,
-            "answers": answers,
-            "correct": correct,
-            "concrete": concrete
-        });
-
     }
 
     //eventuellt sortera frågor
