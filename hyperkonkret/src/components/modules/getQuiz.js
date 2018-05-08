@@ -12,8 +12,7 @@ export class GetQuiz extends React.Component{
         super(props);
 
     this.state = {
-            quizId: this.props.id,
-            quizType: 1
+            quizType: this.props.id
         };
     };
 
