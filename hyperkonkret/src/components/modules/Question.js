@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Answer from './Answer';
+import Concrete from './Concrete';
 
-const Question = ({ question, answers, handleAnswerClick }) => {
+const Question = ({ question, answers, concrete, handleAnswerClick }) => {
   return (
     <li className="question">
       <h2 className="question-title">
-          {question}
+      {question}
       </h2>
+      <Concrete info={concrete} className="concrete"/>
       <ol className="question-answers">
         {answers.map((answer, index) => {
           return (

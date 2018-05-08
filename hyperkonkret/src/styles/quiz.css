@@ -14,7 +14,7 @@ html, body, #app, div[data-reactroot] {
 
 .wrapper{
   background: white;
-  border: 3px solid steelblue;
+  border: 3px solid grey;
 }
 
 /*
@@ -84,6 +84,9 @@ code {
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 15%;
+}
+
+.concrete{
 }
 
 .question-title{
@@ -203,8 +206,8 @@ code {
 }
 
 .wrong {
-  background: rgba(236,100,75,.5);
   animation: shake 0.5s cubic-bezier(.35,.05,.20,.99) both;
+  color: rgba(192,192,192,.5);
 }
 
 .right {
