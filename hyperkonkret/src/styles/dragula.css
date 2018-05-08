@@ -33,27 +33,30 @@ margin: auto;
 height: 20em;
 background: white;
 position: center;
-border: 3px solid steelblue;
 }
 
-#drag-elements, #drag-elements2 {
+#drag-elements {
   float: left;
   align-content: center;
-  background-color: green;
 }
 
-#drop-target, #drop-target2{
+#drop-target {
   float: right;
-  background-color: red;
-
 }
 
+#el{
+  padding: 1em;
+  border: solid grey;
+  align-self: center;
+  text-align: center;
+}
+/*
 #el{
   margin: auto;
   margin-left: 1em;
   margin-top: 1em;
   padding: 1em;
-  border: solid steelblue;
+  border: solid grey;
   align-self: center;
   text-align: center;
-}
+}*/

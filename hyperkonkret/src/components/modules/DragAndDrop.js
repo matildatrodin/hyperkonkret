@@ -17,10 +17,16 @@ constructor() {
 };
 
 componentDidMount(){
-  Dragula([$('drag-elements'), $('drop-target')], {
+  Dragula([$('drag-elements1'), $('drop-target1')], {
     revertOnSpill: true
   })
   Dragula([$('drag-elements2'), $('drop-target2')], {
+    revertOnSpill: true
+  })
+  Dragula([$('drag-elements3'), $('drop-target3')], {
+    revertOnSpill: true
+  })
+  Dragula([$('drag-elements4'), $('drop-target4')], {
     revertOnSpill: true
   })
 }
@@ -28,18 +34,49 @@ componentDidMount(){
 render() {
   return(
     <div id='container'>
-      <div id='drag-elements'>
-        <div id='el'>A</div>
+
+    <div id='drag-elements'>
+      <div id='drag-elements1'>
+        <div id='el'>Flugsvamp</div>
       </div>
+      <br/>
+
       <div id='drag-elements2'>
-        <div id='el'>B</div>
+        <div id='el'>Häst</div>
       </div>
-      <div id='drop-target'>
-        a
+      <br/>
+
+      <div id='drag-elements3'>
+        <div id='el'>Pizza</div>
       </div>
+      <br/>
+
+      <div id='drag-elements4'>
+        <div id='el'>Spanska</div>
+      </div>
+      <br/>
+    </div>
+
+    <div id='drop-target'>
+      <div id='drop-target1'>
+        Svamp
+      </div>
+      <br/>
+
       <div id='drop-target2'>
-        b
+        Djur
       </div>
+      <br/>
+
+      <div id='drop-target3'>
+        Mat
+      </div>
+      <br/>
+
+      <div id='drop-target4'>
+        Språk
+      </div>
+    </div>
     </div>)
   }
 }
