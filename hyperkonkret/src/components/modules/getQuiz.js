@@ -56,13 +56,11 @@ export class GetQuiz extends React.Component{
             });
 
         }
+        console.log("i flervalsufnk" + questionsUnsorted);
         return questionsUnsorted;
     }
 
-    createDragAndDrop(questionArray){
 
-
-    }
 
 
 render(){
@@ -73,17 +71,29 @@ render(){
     let theQuiz = null;
     let questionsUnsorted = [];
 
-    if(this.quizType == 1){
-        questionsUnsorted = this.createMultipleChoice(questionexample);
+    if(this.state.quizType == 1) {
+        let multipleChoiceQuestions = [];
+
+        for (let i = 0; i < questionexample.length; i++) {
+            if (questionexample[i].type == "multiple-choice") {
+                multipleChoiceQuestions.push(questionexample[i]);
+                console.log(questionexample[i]);
+                console.log(multipleChoiceQuestions[i]);
+            }
+
+        }
+
+        questionsUnsorted = this.createMultipleChoice(multipleChoiceQuestions);
 
     }
-    else if (this.quizType == 2){
+    else if (this.state.quizType == 2){
         for(let i = 0 ; i < questionexample.length; i++){
             if(questionexample[i].type == "match"){
                 questionsUnsorted.push(questionexample[i]);
             }
 
         }
+
     }
 
     //eventuellt sortera frågor
