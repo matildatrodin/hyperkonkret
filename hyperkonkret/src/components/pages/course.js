@@ -5,6 +5,7 @@ import '../../styles/App.css';*/
 import { Button } from 'reactstrap';
 
 import { GetQuiz } from '../modules/getQuiz';
+import '../../styles/quizButtons.css';
 
 export class Course extends React.Component {
 
@@ -12,13 +13,13 @@ export class Course extends React.Component {
         super();//ta in props för vilken kurs/quiz som ska visas?
 
         this.state = {
-            show: 2
+            show: 0
         }
     }
 
-    componentWillMount(){
+    /*componentWillMount(){
         this.state.show = 1;
-    }
+    }*/
 
 
     handleClick(showQuiz){ //på vilken quiz du vill göra
@@ -30,6 +31,10 @@ export class Course extends React.Component {
             this.setState({ show: 1 });
 
         }
+        else if (showQuiz == 0){
+            this.setState({ show: 0 });
+
+        }
     }
 
     render() {
@@ -37,17 +42,25 @@ export class Course extends React.Component {
             return(
                 <div>
                     <GetQuiz id={1}/>
+                    <button id="exit" onClick={() => this.handleClick(0)}>Avsluta övning</button>
                 </div>);
         }
         else if (this.state.show == 2){
             return(
                 <div>
                     <GetQuiz id={2} />
+                    <button id="exit" onClick={() => this.handleClick(0)}>Avsluta övning</button>
                 </div>
             )
         }
         else{
-            return(<h1>Finns inget sådant quiz!</h1>);
+            return(
+                <div>
+                    <button id="multiplechoice" onClick={() => this.handleClick(2)}>Gör en flervalsövning</button>
+                    <button id="drag-and-drop" onClick={() => this.handleClick(1)}>Gör en drag-and-drop övning</button>
+                </div>
+
+        );
         }
     }
 }
