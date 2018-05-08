@@ -13,7 +13,7 @@ export class GetQuiz extends React.Component{
 
     this.state = {
             quizId: this.props.id,
-            quizType: 1
+            quizType: 2
         };
     };
 

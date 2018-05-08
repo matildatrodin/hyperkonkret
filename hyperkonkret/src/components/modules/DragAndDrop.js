@@ -31,17 +31,16 @@ componentDidMount(){
 render() {
   return(<div id='container'>
       <div id='drag-elements'>
-      {this.props.quiz[0].answers.map(alt => {
-      // [0] är hårdkodat, ska vara id:t på frågan
-        console.log("q: " + alt);
+      {this.props.quiz[0].answers.map(alt => {// [0] är hårdkodat, ska vara id:t på frågan
         return (<div id="el">{alt}</div>)
       })
       }
       </div>
       <div id='drop-target'>
-      *Dra elementen här under*
-      <br/>
-      (P.S. Ändra i getQuiz.js för att byta till alternativ frågor)
+      {this.props.quiz[0].answers.map(alt => {// [0] är hårdkodat, ska vara id:t på frågan
+        return (<div id="el">{alt}</div>)
+      })
+      }
       </div>
   </div>);
 
