@@ -10,12 +10,39 @@ html, body, #app, div[data-reactroot] {
   height: auto;
   width: 80%;
   margin: auto;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
 }
 
 .wrapper{
   background: white;
   border: 3px solid grey;
 }
+
+/* DRAG AND DROP */
+#drop-target1, #drop-target2, #drop-target3, #drop-target4 {
+    padding: 1em;
+    border: solid grey;
+    display: inline-block;
+    margin: 1em;
+}
+
+#drop-target {
+/*fyll i här*/
+}
+
+#drag-elements {
+/*fyll i här*/
+}
+
+#el{
+  padding: 1em;
+  border: solid grey;
+  align-self: center;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+}
+
 
 /*
 body {

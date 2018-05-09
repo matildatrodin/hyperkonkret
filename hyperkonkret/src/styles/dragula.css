@@ -36,12 +36,18 @@ position: center;
 }
 
 #drag-elements {
-  float: left;
   align-content: center;
+  float: left;
 }
 
 #drop-target {
-  float: right;
+    float: right;
+}
+
+#drop-target1, #drop-target2, #drop-target3, #drop-target4 {
+    text-align: top;
+    padding: 2em;
+    border: solid grey;
 }
 
 #el{

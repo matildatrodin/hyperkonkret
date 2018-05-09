@@ -1,11 +1,15 @@
 
 import * as React from "react";
 import Dragula from 'react-dragula';
-import '../../styles/dragula.css';
+//import '../../styles/dragula.css';
 import '../../styles/quiz.css';
+
 function $(id) {
     return document.getElementById(id);
   }
+
+let counts = 0;
+
 export class DragAndDrop extends React.Component{
 constructor() {
   super();
@@ -13,86 +17,99 @@ constructor() {
   this.state = {
     maxQuestions: 0,
     answers1: [],
-      answers2: []
+    answers2: []
   }
 };
 
 componentDidMount() {
-  Dragula([$('drag-elements1'), $('drop-target1')], {
-    revertOnSpill: true
-  })
-  Dragula([$('drag-elements2'), $('drop-target2')], {
-    revertOnSpill: true
-  })
-  Dragula([$('drag-elements3'), $('drop-target3')], {
-    revertOnSpill: true
-  })
-  Dragula([$('drag-elements4'), $('drop-target4')], {
-    revertOnSpill: true
-  })
 
-    let ans1 = [];
-    let ans2 = [];
+  let drake = Dragula([$('drag-elements'), $('drop-target1'), $('drop-target2'), $('drop-target3'), $('drop-target4')], {
+    revertOnSpill: true
+  }).on('drop', function(el, target){
+    if ((el == $('drag-elements1'))&&(target == $('drop-target1')) ||
+        (el == $('drag-elements2'))&&(target == $('drop-target2')) ||
+        (el == $('drag-elements3'))&&(target == $('drop-target3')) ||
+        (el == $('drag-elements4'))&&(target == $('drop-target4'))){
+          counts++;
+          console.log("counts " + counts);
+          // När counts är 4 vill vi gå till nästa fråga
+  }
+  else {
+    drake.cancel();
+  }
+  });
 
-    for (let n= 0 ; n < this.props.questions.length ; n ++) {
+/*
+let correctValue = this.state.correct;
+this.setState({correct: correctValue + 1})
+console.log("correct: " + this.state.correct)
+*/
 
-        let answerArray = this.props.questions[n].answer.split("\n");
-        for (let i = 0; i < answerArray.length; i++) {
-            let answerDivided = answerArray[i].split("[=]");
-            ans1.push(answerDivided[0]);
-            ans2.push(answerDivided[1]);
-        }
+  let ans1 = [];
+  let ans2 = [];
+
+
+  for (let n= 0 ; n < this.props.questions.length ; n ++) {
+
+      let answerArray = this.props.questions[n].answer.split("\n");
+      for (let i = 0; i < answerArray.length; i++) {
+          let answerDivided = answerArray[i].split("[=]");
+          ans1.push(answerDivided[0]);
+          ans2.push(answerDivided[1]);
+      }
 }
-    this.setState({
-       answers1: ans1,
-       answer2: ans2
-    });
+  this.setState({
+     answers1: ans1,
+     answers2: ans2
+  });
 }
 
 render() {
+
   return(
     <div id='container'>
-
+    <h2 className="question-title">
+    {this.props.questions[0].question}
+    </h2>
     <div id='drag-elements'>
       <div id='drag-elements1'>
-        <div id='el'>Flugsvamp</div>
+        <div id='el'>{this.state.answers1[0]}</div>
       </div>
       <br/>
 
       <div id='drag-elements2'>
-        <div id='el'>Häst</div>
+        <div id='el'>{this.state.answers1[1]}</div>
       </div>
       <br/>
 
       <div id='drag-elements3'>
-        <div id='el'>Pizza</div>
+        <div id='el'>{this.state.answers1[2]}</div>
       </div>
       <br/>
 
       <div id='drag-elements4'>
-        <div id='el'>Spanska</div>
+        <div id='el'>{this.state.answers1[3]}</div>
       </div>
       <br/>
     </div>
-
     <div id='drop-target'>
       <div id='drop-target1'>
-        Svamp
+      {this.state.answers2[0]}
       </div>
       <br/>
 
       <div id='drop-target2'>
-        Djur
+        {this.state.answers2[1]}
       </div>
       <br/>
 
       <div id='drop-target3'>
-        Mat
+        {this.state.answers2[2]}
       </div>
       <br/>
 
       <div id='drop-target4'>
-        Språk
+        {this.state.answers2[3]}
       </div>
     </div>
     </div>)
