@@ -7,40 +7,49 @@ html, body, #app, div[data-reactroot] {
 }
 
 #card{
-  height: auto;
+  height: 100%;
   width: 80%;
   margin: auto;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+  background-color: white;
 }
 
-.wrapper{
-  background: white;
-  border: 3px solid grey;
+.question-field {
+  overflow: hidden;
+  width: 100%;
 }
 
 /* DRAG AND DROP */
 #drop-target1, #drop-target2, #drop-target3, #drop-target4 {
-    padding: 1em;
-    border: solid grey;
-    display: inline-block;
-    margin: 1em;
+  border: solid 4px lightskyblue;
+  background-color: white;
+  display: inline-block;
+  padding: 1em;
+  margin: 1em;
+  min-width: 150px;
 }
 
 #drop-target {
-/*fyll i här*/
+  overflow: hidden;
+  width: 50%;
+  margin: auto;
 }
 
 #drag-elements {
-/*fyll i här*/
+  float: left;
+  width: 50%;
+  margin: auto;
 }
 
 #el{
   padding: 1em;
-  border: solid grey;
-  align-self: center;
   text-align: center;
+  min-width: 100px;
   display: inline-block;
+  background-color: lightskyblue;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+  border: 2px deepskyblue;
+  margin: 1em;
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -141,7 +150,7 @@ img {
     display: inline-block;
     *display: inline;
     background: white;
-    border: 2px auto darkblue;
+    border: 2px;
     float: right;
 }
 
@@ -239,7 +248,7 @@ img {
   background: rgba(255,255,255,.1);
 }
 
-.results-container a:active, {
+.results-container a:active {
   background: rgba(255,255,255,.5);
   outline: none;
   top: -2px;
@@ -293,7 +302,7 @@ img {
 .correct-modal.modal-enter {
   display: flex;
   animation: zoomIn 5s;
-}*/
+}
 
 .praise, .points {
   backface-visibility: hidden;

@@ -56,6 +56,10 @@ Color/shape of close button cross
     text-decoration: none;
 }
 
+.Link:hover{
+    color: #92dbe8;
+}
+
 .Profile-img-side {
     margin-left: 10%;
     margin-right: 10%;

@@ -67,52 +67,48 @@ console.log("correct: " + this.state.correct)
 render() {
 // ALLT ÄR HÅRDKODAT FÖR EN FRÅGA [0]. Måste gå igenom flera
   return(
-    <div id='container'>
+    <div>
     <h2 className="question-title">
     {this.props.questions[0].question}
     </h2>
     <Concrete info={this.props.questions[0].concrete} className="concrete"/>
+      <div id="question-field">
     <div id='drag-elements'>
       <div id='drag-elements1'>
         <div id='el'>{this.state.answers1[0]}</div>
       </div>
-      <br/>
 
       <div id='drag-elements2'>
         <div id='el'>{this.state.answers1[1]}</div>
       </div>
-      <br/>
 
       <div id='drag-elements3'>
         <div id='el'>{this.state.answers1[2]}</div>
       </div>
-      <br/>
 
       <div id='drag-elements4'>
         <div id='el'>{this.state.answers1[3]}</div>
       </div>
-      <br/>
     </div>
-    <div id='drop-target'>
-      <div id='drop-target1'>
-      {this.state.answers2[0]}
       </div>
-      <br/>
+      <div id="question-field">
+        <div id='drop-target'>
+          <div id='drop-target1'>
+          {this.state.answers2[0]}
+          </div>
 
-      <div id='drop-target2'>
-        {this.state.answers2[1]}
-      </div>
-      <br/>
+          <div id='drop-target2'>
+            {this.state.answers2[1]}
+          </div>
 
-      <div id='drop-target3'>
-        {this.state.answers2[2]}
+          <div id='drop-target3'>
+            {this.state.answers2[2]}
+          </div>
+          <div id='drop-target4'>
+            {this.state.answers2[3]}
+          </div>
+        </div>
       </div>
-      <br/>
-
-      <div id='drop-target4'>
-        {this.state.answers2[3]}
-      </div>
-    </div>
     </div>)
   }
 }

@@ -9,6 +9,7 @@ import FaAngleDown from 'react-icons/lib/fa/angle-down';
 import FaAngleUp from 'react-icons/lib/fa/angle-up';
 import { Button } from 'react-bootstrap';
 import {user} from "../data/user-data";
+import { Header } from '../modules/header';
 
 const items = [
     {
@@ -80,6 +81,7 @@ export default class TeacherPage extends React.Component {
 
         return (
                 <div className="Teacher">
+                    <Header/>
                     <div className="Teacher-body">
                     <div style={{backgroundImage: "url(" +  Teacher  + ")"}} className="Teacher-img"/>
                         <br/>
