@@ -41,8 +41,16 @@ html, body, #app, div[data-reactroot] {
   text-align: center;
   display: inline-block;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
+/* ändra cursor till när man håller i ett element?
+#el.grabbed{
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+*/
 
 /*
 body {
@@ -97,6 +105,10 @@ code {
   margin: 0 1%;
 }
 
+img {
+  max-width: 80%;
+}
+
 .quiz-name{
     display: inline-block;
     *display: inline;
@@ -114,6 +126,7 @@ code {
 }
 
 .concrete{
+  background-color: blue;
 }
 
 .question-title{

@@ -15,6 +15,7 @@ const QuestionList = ({ questions, type, handleAnswerClick}) => {
             question={question.question}
             answers={question.answers}
             concrete={question.concrete}
+            image={question.image}
             handleAnswerClick={handleAnswerClick}
           />
         );

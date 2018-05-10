@@ -1,7 +1,7 @@
 
 import * as React from "react";
 import Dragula from 'react-dragula';
-//import '../../styles/dragula.css';
+import Concrete from './Concrete';
 import '../../styles/quiz.css';
 
 function $(id) {
@@ -65,12 +65,13 @@ console.log("correct: " + this.state.correct)
 }
 
 render() {
-
+// ALLT ÄR HÅRDKODAT FÖR EN FRÅGA [0]. Måste gå igenom flera
   return(
     <div id='container'>
     <h2 className="question-title">
     {this.props.questions[0].question}
     </h2>
+    <Concrete info={this.props.questions[0].concrete} className="concrete"/>
     <div id='drag-elements'>
       <div id='drag-elements1'>
         <div id='el'>{this.state.answers1[0]}</div>

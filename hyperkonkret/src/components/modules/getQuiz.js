@@ -37,7 +37,6 @@ export class GetQuiz extends React.Component{
         let questionsUnsorted = [];
         for(let i = 0; i < questionArray.length; i++){
             let answers = [];
-            let concrete = questionArray[i].concrete;
             let answerArray = questionArray[i].answer.split("\n");
 
             for(let n = 0; n < answerArray.length; n++){  //parse answer-string
@@ -53,7 +52,8 @@ export class GetQuiz extends React.Component{
                 "question": <span>{questionArray[i].question}</span>,
                 "answers": answers,
                 "correct": correct,
-                "concrete": concrete
+                "concrete": questionArray[i].concrete,
+                "image": questionArray[i].image
             });
 
         }
