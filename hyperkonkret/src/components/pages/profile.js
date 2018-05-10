@@ -4,6 +4,7 @@ import Heck from '../../images/heck.png';
 import { Line } from 'rc-progress';
 import { user } from '../data/user-data';
 import { course } from '../data/course-data';
+import { Header } from '../modules/header';
 
 /* Vi kommer här behöva implementera props, så att vi varje gång vi öppnar profilen
 skickar med id för kurs och quiz och får ut data på hur långt
@@ -48,6 +49,7 @@ export default class Profile extends React.Component {
 
         return(
             <div className='Profile'>
+                <Header/>
                 <img src={users.image} className='Profile-img'/>
                 <p className='Profile-name'>{user.username}</p>
                 <br/>
