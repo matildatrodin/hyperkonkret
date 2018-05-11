@@ -12,15 +12,32 @@ import { BrowserRouter as Router } from 'react-router-dom';
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {currentState: false};
+        this.state = {
+              currentState: false,
+              isStudent: false,
+              isTeacher: false
+          };
         this.loginState = this.loginState.bind(this);
-
+        this.changeSidebarContent=this.changeSidebarContent.bind(this);
         /*  this.state =  {alt: 1};
           this.changeState = this.changeState.bind(this);*/
     }
 
     loginState(newState){
         this.setState({currentState: newState});
+    }
+
+    changeSidebarContent(user) {
+      console.log("Går in i App:s changeContent");
+      if (user == "student"){
+        this.setState({isStudent: true, isTeacher: false});
+      }
+      else if (user == "teacher"){
+        this.setState({isStudent: false, isTeacher: true});
+      }
+      else {
+        this.setState({isStudent: false, isTeacher: false});
+      }
     }
 
     /*  changeState(oldState) {
@@ -45,7 +62,7 @@ class App extends React.Component {
         return (
             <Router>
                 <div className="App-body">
-                    <SideBar loginState={this.state.currentState}/>
+                    <SideBar changeContent={this.changeSidebarContent} loginState={this.state.currentState} student={this.state.isStudent} teacher={this.state.isTeacher}/>
                     <br/>
                 </div>
             </Router>

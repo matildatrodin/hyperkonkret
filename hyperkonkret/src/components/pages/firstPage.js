@@ -11,30 +11,28 @@ export default class FirstPage extends React.Component {
         super(props);
         this.openTeacher = this.openTeacher.bind(this);
         this.openStudent = this.openStudent.bind(this);
-        this.state = {
-            isTeacher: false,
-            isStudent: false
-        }
     }
 
     openTeacher() {
-        this.props.history.push("/teacher");
-        this.setState({isTeacher: true})
+        //this.props.history.push("/teacher");
+        //this.setState({isTeacher: true});
+        this.props.changeState(false, true);
     }
 
     openStudent() {
-        this.props.history.push("/student");
-        this.setState({isStudent: true})
+        //this.props.history.push("/student");
+        //this.setState({isStudent: true});
+        this.props.changeState(true, false);
     }
 
     render() {
         return(
             <div>
                 <div className="FirstPage-content">
-                    <button value={this.state.isStudent} className="Button-student" onClick={this.openStudent}>Elev</button>
+                    <button className="Button-student" onClick={this.openStudent}>Elev</button>
                 </div>
                 <div className="FirstPage-content">
-                    <button value={this.state.isTeacher} className="Button-teacher" onClick={this.openTeacher}>Lärare</button>
+                    <button className="Button-teacher" onClick={this.openTeacher}>Lärare</button>
                 </div>
             </div>
         )
