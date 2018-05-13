@@ -20,6 +20,23 @@ html, body, #app, div[data-reactroot] {
 }
 
 /* DRAG AND DROP */
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
 #drop-target1, #drop-target2, #drop-target3, #drop-target4 {
   border: solid 4px grey;
   background-color: white;
