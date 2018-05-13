@@ -50,8 +50,9 @@ class SideBar extends React.Component {
                 <Menu isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
                     {SidebarContent}
                 </Menu>
-                <Routes changeContent={this.props.changeContent}/>
                 <Header/>
+                <Routes changeContent={this.props.changeContent}/>
+
             </div>
 
         );
