@@ -5,6 +5,7 @@ import FirstPage from '../pages/firstPage';
 import Profile from '../pages/profile';
 import { Course } from '../pages/course';
 import CreateQuiz from "../pages/createQuiz";
+import CourseList from '../pages/courseList';
 
 
 
@@ -31,7 +32,7 @@ export default class Routes extends React.Component {
                 <Switch>
                     <Route path="/student" component={Profile}/>
                     <Route path="/teacher" component={TeacherPage}/>
-                    <Route path="/course" component={Course}/>
+                    <Route path="/course" component={CourseList}/>
                     <Route path="/createquiz" component={CreateQuiz}/>
                 </Switch>
             </div>

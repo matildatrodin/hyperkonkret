@@ -7,7 +7,7 @@ import { Button } from 'reactstrap';
 import { GetQuiz } from '../modules/getQuiz';
 import '../../styles/quizButtons.css';
 
-export class Course extends React.Component {
+export default class Course extends React.Component {
 
     constructor() {
         super();//ta in props för vilken kurs/quiz som ska visas?
@@ -56,6 +56,7 @@ export class Course extends React.Component {
         else{
             return(
                 <div>
+                    <h2>Övningar i {this.props.name}</h2>
                     <button id="multiplechoice" onClick={() => this.handleClick(2)}>Gör en flervalsövning</button>
                     <button id="drag-and-drop" onClick={() => this.handleClick(1)}>Gör en drag-and-drop övning</button>
                 </div>

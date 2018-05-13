@@ -50,6 +50,7 @@ export default class Profile extends React.Component {
         return(
             <div className='Profile'>
                 <Header/>
+                <h2>Profil</h2>
                 <img src={users.image} className='Profile-img'/>
                 <p className='Profile-name'>{user.username}</p>
                 <br/>

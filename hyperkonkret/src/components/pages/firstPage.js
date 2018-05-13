@@ -4,6 +4,12 @@ import '../../images/img2.jpg';
 import '../../styles/firstPage.css';
 import Routes from '../modules/routes';
 import { Link, Redirect } from 'react-router-dom';
+import {logo} from '../../images/logo shadow/hyperkonkret-black.png';
+
+
+const images = {
+    image: require('../../images/logo shadow/hyperkonkret-black.png')
+};
 
 export default class FirstPage extends React.Component {
 
@@ -28,6 +34,7 @@ export default class FirstPage extends React.Component {
     render() {
         return(
             <div>
+                <img src={images.image} />
                 <div className="FirstPage-content">
                     <button className="Button-student" onClick={this.openStudent}>Elev</button>
                 </div>
