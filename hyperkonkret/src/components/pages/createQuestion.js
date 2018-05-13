@@ -80,7 +80,7 @@ export default class CreateQuestion extends React.Component {
     render(){
         return(
             <div>
-                <Button color="danger" onClick={this.toggle}>Lägg till fråga</Button>
+                <Button color="danger" onClick={this.toggle}>Lägg till flervalsfråga</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Lägg till fråga</ModalHeader>
                     <ModalBody>

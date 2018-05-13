@@ -2,14 +2,14 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import '../../styles/createQuiz.css';
 import CreateQuestion from "./createQuestion";
-
+import TypeOfQuestion from './typeOfQuestion';
 
 export default class CreateQuiz extends React.Component {
 
     render(){
         return(
             <div>
-            <h1>Skapa ett quizzzzz 🐝 </h1>
+            <h2>Skapa en övning </h2>
             <Form className="quiz">
                 <FormGroup>
                     <Label>Namn</Label>
@@ -20,10 +20,10 @@ export default class CreateQuiz extends React.Component {
                     <Input type="textarea" name="text" id="exampleText" />
                 </FormGroup>
                 <FormGroup>
-                    <CreateQuestion/>
+                    <TypeOfQuestion />
                 </FormGroup>
 
-                <Button>Skapa quiz</Button>
+                <Button>Skapa övning</Button>
             </Form>
             </div>
         );
