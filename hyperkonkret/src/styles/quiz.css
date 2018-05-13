@@ -33,7 +33,7 @@ html, body, #app, div[data-reactroot] {
   border: solid 4px green;
   background-color: white;
   display: inline-block;
-  padding: 1em;
+  padding-left: 1em;
   margin: 1em;
   min-width: 150px;
 }

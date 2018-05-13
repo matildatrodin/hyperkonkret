@@ -88,8 +88,11 @@ render() {
       <div id="question-field">
         <div id='drop-target'>
           <div id='drop-target1'>{this.state.answers2[0]}</div>
+          <br/>
           <div id='drop-target2'>{this.state.answers2[1]}</div>
+          <br/>
           <div id='drop-target3'>{this.state.answers2[2]}</div>
+          <br/>
           <div id='drop-target4'>{this.state.answers2[3]}</div>
         </div>
       </div>
