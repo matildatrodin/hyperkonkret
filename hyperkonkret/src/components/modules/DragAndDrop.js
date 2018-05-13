@@ -31,7 +31,9 @@ componentDidMount() {
         (el == $('drag-elements3'))&&(target == $('drop-target3')) ||
         (el == $('drag-elements4'))&&(target == $('drop-target4'))){
           counts++;
-          console.log("counts " + counts);
+          target.id = 'drop-target-correct';
+          el.id = 'el-correct'
+          console.log(target.id);
           // När counts är 4 vill vi gå till nästa fråga
   }
   else {
@@ -74,39 +76,21 @@ render() {
     <Concrete info={this.props.questions[0].concrete} className="concrete"/>
       <div id="question-field">
     <div id='drag-elements'>
-      <div id='drag-elements1'>
-        <div id='el'>{this.state.answers1[0]}</div>
-      </div>
-
-      <div id='drag-elements2'>
-        <div id='el'>{this.state.answers1[1]}</div>
-      </div>
-
-      <div id='drag-elements3'>
-        <div id='el'>{this.state.answers1[2]}</div>
-      </div>
-
-      <div id='drag-elements4'>
-        <div id='el'>{this.state.answers1[3]}</div>
-      </div>
+      <div id='drag-elements1' className="el">{this.state.answers1[0]}</div>
+      <br/>
+      <div id='drag-elements2' className="el">{this.state.answers1[1]}</div>
+      <br/>
+      <div id='drag-elements3' className="el">{this.state.answers1[2]}</div>
+      <br/>
+      <div id='drag-elements4' className="el">{this.state.answers1[3]}</div>
     </div>
       </div>
       <div id="question-field">
         <div id='drop-target'>
-          <div id='drop-target1'>
-          {this.state.answers2[0]}
-          </div>
-
-          <div id='drop-target2'>
-            {this.state.answers2[1]}
-          </div>
-
-          <div id='drop-target3'>
-            {this.state.answers2[2]}
-          </div>
-          <div id='drop-target4'>
-            {this.state.answers2[3]}
-          </div>
+          <div id='drop-target1'>{this.state.answers2[0]}</div>
+          <div id='drop-target2'>{this.state.answers2[1]}</div>
+          <div id='drop-target3'>{this.state.answers2[2]}</div>
+          <div id='drop-target4'>{this.state.answers2[3]}</div>
         </div>
       </div>
     </div>)

@@ -21,7 +21,16 @@ html, body, #app, div[data-reactroot] {
 
 /* DRAG AND DROP */
 #drop-target1, #drop-target2, #drop-target3, #drop-target4 {
-  border: solid 4px lightskyblue;
+  border: solid 4px grey;
+  background-color: white;
+  display: inline-block;
+  padding: 1em;
+  margin: 1em;
+  min-width: 150px;
+}
+
+#drop-target-correct {
+  border: solid 4px green;
   background-color: white;
   display: inline-block;
   padding: 1em;
@@ -41,19 +50,21 @@ html, body, #app, div[data-reactroot] {
   margin: auto;
 }
 
-#el{
+.el{
   padding: 1em;
+  background-color: lightgrey;
   text-align: center;
   min-width: 100px;
   display: inline-block;
-  background-color: lightskyblue;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
-  border: 2px deepskyblue;
   margin: 1em;
   cursor: -webkit-grab;
   cursor: grab;
 }
 
+#el-correct{
+  background-color: rgba(0, 255, 0, .2);
+}
 /* ändra cursor till när man håller i ett element?
 #el.grabbed{
   cursor: -webkit-grabbing;
