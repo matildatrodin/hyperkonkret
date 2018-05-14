@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
+const concrete = {
+    image: require('../../images/logo no shadow/H-black.png'),
+};
+
 class Concrete extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +19,7 @@ class Concrete extends Component {
   render() {
     return (
       <div>
-        <Button color="grey" onClick={this.toggle} style={{ marginBottom: '1rem' }}>H</Button>
+        <img className="concrete" src={concrete.image} width="7%" onClick={this.toggle} style={{marginBottom: '1rem'}}/>
         <Collapse isOpen={this.state.collapse}>
           <Card>
             <CardBody>
