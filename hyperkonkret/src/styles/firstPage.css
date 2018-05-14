@@ -37,7 +37,7 @@
 }
 
 .Button-student:hover{
-    background-color: #007272;
+    background-color: #e66f00;
 }
 
 .FirstPage-content{
@@ -50,7 +50,7 @@
 .text-box{
     background-color: #D3D3D3;
     padding: 5% 5% 5% 5%;
-    border-radius: 25px;
+    border-radius: 15px;
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 2%;
@@ -64,14 +64,11 @@
     font-size: 150%;
 }
 .FirstPage-catch{
-    background-color: #D3D3D3;
-    padding: 5% 5% 5% 5%;
-    border-radius: 25px;
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 5%;
     color: #5d5d5d;
-    font-size: 110%;
+    font-size: 130%;
 }
 
 

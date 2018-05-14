@@ -80,7 +80,7 @@ export default class CreateQuestion extends React.Component {
     render(){
         return(
             <div>
-                <Button color="danger" onClick={this.toggle}>Lägg till flervalsfråga</Button>
+                <Button className="muliple-choice" onClick={this.toggle}>Lägg till flervalsfråga</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>Lägg till fråga</ModalHeader>
                     <ModalBody>
@@ -89,28 +89,28 @@ export default class CreateQuestion extends React.Component {
                                 <Label>Fråga</Label>
                                 <Input style={{height: '100px'}}type="text" name="header" />
                             </FormGroup>
-                            <FormGroup tag="fieldset" id="descriptions">
-                                <Label for="exampleText">Beskrivning av fråga - Hyperkonkret</Label>
-                                <FormGroup>
-                                    <CreateDescription list={this.state.descriptions} remove={this.removeDescription}/>
-                                    <Button style={{marginTop: '10px', marginLeft: '20px', fontSize: '12px'}} color="primary" onClick={this.addDescription}>Lägg till frågebeskrivning</Button>
-                                </FormGroup>
-                            </FormGroup>
                             <FormGroup>
                                 <Input type="file" name="file" id="exampleFile" />
                                 <FormText color="muted">
                                     Välj t.ex. en bild du vill ha till din fråga...
                                 </FormText>
                             </FormGroup>
+                            <FormGroup tag="fieldset" id="descriptions">
+                                <Label for="exampleText">Beskrivning av fråga - Hyperkonkret</Label>
+                                <FormGroup>
+                                    <CreateDescription list={this.state.descriptions} remove={this.removeDescription}/>
+                                    <Button style={{marginTop: '10px', marginLeft: '20px', fontSize: '12px'}} onClick={this.addDescription}>Lägg till frågebeskrivning</Button>
+                                </FormGroup>
+                            </FormGroup>
                             <FormGroup tag="fieldset" id="answers">
                                 <label>Svarsalternativ</label>
                                 <CreateAnswer list={this.state.answers} remove={this.removeAnswer}/>
-                                <Button style={{marginTop: '5px', marginLeft: '20px', fontSize: '12px'}} color="primary" onClick={this.addAnswer}>Lägg till svar</Button>
+                                <Button style={{marginTop: '5px', marginLeft: '20px', fontSize: '12px'}} onClick={this.addAnswer}>Lägg till svar</Button>
                             </FormGroup>
                         </Form>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="success" onClick={this.toggle}>Skapa fråga</Button>
+                        <Button color="info" onClick={this.toggle}>Skapa fråga</Button>
                         <Button color="secondary" onClick={this.toggle}>Avbryt</Button>
                     </ModalFooter>
                 </Modal>
