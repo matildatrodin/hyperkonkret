@@ -37,6 +37,7 @@ export default class Course extends React.Component {
         }
     }
 
+
     render() {
         if(this.state.show == 1){
             return(
@@ -59,6 +60,7 @@ export default class Course extends React.Component {
                     <h2>Övningar i {this.props.name}</h2>
                     <button id="multiplechoice" onClick={() => this.handleClick(2)}>Gör en flervalsövning</button>
                     <button id="drag-and-drop" onClick={() => this.handleClick(1)}>Gör en drag-and-drop övning</button>
+
                 </div>
 
         );

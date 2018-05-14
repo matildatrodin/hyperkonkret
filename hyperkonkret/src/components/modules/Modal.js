@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const image = {
+    tummeUpp: require('../../images/icons/tummeupp.png')
+};
+
 const Modal = ({ modal: { state, praise, points } }) => {
   return (
     <div className={'correct-modal' + (state === 'show' ? ' modal-enter' : '')}>
-      <div className="praise">{praise}</div>
-        {/*<div className="points">{points}</div>*/}
+      <div className="praise">{<img width="200em" src={image.tummeUpp}/>}</div>
     </div>
   );
 };

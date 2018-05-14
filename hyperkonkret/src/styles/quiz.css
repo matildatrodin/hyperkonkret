@@ -310,8 +310,6 @@ img {
   font-size: 3em;
   text-align: center;
   width: 75%;
-  height: 20%;
-  background-color: white;
   padding: 5%;
   z-index: 2;
   align-items: center;
@@ -329,7 +327,7 @@ img {
 
 .correct-modal.modal-enter {
   display: flex;
-  animation: zoomIn 5s;
+  animation: zoomIn 2s;
 }
 
 .praise, .points {
