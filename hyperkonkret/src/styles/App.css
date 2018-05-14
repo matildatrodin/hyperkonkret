@@ -19,7 +19,8 @@ html, body {
 
 .App-header {
   background-color: transparent;
-  height: 20%;
+  height: 100%;
+  margin-bottom: 10%;
 }
 
 .App-header-logo {
