@@ -51,17 +51,17 @@ export default class Profile extends React.Component {
             <div className='Profile'>
                 <Header/>
                 <h2 className="Profile-header">Min sida</h2>
-                    <div className="Profile-top-content-box">
+                    <div className="Profile-top-content-left-box">
                         <div style={{backgroundImage: "url(" +  Student  + ")"}} className="Profile-img"/>
                         <p className='Profile-name'>{user.username}</p>
                     </div>
-                    <div className="Profile-top-content-box">
+                    <div className="Profile-top-content-right-box">
                         <p className='Profile-properties'>{user.usertype}</p>
                         <p className='Profile-properties' style={{fontWeight: 'bold'}}>{user.firstname} {user.lastname}</p>
                         <p className='Profile-properties'>{user.email}</p>
                         <p className='Profile-properties'>Senast inloggad: {user.last_login}</p>
                     </div>
-                <br/>
+                <div className="Profile-bottom-content">
                 <div>
                     <h2 className='Progress-title'>Framsteg</h2>
                 </div>
@@ -105,6 +105,7 @@ export default class Profile extends React.Component {
                         <Line className='Profile-progress-bar' percent="20" strokeWidth="2" trailWidth="2" strokeColor="#92dbe8"/>
                         <p align="left">Religiösa byggnader</p>
                     </div>
+                </div>
 
                 </div>
             </div>
