@@ -4,11 +4,11 @@ export const user =
 
     {
         id: 1,
-        username: 'snake',
+        username: 'Josefineline',
         password: 'hej',
-        email: 'matildatrodin@gmail.com',
-        firstname: 'Matilda',
-        lastname: 'Trodin',
+        email: 'Josefine.svensson@gmail.com',
+        firstname: 'Josefine',
+        lastname: 'Svensson',
         usertype: 'Elev',
         last_login: '6 dagar',
         login_count: '3',

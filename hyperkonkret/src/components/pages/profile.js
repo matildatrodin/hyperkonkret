@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/profile.css';
-import Student from '../../images/heck.png';
+import Student from '../../images/student.jpg';
 import { Line } from 'rc-progress';
 import { user } from '../data/user-data';
 import { course } from '../data/course-data';
@@ -14,10 +14,6 @@ Vi kommer också behöva göra en funktion som visar så många kurser just den 
 är registrerad på, nu är det hårdkodat precis 3 stycken.
 
 Det kan vi inte riktigt göra förrän vi har back-end*/
-
-const items = {
-    image: require('../../images/heck.png')
-};
 
 export default class Profile extends React.Component {
 
@@ -53,11 +49,18 @@ export default class Profile extends React.Component {
                 <h2 className="Profile-header">Min sida</h2>
                     <div className="Profile-top-content">
                         <div style={{backgroundImage: "url(" +  Student  + ")"}} className="Profile-img"/>
-                        <p className='Profile-name'>{user.username}</p>
-                        <p className='Profile-properties'>{user.usertype}</p>
-                        <p className='Profile-properties' style={{fontWeight: 'bold'}}>{user.firstname} {user.lastname}</p>
-                        <p className='Profile-properties'>{user.email}</p>
-                        <p className='Profile-properties'>Senast inloggad: {user.last_login}</p>
+                        <h2 className='Profile-name'>{user.username}</h2>
+                        <h3 className='Profile-properties'>{user.usertype}</h3>
+                        <h3 className='Profile-properties' style={{fontWeight: 'bold'}}>{user.firstname} {user.lastname}</h3>
+                        <h3 className='Profile-properties'>{user.email}</h3>
+                        <h3 className='Profile-properties'>Senast inloggad: {user.last_login}</h3>
+                    </div>
+                    <div className="Profile-top-right-content">
+                        <h2 className='Profile-name'>Sammanfattning</h2>
+                        <h3 className='Profile-properties-right'>2 avklarade ämnen</h3>
+                        <h3 className='Profile-properties-right'>23 avklarade uppgifter</h3>
+                        <h3 className='Profile-properties-right'>10 pågående uppgifter</h3>
+                        <h3 className='Profile-properties-right'>Senast avklarad uppgift: Substantiv</h3>
                     </div>
                 <div className="Profile-bottom-content">
                 <div>
@@ -69,9 +72,9 @@ export default class Profile extends React.Component {
                         <h3>Svenska ordklasser</h3>
                         <h6>Skapad av {course.created_by}</h6>
                         <br/>
-                        <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#92dbe8"/>
+                        <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
                         <p align="left">Adjektiv</p>
-                        <Line className='Profile-progress-bar' percent="60" strokeWidth="2" trailWidth="2" strokeColor="#92dbe8"/>
+                        <Line className='Profile-progress-bar' percent="60" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
                         <p align="left">Verb</p>
                         <Line className='Profile-progress-bar' percent="100" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
                         <p align="left">Substantiv</p>
@@ -82,13 +85,13 @@ export default class Profile extends React.Component {
                         <h3>Matematik</h3>
                         <h6>Skapad av Robert</h6>
                         <br/>
-                        <Line className='Profile-progress-bar' percent="90" strokeWidth="2" trailWidth="2" strokeColor="#92dbe8"/>
+                        <Line className='Profile-progress-bar' percent="90" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
                         <p align="left">Multiplikation</p>
                         <Line className='Profile-progress-bar' percent="100" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
                         <p align="left">Division</p>
-                        <Line className='Profile-progress-bar' percent="60" strokeWidth="2" trailWidth="2" strokeColor="#92dbe8"/>
+                        <Line className='Profile-progress-bar' percent="60" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
                         <p align="left">Bråktal</p>
-                        <Line className='Profile-progress-bar' percent="20" strokeWidth="2" trailWidth="2" strokeColor="#92dbe8"/>
+                        <Line className='Profile-progress-bar' percent="20" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
                         <p align="left">Procenträkning</p>
                     </div>
 
@@ -100,7 +103,7 @@ export default class Profile extends React.Component {
                         <p align="left">Symboler</p>
                         <Line className='Profile-progress-bar' percent="100" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
                         <p align="left">Gudar</p>
-                        <Line className='Profile-progress-bar' percent="20" strokeWidth="2" trailWidth="2" strokeColor="#92dbe8"/>
+                        <Line className='Profile-progress-bar' percent="20" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
                         <p align="left">Religiösa byggnader</p>
                     </div>
                 </div>
