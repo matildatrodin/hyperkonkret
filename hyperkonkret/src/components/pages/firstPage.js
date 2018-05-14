@@ -45,7 +45,7 @@ export default class FirstPage extends React.Component {
                     <button className="Button-teacher" onClick={this.openTeacher}>Lärare börjar här</button>
                 </div>
                 <div className="FirstPage-catch">
-                    Inkludering får aldrig bli exkludering
+                    - Inkludering får aldrig bli exkludering -
                 </div>
             </div>
         )
