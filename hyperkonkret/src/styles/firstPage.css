@@ -4,54 +4,76 @@
 }
 
 .Button-teacher {
-    background-color: royalblue;
+    background-color: #008B8B;
     color: white;
     border: none;
     text-align: center;
     padding: 2%;
     text-decoration: none;
     font-size: 20px;
-    width: 150px;
-    height: 75px;
-    margin-top: 25%;
-    margin-bottom: 50%;
+    margin-top: 5%;
     display: inline-block;
     border-radius: 5%;
 
 
+}
+
+.Button-teacher:hover{
+    background-color: #007272;
 }
 
 .Button-student {
-    background-color: deepskyblue;
+    background-color: #ff7b00;
     color: white;
     border: none;
     text-align: center;
     padding: 2%;
     text-decoration: none;
     font-size: 20px;
-    width: 150px;
-    height: 75px;
-    margin-top: 25%;
-    margin-bottom: 50%;
+    margin-top: 5%;
     display: inline-block;
     border-radius: 5%;
+    margin-right: 5%;
 }
 
-.FirstPage-content-student {
-    float: left;
-    width: 50%;
-    height: 100%;
-    margin-top: 5%;
-    background-color: royalblue;
+.Button-student:hover{
+    background-color: #007272;
 }
 
-.FirstPage-content-teacher {
+.FirstPage-content{
     float: left;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    margin-top: 5%;
-    background-color: deepskyblue;
+    margin-top: 1%;
 }
+
+.text-box{
+    background-color: #D3D3D3;
+    padding: 5% 5% 5% 5%;
+    border-radius: 25px;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.info-text{
+    color: #5d5d5d;
+    font-size: 110%;
+}
+.info-logo-text{
+    padding-top: 2%;
+    font-size: 150%;
+}
+.FirstPage-catch{
+    background-color: #D3D3D3;
+    padding: 5% 5% 5% 5%;
+    border-radius: 25px;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 5%;
+    color: #5d5d5d;
+    font-size: 110%;
+}
+
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
