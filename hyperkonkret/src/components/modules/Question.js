@@ -16,7 +16,7 @@ picture = <img src={image}/>
       <h2 className="question-title">
       {question}
       </h2>
-      <Concrete info={concrete} className="concrete"/>
+      <Concrete info={concrete}/>
       {picture}
       <ol className="question-answers">
         {answers.map((answer, index) => {

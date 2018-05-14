@@ -17,13 +17,8 @@ export default class CourseList extends React.Component{
 
     }
 
-    handleClick(e, id){
-        if(id==1){
-            this.setState({show: 1});
-        }
-        else if(id==2){
-            this.setState({show: 2});
-        }
+    handleClick(id){
+    this.setState({show: id});
     }
 
 
@@ -34,18 +29,20 @@ export default class CourseList extends React.Component{
             return (
                 <div>
                     <Header/>
-                    <h2>Kurser</h2>
+                    <h2>Dina registrerade kurser:</h2>
                     <br></br>
-                    <Button onClick={(e, id) => this.handleClick(e, 1)}>{course[0].title}</Button>
-                    <Button onClick={(e, id) => this.handleClick(e, 2)}>{course[1].title}</Button>
-                    <Button onClick={(e, id) => this.handleClick(e, 3)}>{course[2].title}</Button>
+                    <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(1)}>{course[0].title}</Button>
+                    <br/>
+                    <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(2)}>{course[1].title}</Button>
+                    <br/>
+                    <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(3)}>{course[2].title}</Button>
                 </div>
 
             )
 
         }
         else {
-            return(<Course id={id} title={course[id-1].title}/>);
+            return(<Course id={id} title={course[id-1].title} goBackToCourseList={this.handleClick}/>);
 
         }
     }

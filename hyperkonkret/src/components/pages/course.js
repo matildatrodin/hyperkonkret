@@ -14,24 +14,9 @@ export default class Course extends React.Component {
         }
     }
 
-    /*componentWillMount(){
-        this.state.show = 1;
-    }*/
-
 
     handleClick(showQuiz){ //på vilken quiz du vill göra
-        if (showQuiz == 1){
-            this.setState({ show: 2 });
-
-        }
-        else if (showQuiz == 2){
-            this.setState({ show: 1 });
-
-        }
-        else if (showQuiz == 0){
-            this.setState({ show: 0 });
-
-        }
+      this.setState({ show: showQuiz });
     }
 
 
@@ -52,10 +37,9 @@ export default class Course extends React.Component {
                 <div>
                     <Header/>
                     <h2>Övningar i {this.props.title}</h2>
-
-                    <button id="multiplechoice" onClick={() => this.handleClick(2)}>Gör en flervalsövning</button>
-                    <button id="drag-and-drop" onClick={() => this.handleClick(1)}>Gör en drag-and-drop övning</button>
-
+                    <button id="multiplechoice" onClick={() => this.handleClick(1)}>Gör en flervalsövning</button>
+                    <button id="drag-and-drop" onClick={() => this.handleClick(2)}>Gör en drag-and-drop övning</button>
+                    <button id="exit" onClick={() => this.props.goBackToCourseList(0)}>Gå tillbaka till kurser</button>
                 </div>
 
         );

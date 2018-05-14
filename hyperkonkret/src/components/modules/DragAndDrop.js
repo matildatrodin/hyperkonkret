@@ -71,7 +71,7 @@ render() {
     <h2 className="question-title">
     {this.props.questions[0].question}
     </h2>
-    <Concrete info={this.props.questions[0].concrete} className="concrete"/>
+    <Concrete info={this.props.questions[0].concrete}/>
       <div id="question-field">
     <div id='drag-elements'>
       <div id='drag-elements1' className="el">{this.state.answers1[0]}</div>

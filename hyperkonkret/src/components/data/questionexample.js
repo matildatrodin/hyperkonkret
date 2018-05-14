@@ -23,7 +23,7 @@ export const questionexample = [
     },
     {
         id: 3,
-        exercise_id: 20,
+        exercise_id: 20, // ändra frågan + id
         type: "match",
         image: "",
         question: "Para ihop ?",
@@ -33,7 +33,7 @@ export const questionexample = [
     },
     {
         id: 4,
-        exercise_id: 10,
+        exercise_id: 10, // ändra frågan + id
         type: "match",
         image: "",
         question: "Matcha stora och små bokstäver",
