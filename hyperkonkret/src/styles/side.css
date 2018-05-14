@@ -7,7 +7,7 @@
     top: 36px;
 }
 .bm-burger.button:hover {
-    color: #92dbe8;
+    color: #007272;
 }
 
 /* Color/shape of burger icon bars */
@@ -62,9 +62,24 @@ Color/shape of close button cross
     color: grey;
     text-decoration: none;
 }
-
 .Link:hover{
-    color: #92dbe8;
+    color: darkgray;
+}
+
+.LinkT:any-link {
+    color: grey;
+    text-decoration: none;
+}
+.LinkT:hover{
+    color: #007272;
+}
+
+.LinkS:any-link {
+    color: grey;
+    text-decoration: none;
+}
+.LinkS:hover{
+    color: #ff7b00;
 }
 
 .Profile-img-side {
