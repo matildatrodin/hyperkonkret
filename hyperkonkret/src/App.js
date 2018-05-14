@@ -64,6 +64,8 @@ class App extends React.Component {
                 <div className="App-body">
                     <SideBar changeContent={this.changeSidebarContent} loginState={this.state.currentState} student={this.state.isStudent} teacher={this.state.isTeacher}/>
                     <br/>
+
+                    <Footer/>
                 </div>
             </Router>
         )

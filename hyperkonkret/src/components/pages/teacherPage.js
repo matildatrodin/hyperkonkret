@@ -11,11 +11,6 @@ import { Button } from 'react-bootstrap';
 import {user} from "../data/user-data";
 import { Header } from '../modules/header';
 
-const items = [
-    {
-        image: require('../../images/bild2.jpg')
-    }
-];
 
 const course = {
     id: 1,
@@ -37,48 +32,18 @@ const teacher = {
 
 
 export default class TeacherPage extends React.Component {
-
-  /*  componentDidMount() {
-        let self = this;
-        fetch('/course', {method: 'GET'}).then(function(response) {
-            if (response.status >= 400) {
-                throw new Error("Bad response from server")
-            }
-            return response.json();
-        }).then(function(data) {
-            self.setState({course: data});
-        }).catch(err => {
-            console.log('caught it!', err);
-        })
-    }
-
-      componentDidMount() {
-        let self = this;
-        fetch('/user', {method: 'GET'}).then(function(response) {
-            if (response.status >= 400) {
-                throw new Error("Bad response from server")
-            }
-            return response.json();
-        }).then(function(data) {
-            self.setState({user: data});
-        }).catch(err => {
-            console.log('caught it!', err);
-        })
-    }*/
-
-
     constructor(props) {
         super(props);
         this.toggleFirst = this.toggleFirst.bind(this);
         this.toggleSecond = this.toggleFirst.bind(this);
-        this.state = { collapse: false };
+        this.state = { collapseFirst: false, collapseSecond: false };
     }
 
     toggleFirst() {
-        this.setState({ collapse: !this.state.collapse });
+        this.setState({ collapseFirst: !this.state.collapseFirst });
     }
     toggleSecond() {
-        this.setState({ collapse: !this.state.collapse });
+        this.setState({ collapseSecond: !this.state.collapseSecond });
     }
 
     render() {
@@ -87,8 +52,8 @@ export default class TeacherPage extends React.Component {
                 <div className="Teacher">
                     <Header/>
                     <div className="Teacher-body">
+                    <div className="Teacher-card">
                     <div style={{backgroundImage: "url(" +  Teacher  + ")"}} className="Teacher-img"/>
-                        <br/>
                     <h2 className="Teacher-name">{teacher.username}</h2>
                     <br/>
                         <p className='Teacher-properties'>{teacher.usertype}</p>
@@ -96,10 +61,12 @@ export default class TeacherPage extends React.Component {
                         <p className='Teacher-properties'>{teacher.email}</p>
                         <p className='Teacher-properties'>Senast inloggad: {teacher.last_login}</p>
                         <br/>
-                    <div className="Course-title" onClick={this.toggleFirst}>
-                        <h3 align="left">Svenska ordklasser<FaAngleUp className={this.state.collapse ? "Arrow-down" : "Arrow-up"}/></h3>
                     </div>
-                        <Collapse isOpen={this.state.collapse}>
+                    <div className="Course-list">
+                    <div className="Course-title" onClick={this.toggleFirst}>
+                        <h3 align="left">Svenska ordklasser<FaAngleUp className={this.state.collapseFirst ? "Arrow-down" : "Arrow-up"}/></h3>
+                    </div>
+                        <Collapse isOpen={this.state.collapseFirst}>
                             <div className="Course-body">
                                 <div className="Course-box">
                                     <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
@@ -122,9 +89,9 @@ export default class TeacherPage extends React.Component {
                         </Collapse>
 
                     <div className="Course-title" onClick={this.toggleSecond}>
-                        <h3 align="left">Svenska ordklasser<FaAngleUp className={this.state.collapse ? "Arrow-down" : "Arrow-up"}/></h3>
+                        <h3 align="left">Svenska ordklasser<FaAngleUp className={this.state.collapseSecond ? "Arrow-down" : "Arrow-up"}/></h3>
                     </div>
-                    <Collapse isOpen={this.state.collapse}>
+                    <Collapse isOpen={this.state.collapseSecond}>
                         <div className="Course-body">
                             <div className="Course-box">
                                 <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
@@ -145,8 +112,37 @@ export default class TeacherPage extends React.Component {
                             </div>
                         </div>
                     </Collapse>
+                    </div>
                 </div>
                 </div>
         )
     }
 };
+
+/*  componentDidMount() {
+      let self = this;
+      fetch('/course', {method: 'GET'}).then(function(response) {
+          if (response.status >= 400) {
+              throw new Error("Bad response from server")
+          }
+          return response.json();
+      }).then(function(data) {
+          self.setState({course: data});
+      }).catch(err => {
+          console.log('caught it!', err);
+      })
+  }
+
+    componentDidMount() {
+      let self = this;
+      fetch('/user', {method: 'GET'}).then(function(response) {
+          if (response.status >= 400) {
+              throw new Error("Bad response from server")
+          }
+          return response.json();
+      }).then(function(data) {
+          self.setState({user: data});
+      }).catch(err => {
+          console.log('caught it!', err);
+      })
+  }*/
