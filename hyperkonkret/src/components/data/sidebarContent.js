@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 const user = {
-    image: require('../../images/profil.png'),
+    image: require('../../images/logo no shadow/H-black.png'),
     imageSnake: require('../../images/heck.png'),
     imageTeacher: require('../../images/teacher.jpg')
 };
