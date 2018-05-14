@@ -13,9 +13,10 @@
     font-size: 20px;
     width: 150px;
     height: 75px;
-    margin-top: 50%;
+    margin-top: 25%;
     margin-bottom: 50%;
     display: inline-block;
+    border-radius: 5%;
 
 
 }
@@ -30,15 +31,26 @@
     font-size: 20px;
     width: 150px;
     height: 75px;
-    margin-top: 50%;
+    margin-top: 25%;
     margin-bottom: 50%;
     display: inline-block;
+    border-radius: 5%;
 }
 
-.FirstPage-content {
+.FirstPage-content-student {
     float: left;
     width: 50%;
     height: 100%;
+    margin-top: 5%;
+    background-color: royalblue;
+}
+
+.FirstPage-content-teacher {
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin-top: 5%;
+    background-color: deepskyblue;
 }
 
 /* Mobile Styles */

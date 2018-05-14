@@ -69,11 +69,15 @@ export default class TeacherPage extends React.Component {
 
     constructor(props) {
         super(props);
-        this.toggle = this.toggle.bind(this);
+        this.toggleFirst = this.toggleFirst.bind(this);
+        this.toggleSecond = this.toggleFirst.bind(this);
         this.state = { collapse: false };
     }
 
-    toggle() {
+    toggleFirst() {
+        this.setState({ collapse: !this.state.collapse });
+    }
+    toggleSecond() {
         this.setState({ collapse: !this.state.collapse });
     }
 
@@ -92,31 +96,56 @@ export default class TeacherPage extends React.Component {
                         <p className='Teacher-properties'>{teacher.email}</p>
                         <p className='Teacher-properties'>Senast inloggad: {teacher.last_login}</p>
                         <br/>
-                    <div className="Course-title" onClick={this.toggle}>
-                        <h3 align="left">{course.name}<FaAngleUp className={this.state.collapse ? "Arrow-down" : "Arrow-up"}/></h3>
+                    <div className="Course-title" onClick={this.toggleFirst}>
+                        <h3 align="left">Svenska ordklasser<FaAngleUp className={this.state.collapse ? "Arrow-down" : "Arrow-up"}/></h3>
                     </div>
                         <Collapse isOpen={this.state.collapse}>
                             <div className="Course-body">
                                 <div className="Course-box">
                                     <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                                    <p align="left">{course.quizName}</p>
+                                    <p align="left">Adjektiv</p>
                                     <div align="right">
                                         <Button className="Course-edit-button">Redigera</Button>
                                     </div>
                                     <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                                    <p align="left">{course.quizName}</p>
+                                    <p align="left">Verb</p>
                                     <div align="right">
                                         <Button className="Course-edit-button">Redigera</Button>
                                     </div>
                                     <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                                    <p align="left">{course.quizName}</p>
+                                    <p align="left">Substantiv</p>
                                     <div align="right">
                                         <Button className="Course-edit-button">Redigera</Button>
                                     </div>
                                 </div>
                             </div>
                         </Collapse>
+
+                    <div className="Course-title" onClick={this.toggleSecond}>
+                        <h3 align="left">Svenska ordklasser<FaAngleUp className={this.state.collapse ? "Arrow-down" : "Arrow-up"}/></h3>
                     </div>
+                    <Collapse isOpen={this.state.collapse}>
+                        <div className="Course-body">
+                            <div className="Course-box">
+                                <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
+                                <p align="left">Adjektiv</p>
+                                <div align="right">
+                                    <Button className="Course-edit-button">Redigera</Button>
+                                </div>
+                                <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
+                                <p align="left">Verb</p>
+                                <div align="right">
+                                    <Button className="Course-edit-button">Redigera</Button>
+                                </div>
+                                <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
+                                <p align="left">Substantiv</p>
+                                <div align="right">
+                                    <Button className="Course-edit-button">Redigera</Button>
+                                </div>
+                            </div>
+                        </div>
+                    </Collapse>
+                </div>
                 </div>
         )
     }
