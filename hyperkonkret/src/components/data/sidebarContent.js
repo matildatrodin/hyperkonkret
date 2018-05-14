@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 const user = {
     image: require('../../images/logo no shadow/H-black.png'),
-    imageSnake: require('../../images/heck.png'),
-    imageTeacher: require('../../images/teacher.jpg')
 };
 
 export const LoggedOutSidebarContent =
@@ -22,7 +20,7 @@ export const LoggedOutSidebarContent =
 export const TeacherSidebarContent =
 
     <div id={"Sidebar"}>
-        <img src={user.imageTeacher} className="Profile-img-side"/>
+        <img src={user.image} className="Profile-img-side"/>
             <li className="bm-item-list">
                 <Link to="/teacher" className="LinkT" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Lärare</Link>
                 <br/>
@@ -33,7 +31,7 @@ export const TeacherSidebarContent =
 export const StudentSidebarContent =
 
       <div id={"Sidebar"}>
-          <img src={user.imageSnake} className="Profile-img-side"/>
+          <img src={user.image} className="Profile-img-side"/>
           <li className="bm-item-list">
               <Link to="/student" className="LinkS" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Elev</Link>
               <br/>

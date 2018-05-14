@@ -12,7 +12,9 @@ export class GetQuiz extends React.Component{
         super(props);
 
     this.state = {
-            quizType: this.props.id
+            quizType: this.props.id,
+            course_id: this.props.course
+
         };
     };
 
@@ -31,8 +33,6 @@ export class GetQuiz extends React.Component{
     }
 
     createMultipleChoice(questionArray){
-        console.log(questionArray);
-
         let correct = "";
         let questionsUnsorted = [];
         for(let i = 0; i < questionArray.length; i++){
@@ -60,12 +60,9 @@ export class GetQuiz extends React.Component{
         return questionsUnsorted;
     }
 
-
-
-
 render(){
-    let quiz = exerciseexample; // hämta quiz-objekt från databas
-    let exerciseId = exerciseexample.id; //hämta questions fr databas som har detta id som exercise id
+    let quiz = exerciseexample[this.state.course_id]; // hämta quiz-objekt från databas
+//  let exerciseId = exerciseexample.id; //hämta questions fr databas som har detta id som exercise id
     let nrOfQuestions = questionexample.length;//antal element i array av questions hämtad fr databas
     let questions = [];//ska bli array med questions som passar QuizApp
     let theQuiz = null;
@@ -75,7 +72,7 @@ render(){
         let multipleChoiceQuestions = [];
 
         for (let i = 0; i < questionexample.length; i++) {
-            if (questionexample[i].type == "multiple-choice") {
+            if (questionexample[i].type == "multiple-choice" && questionexample[i].exercise_id == this.state.course_id) {
                 multipleChoiceQuestions.push(questionexample[i]);
             }
 
@@ -86,7 +83,7 @@ render(){
     }
     else if (this.state.quizType == 2){
         for(let i = 0 ; i < questionexample.length; i++){
-            if(questionexample[i].type == "match"){
+            if(questionexample[i].type == "match" && questionexample[i].exercise_id == this.state.course_id){
                 console.log("dragndrop: " + questionexample[i].type );
 
                 questionsUnsorted.push(questionexample[i]);
