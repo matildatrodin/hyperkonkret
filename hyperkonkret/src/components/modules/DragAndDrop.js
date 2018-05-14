@@ -8,7 +8,7 @@ function $(id) {
     return document.getElementById(id);
   }
 
-let counts = 0;
+let counts;
 
 export class DragAndDrop extends React.Component{
 constructor() {
@@ -22,7 +22,7 @@ constructor() {
 };
 
 componentDidMount() {
-
+  counts = 0;
   let drake = Dragula([$('drag-elements'), $('drop-target1'), $('drop-target2'), $('drop-target3'), $('drop-target4')], {
     revertOnSpill: true
   }).on('drop', function(el, target){
@@ -30,11 +30,9 @@ componentDidMount() {
         (el == $('drag-elements2'))&&(target == $('drop-target2')) ||
         (el == $('drag-elements3'))&&(target == $('drop-target3')) ||
         (el == $('drag-elements4'))&&(target == $('drop-target4'))){
-          counts++;
+          counts++
           target.id = 'drop-target-correct';
-          el.id = 'el-correct'
-          console.log(target.id);
-          // När counts är 4 vill vi gå till nästa fråga
+          el.id = 'el-correct';
   }
   else {
     drake.cancel();
