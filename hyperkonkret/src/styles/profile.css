@@ -7,6 +7,7 @@
     text-align: left;
     margin-left: 10%;
     margin-top: 1%;
+    margin-bottom: 1%;
     color: dimgrey;
 }
 
@@ -26,7 +27,7 @@
 }
 
 .Profile-top-content {
-    background-color: #ff7b00;
+    background-color: #008B8B;
     padding-top: 15px;
     width: 50%;
     border-radius: 10px;
@@ -44,7 +45,7 @@
 }
 
 .Profile-top-right-content {
-    background-color: grey;
+    background-color: #D3D3D3;
     padding-top: 15px;
     width: 28%;
     border-radius: 10px;
@@ -54,7 +55,7 @@
 }
 
 .Profile-name {
-    margin-left: 30%;
+    margin-left: 25%;
     text-align: left;
     font-weight: bold;
     color: white;
@@ -64,19 +65,28 @@
 }
 
 .Profile-properties {
+    margin-left: 25%;
     font-weight: normal;
     font-size: 20px;
     text-align: left;
     color: white;
-    margin-left: 30%;
     padding: 5px;
+}
+
+.Profile-name-right {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-family: sans-serif;
+    font-size: 30px;
+
 }
 
 .Profile-properties-right {
     font-weight: normal;
     font-size: 20px;
     text-align: center;
-    color: white;
+    color: black;
     padding: 5px;
 }
 
@@ -85,13 +95,13 @@
     text-align: left;
     margin-left: 10%;
     margin-top: 2px;
+    margin-bottom: 1%;
 }
 
 .Profile-progress-body {
     display: flex;
     margin-left: 10%;
-    margin-top: 2%;
-    margin-right: 10%;
+    margin-right: 8%;
 }
 
 .Profile-progress-box {

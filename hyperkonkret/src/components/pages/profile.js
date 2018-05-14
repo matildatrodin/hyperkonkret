@@ -56,11 +56,11 @@ export default class Profile extends React.Component {
                         <h3 className='Profile-properties'>Senast inloggad: {user.last_login}</h3>
                     </div>
                     <div className="Profile-top-right-content">
-                        <h2 className='Profile-name'>Sammanfattning</h2>
+                        <h2 className='Profile-name-right'>Sammanfattning</h2>
                         <h3 className='Profile-properties-right'>2 avklarade ämnen</h3>
                         <h3 className='Profile-properties-right'>23 avklarade uppgifter</h3>
                         <h3 className='Profile-properties-right'>10 pågående uppgifter</h3>
-                        <h3 className='Profile-properties-right'>Senast avklarad uppgift: Substantiv</h3>
+                        <h3 className='Profile-properties-right' style={{fontWeight: 'bold'}}>Senast avklarad uppgift: Substantiv</h3>
                     </div>
                 <div className="Profile-bottom-content">
                 <div>
