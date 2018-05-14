@@ -35,10 +35,10 @@ export default class FirstPage extends React.Component {
         return(
             <div>
                 <img src={images.image} />
-                <div className="FirstPage-content">
+                <div className="FirstPage-content-student">
                     <button className="Button-student" onClick={this.openStudent}>Elev</button>
                 </div>
-                <div className="FirstPage-content">
+                <div className="FirstPage-content-teacher">
                     <button className="Button-teacher" onClick={this.openTeacher}>Lärare</button>
                 </div>
             </div>

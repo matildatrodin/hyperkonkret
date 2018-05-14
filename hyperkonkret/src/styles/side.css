@@ -6,10 +6,17 @@
     left: 36px;
     top: 36px;
 }
+.bm-burger.button:hover {
+    color: #92dbe8;
+}
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
     background: grey;
+}
+
+.bm-burger-bars:hover {
+    color: #92dbe8;
 }
 
 /* Position and sizing of clickable cross button
@@ -61,9 +68,16 @@ Color/shape of close button cross
 }
 
 .Profile-img-side {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 20%;
-    margin-top: 10%;
     width: 100px;
+    height: 100px;
+    -webkit-border-radius: 100px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 100px;
+    -moz-background-clip: padding;
+    border-radius: 100px;
+    background-clip: padding-box;
+    margin: 7px 0 0 5px;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
 }
