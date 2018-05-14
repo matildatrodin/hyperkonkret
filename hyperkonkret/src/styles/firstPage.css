@@ -3,15 +3,22 @@
     width: 100%;
 }
 
+.pic{
+    width: 20%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
 .Button-teacher {
-    background-color: #008B8B;
+    background-color: #00676f;
     color: white;
     border: none;
     text-align: center;
     padding: 2%;
     text-decoration: none;
     font-size: 20px;
-    margin-top: 5%;
+    margin-top: 2%;
     display: inline-block;
     border-radius: 5%;
 
@@ -23,21 +30,21 @@
 }
 
 .Button-student {
-    background-color: #ff7b00;
+    background-color: #00676f;
     color: white;
     border: none;
     text-align: center;
     padding: 2%;
     text-decoration: none;
     font-size: 20px;
-    margin-top: 5%;
+    margin-top: 2%;
     display: inline-block;
     border-radius: 5%;
-    margin-right: 5%;
+    margin-right: 11%;
 }
 
 .Button-student:hover{
-    background-color: #e66f00;
+    background-color: #007272;
 }
 
 .FirstPage-content{

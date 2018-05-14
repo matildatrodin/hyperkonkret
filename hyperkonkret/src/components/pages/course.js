@@ -3,6 +3,7 @@ import React from 'react';
 /*import '../../quiz/src/style.css';
 import '../../styles/App.css';*/
 import { Button } from 'reactstrap';
+import {Header} from "../modules/header";
 
 import { GetQuiz } from '../modules/getQuiz';
 import '../../styles/quizButtons.css';
@@ -57,6 +58,7 @@ export default class Course extends React.Component {
         else{
             return(
                 <div>
+                    <header/>
                     <h2>Övningar i {this.props.name}</h2>
                     <button id="multiplechoice" onClick={() => this.handleClick(2)}>Gör en flervalsövning</button>
                     <button id="drag-and-drop" onClick={() => this.handleClick(1)}>Gör en drag-and-drop övning</button>
