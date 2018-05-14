@@ -9,7 +9,10 @@ import {logo} from '../../images/logo shadow/hyperkonkret-black.png';
 
 
 const images = {
-    image: require('../../images/logo shadow/hyperkonkret-black.png')
+    image: require('../../images/logo shadow/hyperkonkret-black.png'),
+    student: require('../../images/icons/elever.png'),
+    teacher: require('../../images/icons/larare.png')
+
 };
 
 export default class FirstPage extends React.Component {
@@ -36,14 +39,16 @@ export default class FirstPage extends React.Component {
         return(
             <div>
                 <img src={images.image} />
-                <div className="FirstPage-info">
-                    <div className="text-box">
-                        <div className="info-text"> Det är en självklarhet att alla ska kunna lära sig det man vill. Hyperkonkret är en lärandemiljö som hjälper både lärare och föräldrar hur man ska stötta elever. Inspiration, motivation och studieteknik i ett paket.</div>
-                        <div className="info-logo-text">Hyperkonkret, helt enkelt!</div>
-                    </div>
-                    <button className="Button-student" onClick={this.openStudent}>Elever börjar här</button>
-                    <button className="Button-teacher" onClick={this.openTeacher}>Lärare börjar här</button>
+                <div className="text-box">
+                    <div className="info-text"> Det är en självklarhet att alla ska kunna lära sig det man vill. Hyperkonkret är en lärandemiljö som hjälper både lärare och föräldrar hur man ska stötta elever. Inspiration, motivation och studieteknik i ett paket.</div>
+                    <div className="info-logo-text">Hyperkonkret, helt enkelt!</div>
                 </div>
+                <div>
+                    <img className="pic" src={images.student} />
+                    <img className="pic" src={images.teacher} />
+                </div>
+                <button className="Button-student" onClick={this.openStudent}>Elever börjar här</button>
+                <button className="Button-teacher" onClick={this.openTeacher}>Lärare börjar här</button>
                 <div className="FirstPage-catch">
                     - Inkludering får aldrig bli exkludering -
                 </div>

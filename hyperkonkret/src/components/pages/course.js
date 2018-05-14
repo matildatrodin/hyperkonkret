@@ -50,8 +50,13 @@ export default class Course extends React.Component {
         else{
             return(
                 <div>
+<<<<<<< HEAD
                     <Header/>
                     <h2>Övningar i {this.props.title}</h2>
+=======
+                    <header/>
+                    <h2>Övningar i {this.props.name}</h2>
+>>>>>>> 0d65ac92e24bbf0075212f79f47f0cb07eafd8cb
                     <button id="multiplechoice" onClick={() => this.handleClick(2)}>Gör en flervalsövning</button>
                     <button id="drag-and-drop" onClick={() => this.handleClick(1)}>Gör en drag-and-drop övning</button>
 
