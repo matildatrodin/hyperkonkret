@@ -51,6 +51,7 @@ export default class TeacherPage extends React.Component {
         return (
                 <div className="Teacher">
                     <Header/>
+                    <h2 className="Teacher-header">Min sida</h2>
                     <div className="Teacher-body">
                     <div className="Teacher-card">
                     <div style={{backgroundImage: "url(" +  Teacher  + ")"}} className="Teacher-img"/>

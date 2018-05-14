@@ -51,11 +51,9 @@ export default class Profile extends React.Component {
             <div className='Profile'>
                 <Header/>
                 <h2 className="Profile-header">Min sida</h2>
-                    <div className="Profile-top-content-left-box">
+                    <div className="Profile-top-content">
                         <div style={{backgroundImage: "url(" +  Student  + ")"}} className="Profile-img"/>
                         <p className='Profile-name'>{user.username}</p>
-                    </div>
-                    <div className="Profile-top-content-right-box">
                         <p className='Profile-properties'>{user.usertype}</p>
                         <p className='Profile-properties' style={{fontWeight: 'bold'}}>{user.firstname} {user.lastname}</p>
                         <p className='Profile-properties'>{user.email}</p>

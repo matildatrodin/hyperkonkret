@@ -60,20 +60,21 @@ class App extends React.Component {
     render() {
 
         return (
+          <div>
             <Router>
                 <div className="App-body">
                     <SideBar changeContent={this.changeSidebarContent} loginState={this.state.currentState} student={this.state.isStudent} teacher={this.state.isTeacher}/>
                     <br/>
-
-                    <Footer/>
                 </div>
             </Router>
+          </div>
         )
     }
 }
 
 
- /*   render() {
+ /*
+ render() {
 
         if (this.state.alt == 1) {
             return (

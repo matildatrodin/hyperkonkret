@@ -3,6 +3,13 @@
     width: 100%;
 }
 
+.Teacher-header {
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 1%;
+    color: dimgrey;
+}
+
 .Teacher-body {
     max-width: 100%;
 }
@@ -38,7 +45,6 @@
 }
 
 .Teacher-card {
-  margin-top: 5em;
   background-color: white;
   width: 80%;
   margin-left: 10%;
