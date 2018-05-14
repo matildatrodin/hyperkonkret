@@ -6,9 +6,8 @@
 .Profile-header {
     text-align: left;
     margin-left: 10%;
-    margin-top: 1%;
     margin-bottom: 1%;
-    color: dimgrey;
+    color: black;
 }
 
 .Profile-img {
@@ -91,7 +90,7 @@
 }
 
 .Progress-title {
-    color: grey;
+    color: black;
     text-align: left;
     margin-left: 10%;
     margin-top: 2px;
@@ -108,7 +107,7 @@
     border-radius: 10px;
     margin-right: 2%;
     text-align: left;
-    color: grey;
+    color: black;
     padding: 2%;
     width: 33.3333%;
     min-width: 300px;

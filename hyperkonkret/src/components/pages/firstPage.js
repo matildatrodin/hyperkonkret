@@ -38,7 +38,7 @@ export default class FirstPage extends React.Component {
     render() {
         return(
             <div>
-                <img src={images.image} />
+                <img src={images.image} className="Header-img"/>
                 <div className="text-box">
                     <div className="info-text"> Det är en självklarhet att alla ska kunna lära sig det man vill. Hyperkonkret är en lärandemiljö som hjälper både lärare och föräldrar hur man ska stötta elever. Inspiration, motivation och studieteknik i ett paket.</div>
                     <div className="info-logo-text">Hyperkonkret, helt enkelt!</div>

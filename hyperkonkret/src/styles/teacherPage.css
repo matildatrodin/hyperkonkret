@@ -7,7 +7,7 @@
     text-align: left;
     margin-left: 10%;
     margin-top: 1%;
-    color: dimgrey;
+    color: black;
 }
 
 .Teacher-body {
@@ -24,12 +24,10 @@
     -moz-background-clip: padding;
     border-radius: 200px;
     background-clip: padding-box;
-    margin: 7px 0 0 5px;
+    margin-left: 15px;
     background-size: cover;
     background-position: center center;
-    display: inline-block;
     float: left;
-    margin-left: 10%;
 }
 
 .Teacher-table {
@@ -37,26 +35,77 @@
 }
 
 .Teacher-name {
-    padding-top: 20px;
-    color: grey;
+    margin-left: 25%;
+    text-align: left;
+    font-weight: bold;
+    color: white;
     font-family: sans-serif;
     font-size: 30px;
-    display: inline-block;
+}
+
+.Teacher-name-right {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-left: 15px;
 }
 
 .Teacher-card {
-  background-color: white;
-  width: 80%;
-  margin-left: 10%;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+    background-color: #008B8B;
+    padding-top: 15px;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+    min-height: 230px; /* samma som profilbilden */
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.Teacher-card-right {
+    background-color: #D3D3D3;
+    padding-top: 15px;
+    width: 28%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+    min-height: 230px; /* samma som profilbilden */
+    display: inline-block;
 }
 
 .Teacher-properties {
+    margin-left: 25%;
     font-weight: normal;
-    color: grey;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    position: relative;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    padding: 5px;
+}
+
+.Teacher-properties-right {
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.Correct-button {
+    background-color: #008B8B;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 2%;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    width: 150px;
+}
+
+.Correct-button:hover {
+    background-color: grey;
+    color: white;
 }
 
 .Arrow-up {
@@ -70,10 +119,9 @@
 }
 
 .Course-title {
-    margin-left: 10%;
-    margin-right: 2%;
-    margin-top: 2%;
-    color: grey;
+    width: 300px;
+    color: black;
+    text-align: left;
 }
 
 .Course-title-button {
@@ -82,7 +130,9 @@
 }
 
 .Course-body {
-    width: 100%;
+    max-width: 300px;
+    margin-right: 2%;
+    margin-top: 2%;
 }
 
 .Progress-title {
@@ -92,22 +142,25 @@
 
 .Progress-body {
     margin-top: 2%;
-    margin-right: 10%;
 }
 
 .Course-list {
-/*  display: flex;*/
+    display: flex;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .Course-box {
     text-align: left;
-    margin-left: 10%;
-    margin-right: 10%;
     max-width: 300px;
-    width: 50%;
+    width: 100%;
     height: 100%;
     background-color: white;
     padding: 10px;
+    border-radius: 10px;
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, .2);
 }
 
@@ -123,7 +176,7 @@
 }
 
 .Course-edit-button:hover {
-    background-color: #92dbe8;
+    background-color: #008B8B;
     color: white;
 
 }
