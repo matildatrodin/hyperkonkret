@@ -19,8 +19,9 @@ export const LoggedOutSidebarContent =
 export const TeacherSidebarContent =
 
     <div id={"Sidebar"}>
-        <img src={user.image} className="Profile-img-side"/>
-            <li className="bm-item-list">
+        <Link to="/" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>        <img src={user.image} className="Profile-img-side"/>
+        </Link>
+         <li className="bm-item-list">
                 <Link to="/teacher" className="LinkT" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Profil</Link>
                 <br/>
                 <Link to="/Exercises" className="LinkT" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Övningar</Link>
@@ -30,9 +31,11 @@ export const TeacherSidebarContent =
 export const StudentSidebarContent =
 
       <div id={"Sidebar"}>
-          <img src={user.image} className="Profile-img-side"/>
+          <Link to="/" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>        <img src={user.image} className="Profile-img-side"/>
+          </Link>
           <li className="bm-item-list">
-              <Link to="/student" className="LinkS" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Profil</Link>
+              <Link to="/student" className="LinkS" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Profil</Link>          <img src={user.image} className="Profile-img-side"/>
+
               <br/>
               <Link to="/course" className="LinkS" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Kurs</Link>
           </li>
