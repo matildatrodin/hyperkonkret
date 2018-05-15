@@ -24,7 +24,7 @@ export const TeacherSidebarContent =
             <li className="bm-item-list">
                 <Link to="/teacher" className="LinkT" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Lärare</Link>
                 <br/>
-                <Link to="/createquiz" className="LinkT" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Skapa quiz</Link>
+                <Link to="/Exercises" className="LinkT" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Övningar</Link>
             </li>
     </div>;
 

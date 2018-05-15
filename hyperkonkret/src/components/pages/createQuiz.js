@@ -13,8 +13,10 @@ export default class CreateQuiz extends React.Component {
                 <Header/>
                 <div className="quiz-body">
                     <h2>Skapa en övning</h2>
+                    <div className="info">Här skapar du en ny övning. I de översta fälten fyller du i vad övningen heter och en beskrivning av vad ämnet handlar om. Sedan lägger du till olika typer av frågor genom att trycka på knappen "välj typ av fråga"</div>
                     <Form className="quiz">
                         <FormGroup>
+                            <br/>
                             <Label>Namn</Label>
                             <Input type="text" name="header" />
                         </FormGroup>

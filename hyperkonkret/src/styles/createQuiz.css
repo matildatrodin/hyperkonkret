@@ -4,12 +4,17 @@
     border-radius: 15px;
     margin-right: 10%;
     margin-left: 10%;
-    margin-top: 0%;
+    margin-top: 10%;
 }
 
 .quiz {
     padding-right: 15%;
     padding-left: 15%;
+}
+
+.info{
+    color: #4b4d59;
+    font-size: 90%;
 }
 
 .create-question-button{
