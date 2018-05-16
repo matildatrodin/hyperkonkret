@@ -58,7 +58,7 @@ export const questionexample = [
         image: "",
         question: "Vad är monopol? Ett svar är rätt",
         concrete: "Monopol är också ett spel, men det efterfrågar vi inte här.",
-        answer: "[1]Ensamrätt på försäljning eller tillverkning av en vara eller tjänst\n[0]Gemensam rätt på varor och tjänster\n[0]Ensamrätt på en butik\n[0]Svar4",
+        answer: "[1]Ensamrätt på försäljning eller tillverkning av en vara eller tjänst\n[0]Gemensam rätt på varor och tjänster\n[0]Ensamrätt på en butik\n[0]Flera stora företag som styr marknaden",
         order: 2,
     },
     {
@@ -67,7 +67,7 @@ export const questionexample = [
         type: "multiple-choice",
         image: "",
         question: "Vad är en planekonomi? Ett svar är rätt",
-        concrete: "Monopol är också ett spel, men det efterfrågar vi inte här.",
+        concrete: "",
         answer: "[1]När marknaden styr vad som ska säljas och tillverkas\n[0]När arbetarna bestämmer vad som ska säljas och tillverkas\n[1]När staten bestämmer vad som ska säljas och tillverkas\n[0]När ekonomer planerar vad som ska säljas och tillverkas",
         order: 3,
     },
@@ -77,7 +77,7 @@ export const questionexample = [
         type: "match",
         image: "",
         question: "Ordet ekonomi kommer från grekiskan och betyder hushållning. Para ihop de olika meningarna",
-        concrete: "Monopol är också ett spel, men det efterfrågar vi inte här.",
+        concrete: "",
         answer: "Inkomsterna måste balanseras mot utgifterna[=]Det ska gå jämnt upp\nGör av med mer pengar än man har[=]Underskottet\nPlanera inköp utifrån de tillgångar[=]Budget\nHushålla med sina resurser[=]Ha koll på sina pengar",
         order: 1,
     }
