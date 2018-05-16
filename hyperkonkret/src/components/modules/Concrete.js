@@ -66,7 +66,6 @@ class Concrete extends Component {
   }
 
   render() {
-
       if (this.state.descriptions.length > 1) {
           let i = 0;
           return(

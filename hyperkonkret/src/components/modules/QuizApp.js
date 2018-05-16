@@ -133,10 +133,6 @@ export class QuizApp extends Component {
     });
   }
 
-  //måste ändra så att denna funktion gör rätt!
-  restartQuiz() {
-    window.location.reload();
-  }
 
   render() {
     const { step, questions, userAnswers, maxQuestions, score, modal } = this.state;
@@ -144,7 +140,7 @@ export class QuizApp extends Component {
       return (
         <Results
           score={score}
-          restartQuiz={this.restartQuiz}
+          restartQuiz={this.props.restart}
           userAnswers={userAnswers}
         />
       );
