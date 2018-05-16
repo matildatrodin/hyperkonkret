@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Question from './Question';
-import {DragAndDrop} from './DragAndDrop';
+import {DragAndDropList} from './DragAndDropList';
 
 const QuestionList = ({ questions, type, handleAnswerClick}) => {
 
@@ -24,7 +24,7 @@ const QuestionList = ({ questions, type, handleAnswerClick}) => {
   );
 }
 else if (type==2){ // Drag and drop är type 2
-  return(<DragAndDrop questions={questions}/>)
+  return(<DragAndDropList questions={questions}/>)
 }
 
 }

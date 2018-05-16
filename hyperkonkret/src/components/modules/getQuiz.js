@@ -4,7 +4,6 @@ import { QuizApp } from './QuizApp';
 import PropTypes from 'prop-types';
 import { exerciseexample } from '../data/exerciseexample';
 import { questionexample } from '../data/questionexample';
-import {DragAndDrop} from './DragAndDrop';
 
 
 export class GetQuiz extends React.Component{
@@ -84,11 +83,8 @@ render(){
     else if (this.state.quizType == 2){
         for(let i = 0 ; i < questionexample.length; i++){
             if(questionexample[i].type == "match" && questionexample[i].exercise_id == this.state.course_id){
-                console.log("dragndrop: " + questionexample[i].type );
-
                 questionsUnsorted.push(questionexample[i]);
             }
-
         }
         return(<QuizApp totalQuestions={2} quiz={questionsUnsorted} type={this.state.quizType}/>)
     }

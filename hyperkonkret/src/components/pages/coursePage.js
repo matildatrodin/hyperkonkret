@@ -6,7 +6,7 @@ import '../../styles/teacherPage.css';
 
 export default class CoursePage extends React.Component {
 
-    
+
 
     render() {
         return (

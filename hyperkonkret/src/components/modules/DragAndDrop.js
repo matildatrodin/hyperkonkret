@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import Dragula from 'react-dragula';
 import Concrete from './Concrete';
@@ -15,65 +14,62 @@ constructor() {
   super();
 
   this.state = {
-    maxQuestions: 0,
     answers1: [],
-    answers2: []
+    answers2: [],
+    counts: 0
   }
 };
 
 componentDidMount() {
-  counts = 0;
-  let drake = Dragula([$('drag-elements'), $('drop-target1'), $('drop-target2'), $('drop-target3'), $('drop-target4')], {
-    revertOnSpill: true
-  }).on('drop', function(el, target){
-    if ((el == $('drag-elements1'))&&(target == $('drop-target1')) ||
-        (el == $('drag-elements2'))&&(target == $('drop-target2')) ||
-        (el == $('drag-elements3'))&&(target == $('drop-target3')) ||
-        (el == $('drag-elements4'))&&(target == $('drop-target4'))){
-          counts++
-          target.id = 'drop-target-correct';
-          el.id = 'el-correct';
-  }
-  else {
-    drake.cancel();
-  }
-  });
-
-/*
-let correctValue = this.state.correct;
-this.setState({correct: correctValue + 1})
-console.log("correct: " + this.state.correct)
-*/
-
   let ans1 = [];
   let ans2 = [];
-
-
-  for (let n= 0 ; n < this.props.questions.length ; n ++) {
-
-      let answerArray = this.props.questions[n].answer.split("\n");
+  let answerArray = this.props.answers.split("\n");
       for (let i = 0; i < answerArray.length; i++) {
           let answerDivided = answerArray[i].split("[=]");
           ans1.push(answerDivided[0]);
           ans2.push(answerDivided[1]);
       }
-}
-  this.setState({
-     answers1: ans1,
-     answers2: ans2
-  });
+    this.setState({
+      answers1: ans1,
+      answers2: ans2
+      });
 }
 
+
+dragulaCreator = (container) => {
+      let counts = 0;
+      let drake = Dragula([container, $('drop-target1'), $('drop-target2'), $('drop-target3'), $('drop-target4')], {
+        revertOnSpill: true
+      }).on('drop', function(el, target){
+        if ((el == $('drag-elements1'))&&(target == $('drop-target1')) ||
+            (el == $('drag-elements2'))&&(target == $('drop-target2')) ||
+            (el == $('drag-elements3'))&&(target == $('drop-target3')) ||
+            (el == $('drag-elements4'))&&(target == $('drop-target4'))){
+              counts++;
+              target.id = 'drop-target-correct';
+              el.id = 'el-correct';
+
+              if (counts==4) {
+                //// AVSLUTA ÖVNING
+              }
+      }
+      else {
+        drake.cancel();
+      }
+      });
+  };
+
 render() {
-// ALLT ÄR HÅRDKODAT FÖR EN FRÅGA [0]. Måste gå igenom flera
+
+
   return(
     <div>
     <h2 className="question-title">
-    {this.props.questions[0].question}
+    {this.props.question}
     </h2>
-    <Concrete info={this.props.questions[0].concrete}/>
+    <Concrete info={this.props.concrete}/>
       <div id="question-field">
-    <div id='drag-elements'>
+    <div id='drag-elements' ref={this.dragulaCreator}>
       <div id='drag-elements1' className="el">{this.state.answers1[0]}</div>
       <br/>
       <div id='drag-elements2' className="el">{this.state.answers1[1]}</div>
