@@ -29,6 +29,8 @@ export default class CreateQuiz extends React.Component {
                         </FormGroup>
 
                         <button className="create-question-button">Skapa övning</button>
+                        <button className="create-question-button">Avbryt</button>
+
                     </Form>
                 </div>
             </div>

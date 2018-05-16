@@ -2,10 +2,14 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import '../../styles/createQuiz.css';
 import CreateQuestion from "./createQuestion";
-import TypeOfQuestion from './typeOfQuestion';
+import TypeOfSubject from './typeOfSubject';
 import {Header} from "../modules/header";
 
 export default class CreateSubject extends React.Component {
+
+    handleClick(){
+
+    }
 
     render(){
         return(
@@ -25,10 +29,11 @@ export default class CreateSubject extends React.Component {
                             <Input type="textarea" name="text" id="exampleText" />
                         </FormGroup>
                         <FormGroup>
-                            <TypeOfQuestion/>
+                            <TypeOfSubject/>
                         </FormGroup>
 
-                        <button className="create-question-button">Skapa Ämne</button>
+                        <button className="create-question-button" onClick={this.handleClick}>Skapa Ämne</button>
+                        <button className="create-question-button" onClick={this.handleClick}>Avbryt</button>
                     </Form>
                 </div>
             </div>
