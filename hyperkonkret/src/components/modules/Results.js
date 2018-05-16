@@ -14,7 +14,6 @@ const Results = ({ userAnswers, score, restartQuiz }) => {
       <h2>Resultat</h2>
       <div>Du klarade övningen.</div>
       <div>Bra jobbat!</div>
-      <a onClick={restartQuiz}>Gör quizet igen!</a>
     </div>
   );
 }

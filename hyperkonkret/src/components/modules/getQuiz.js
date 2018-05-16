@@ -32,11 +32,6 @@ export class GetQuiz extends React.Component{
         return array;
     };
 
-    conceteParse(concrete){
-
-
-    }
-
     createMultipleChoice(questionArray){
         let correct = "";
         let questionsUnsorted = [];
@@ -68,6 +63,7 @@ export class GetQuiz extends React.Component{
         return questionsUnsorted;
     }
 
+
 render(){
     let quiz = exerciseexample[this.state.course_id]; // hämta quiz-objekt från databas
 //  let exerciseId = exerciseexample.id; //hämta questions fr databas som har detta id som exercise id
@@ -87,7 +83,7 @@ render(){
         }
 
         questionsUnsorted = this.createMultipleChoice(multipleChoiceQuestions);
-        return(<QuizApp totalQuestions={2} quiz={questionsUnsorted} type={this.state.quizType}/>)
+        return(<QuizApp totalQuestions={2} quiz={questionsUnsorted} type={this.state.quizType} restart={this.restartQuiz}/>)
     }
     else if (this.state.quizType == 2){
         for(let i = 0 ; i < questionexample.length; i++){
@@ -98,7 +94,7 @@ render(){
             }
 
         }
-        return(<QuizApp totalQuestions={2} quiz={questionsUnsorted} type={this.state.quizType}/>)
+        return(<QuizApp totalQuestions={2} quiz={questionsUnsorted} type={this.state.quizType} restart={this.restartQuiz}/>)
     }
 
 }
