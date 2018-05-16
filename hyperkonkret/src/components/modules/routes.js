@@ -28,7 +28,7 @@ export default class Routes extends React.Component {
     render () {
         return (
             <div>
-                <Route exact path="/" render={()=><FirstPage changeState={this.changeState}/>}/>
+                <Route exact path="/" render={(props)=><FirstPage {...props} changeState={this.changeState}/>}/>
                 <Switch>
                     <Route path="/student" component={Profile}/>
                     <Route path="/teacher" component={TeacherPage}/>
