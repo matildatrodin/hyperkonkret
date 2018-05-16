@@ -4,13 +4,14 @@ import {Header} from '../modules/header';
 import {course} from '../data/course-data';
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Col, CardColumns, Row, Container, CardDeck, CardLink } from 'reactstrap';
-import '../../styles/myCourses.css';
+import '../../styles/exercises.css';
+
 
 const img = {
     landskap: require('../../images/icons/tummeupp.png'),
 };
 
-export default class CourseList extends React.Component{
+export default class Exercises extends React.Component{
     constructor(props){
         super(props);
         this.state ={
@@ -23,19 +24,20 @@ export default class CourseList extends React.Component{
     }
 
     handleClick(id){
-    this.setState({show: id});
+        this.setState({show: id});
+        this.props.history.push("/quiz");
     }
 
 
     render(){
-      let id = this.state.show;
+        let id = this.state.show;
 
         if (this.state.show==0){
             return (
                 <div>
                     <Header/>
                     <div className="title-subjects">
-                        <h2>Dina ämnen</h2>
+                        <h2>Dina övningar</h2>
                     </div>
                     <div className="subjects">
                         <CardDeck>
@@ -43,11 +45,8 @@ export default class CourseList extends React.Component{
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.landskap}/>
                                 <CardBody>
                                     <CardTitle>{course[0].title}</CardTitle>
-                                    <CardText>
-                                        {course[0].description}
-                                    </CardText>
                                     <CardLink >
-                                        <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(1)}>Gör en övning</Button>
+                                        <Button style={{marginBottom: '2%'}}>Redigera</Button>
                                     </CardLink>
                                 </CardBody>
                             </Card>
@@ -55,11 +54,8 @@ export default class CourseList extends React.Component{
                                 <CardImg/>
                                 <CardBody>
                                     <CardTitle>{course[1].title}</CardTitle>
-                                    <CardText>
-                                        {course[1].description}
-                                    </CardText>
                                     <CardLink >
-                                        <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(2)}>Gör en övning</Button>
+                                        <Button style={{marginBottom: '2%'}} >Redigera</Button>
                                     </CardLink>
                                 </CardBody>
                             </Card>
@@ -67,11 +63,16 @@ export default class CourseList extends React.Component{
                                 <CardImg/>
                                 <CardBody>
                                     <CardTitle>{course[2].title}</CardTitle>
-                                    <CardText>
-                                        {course[2].description}
-                                    </CardText>
                                     <CardLink >
-                                        <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(3)}>Gör en övning</Button>
+                                        <Button style={{marginBottom: '2%'}} >Redigera</Button>
+                                    </CardLink>
+                                </CardBody>
+                            </Card>
+                            <Card>
+                                <CardImg/>
+                                <CardBody>
+                                    <CardLink >
+                                        <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(3)}>Skapa ny övning</Button>
                                     </CardLink>
                                 </CardBody>
                             </Card>
@@ -80,6 +81,8 @@ export default class CourseList extends React.Component{
                 </div>
 
             )
+
+        }else if(this.state.show==3){
 
         }
         else {

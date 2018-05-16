@@ -1,0 +1,23 @@
+.subjects{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+.title-subjects{
+    background-color: #00676f;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1% 1% 0% 1%;
+    text-align: left;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+.pic-subject{
+    top-width: "50%";
+    align-content: center;
+
+
+}
