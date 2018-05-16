@@ -8,7 +8,13 @@ import '../../styles/exercises.css';
 
 
 const img = {
-    landskap: require('../../images/icons/tummeupp.png'),
+    svenska: require('../../images/icons/samhalle.png'),
+    geografi: require('../../images/icons/geografi-green.png'),
+    historia: require('../../images/icons/historia-brun.png'),
+    religion: require('../../images/icons/religion-orange.png'),
+    samhalle: require('../../images/icons/so_lila.png'),
+    plus: require('../../images/icons/plus.png')
+
 };
 
 export default class Exercises extends React.Component{
@@ -23,8 +29,7 @@ export default class Exercises extends React.Component{
 
     }
 
-    handleClick(id){
-        this.setState({show: id});
+    handleClick(){
         this.props.history.push("/quiz");
     }
 
@@ -42,7 +47,7 @@ export default class Exercises extends React.Component{
                     <div className="subjects">
                         <CardDeck>
                             <Card className="card-box">
-                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.landskap}/>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.geografi}/>
                                 <CardBody>
                                     <CardTitle>{course[0].title}</CardTitle>
                                     <CardLink >
@@ -51,7 +56,7 @@ export default class Exercises extends React.Component{
                                 </CardBody>
                             </Card>
                             <Card>
-                                <CardImg/>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.samhalle}/>
                                 <CardBody>
                                     <CardTitle>{course[1].title}</CardTitle>
                                     <CardLink >
@@ -60,7 +65,7 @@ export default class Exercises extends React.Component{
                                 </CardBody>
                             </Card>
                             <Card>
-                                <CardImg/>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.historia}/>
                                 <CardBody>
                                     <CardTitle>{course[2].title}</CardTitle>
                                     <CardLink >
@@ -69,10 +74,10 @@ export default class Exercises extends React.Component{
                                 </CardBody>
                             </Card>
                             <Card>
-                                <CardImg/>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.plus}/>
                                 <CardBody>
                                     <CardLink >
-                                        <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(3)}>Skapa ny övning</Button>
+                                        <Button style={{marginBottom: '2%'}} onClick={this.handleClick}>Skapa ny övning</Button>
                                     </CardLink>
                                 </CardBody>
                             </Card>

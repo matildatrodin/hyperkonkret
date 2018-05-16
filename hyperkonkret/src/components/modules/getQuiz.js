@@ -29,6 +29,11 @@ export class GetQuiz extends React.Component{
     answerOptionDragNDrop(string){
         var array = string.split("[=]");
         return array;
+    };
+
+    conceteParse(concrete){
+
+
     }
 
     createMultipleChoice(questionArray){
@@ -47,11 +52,14 @@ export class GetQuiz extends React.Component{
                 };
             }
 
+            let concreteArray = questionArray[i].concrete.split("\n");
+
+
             questionsUnsorted.push({
                 "question": <span>{questionArray[i].question}</span>,
                 "answers": answers,
                 "correct": correct,
-                "concrete": questionArray[i].concrete,
+                "concrete": concreteArray,
                 "image": questionArray[i].image
             });
 
