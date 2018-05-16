@@ -7,7 +7,12 @@ import { Card, CardImg, CardText, CardBody,
 import '../../styles/myCourses.css';
 
 const img = {
-    landskap: require('../../images/icons/tummeupp.png'),
+    svenska: require('../../images/icons/samhalle.png'),
+    geografi: require('../../images/icons/geografi-green.png'),
+    historia: require('../../images/icons/historia-brun.png'),
+    religion: require('../../images/icons/religion-orange.png'),
+    samhalle: require('../../images/icons/so_lila.png'),
+    plus: require('../../images/icons/plus.png')
 };
 
 export default class CourseList extends React.Component{
@@ -39,8 +44,8 @@ export default class CourseList extends React.Component{
                     </div>
                     <div className="subjects">
                         <CardDeck>
-                            <Card className="card-box">
-                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.landskap}/>
+                            <Card style={{minWidth: '250px', maxWidth: '350px', marginTop: '2%'}}>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.geografi}/>
                                 <CardBody>
                                     <CardTitle>{course[0].title}</CardTitle>
                                     <CardText>
@@ -51,8 +56,8 @@ export default class CourseList extends React.Component{
                                     </CardLink>
                                 </CardBody>
                             </Card>
-                            <Card>
-                                <CardImg/>
+                            <Card style={{minWidth: '250px', maxWidth: '350px', marginTop: '2%'}}>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.samhalle}/>
                                 <CardBody>
                                     <CardTitle>{course[1].title}</CardTitle>
                                     <CardText>
@@ -63,8 +68,8 @@ export default class CourseList extends React.Component{
                                     </CardLink>
                                 </CardBody>
                             </Card>
-                            <Card>
-                                <CardImg/>
+                            <Card style={{minWidth: '250px', maxWidth: '350px', marginTop: '2%'}}>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.historia}/>
                                 <CardBody>
                                     <CardTitle>{course[2].title}</CardTitle>
                                     <CardText>
