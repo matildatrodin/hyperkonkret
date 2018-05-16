@@ -70,13 +70,13 @@ render() {
     <Concrete info={this.props.concrete}/>
       <div id="question-field">
     <div id='drag-elements' ref={this.dragulaCreator}>
-      <div id='drag-elements1' className="el">{this.state.answers1[0]}</div>
-      <br/>
       <div id='drag-elements2' className="el">{this.state.answers1[1]}</div>
       <br/>
-      <div id='drag-elements3' className="el">{this.state.answers1[2]}</div>
+      <div id='drag-elements1' className="el">{this.state.answers1[0]}</div>
       <br/>
       <div id='drag-elements4' className="el">{this.state.answers1[3]}</div>
+      <br/>
+      <div id='drag-elements3' className="el">{this.state.answers1[2]}</div>
     </div>
       </div>
       <div id="question-field">

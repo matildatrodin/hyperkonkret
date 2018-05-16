@@ -2,22 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Answer from './Answer';
 import Concrete from './Concrete';
-import Heck from '../../images/heck.png';
 
 const Question = ({ question, answers, concrete, image, handleAnswerClick }) => {
 
 let picture = <div></div>
 if (image != ""){
-picture = <img src={image}/>
+picture = <img src={image} style={{marginBottom: '2rem'}}/>
 }
 
   return (
     <li className="question">
+      {picture}
       <h2 className="question-title">
       {question}
       </h2>
       <Concrete info={concrete}/>
-      {picture}
       <ol className="question-answers">
         {answers.map((answer, index) => {
           return (

@@ -17,8 +17,8 @@ export const questionexample = [
         type: "multiple-choice",
         image: require('../../images/skog.jpg'),
         question: "Den här bilden är tagen från det landskap som har den största skogsarean. Vilket landskap är det?",
-        concrete: "FIXA fråga.",
-        answer: "[1]Kramar ett träd\n[0]Springer runt i panik\n[0]Ingenting\n[0]Ringer en vän",
+        concrete: "",
+        answer: "[1]Norrbotten\n[0]Västerbotten\n[0]Härjedalen\n[0]Skåne",
         order: 2
     },
     {
