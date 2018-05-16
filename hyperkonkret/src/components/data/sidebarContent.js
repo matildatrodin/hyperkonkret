@@ -24,7 +24,7 @@ export const TeacherSidebarContent =
          <li className="bm-item-list">
                 <Link to="/teacher" className="LinkT" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Profil</Link>
                 <br/>
-                <Link to="/Exercises" className="LinkT" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Övningar</Link>
+                <Link to="/subjects" className="LinkT" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Ämnen</Link>
             </li>
     </div>;
 
@@ -37,6 +37,6 @@ export const StudentSidebarContent =
               <Link to="/student" className="LinkS" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Profil</Link>
 
               <br/>
-              <Link to="/course" className="LinkS" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Kurs</Link>
+              <Link to="/course" className="LinkS" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Ämnen</Link>
           </li>
       </div>;
