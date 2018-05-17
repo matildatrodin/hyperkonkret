@@ -10,6 +10,7 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .App-logo {
@@ -52,29 +53,56 @@ html, body {
   bottom: 0;
   right: 0;
   overflow: auto;
-
 }
 
 .App-footer {
   left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 10px;
-  background-color: rgba(25, 55, 55, 0.5);
+  margin-bottom: 0;
+  width: 100%;/*
+  background-color: rgba(25, 55, 55, 0.5);*/
+  background-color: #d8d8d8;
   color: black;
   vertical-align: middle;
   text-align: center;
   margin-top: 20px;
+  height: 5%;
+  min-height: 3em;
+  bottom: 0px;
+  position:fixed;
+  /*min-height: 100px;*/
+  opacity: .6;
+
 }
 
 .App-footer-text {
-  width: 50%;
-  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: .5em;
+  margin-left: 2em;
+  margin-bottom: .5em;
+  float: left;
+  width: 46%;
+  color: white;
+  font-size: 1.2em;
+
 }
 
-.App-footer-button {
-  width: 50%;
+
+.App-footer-buttons{
+  margin-top: .5em;
   float: right;
+  width: 50%;
+}
+
+.Footer-button{
+  background-color: #d8d8d8;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 1em;
+  margin-right: 1em;
+  display: inline-block;
+  font-weight: bold;
 }
 
 /*
