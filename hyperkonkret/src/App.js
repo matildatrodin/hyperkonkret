@@ -14,8 +14,8 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-              isStudent: false,
-              isTeacher: false
+              isStudent: 0,
+              isTeacher: 0
           };
 
         this.loginState = this.loginState.bind(this);
@@ -36,28 +36,26 @@ class App extends React.Component {
 
 
     getInitialStudent () {
-        localStorage.getItem('currentStudent');
-        this.setState({isStudent: 'currentStudent'});
+        this.setState({isStudent: localStorage.getItem('currentStudent')});
     }
 
     getInitialTeacher () {
-        localStorage.getItem('isTeacher');
-        this.setState({isTeacher: 'currentTeacher'});
+        this.setState({isTeacher: localStorage.getItem('currentTeacher')});
     }
 
 
     saveStudent() {
-        localStorage.setItem('currentStudent', JSON.parse(true));
-        localStorage.setItem('currentTeacher', JSON.parse(false));
-        this.setState({isStudent: true, isTeacher: false});
+        localStorage.setItem('currentStudent', 1);
+        localStorage.setItem('currentTeacher', 0);
+        this.setState({isStudent: 1, isTeacher: 0});
         console.log(localStorage);
         console.log(this.state);
     }
 
     saveTeacher() {
-        localStorage.setItem('currentTeacher', JSON.parse(true));
-        localStorage.setItem('currentStudent', JSON.parse(false));
-        this.setState({isStudent: false, isTeacher: true});
+        localStorage.setItem('currentStudent', 0);
+        localStorage.setItem('currentTeacher', 1);
+        this.setState({isStudent: 0, isTeacher: 1});
         console.log(localStorage);
         console.log(this.state);
     }
@@ -71,7 +69,7 @@ class App extends React.Component {
           this.saveTeacher()
       }
       else {
-        this.setState({isStudent: false, isTeacher: false});
+        this.setState({isStudent: 0, isTeacher: 0});
       }
     }
 

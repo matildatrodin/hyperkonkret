@@ -33,7 +33,7 @@ class Routes extends React.Component {
             <div>
                 <Route exact path="/" render={() => <FirstPage changeState={this.changeState}/>}/>
                 <Switch>
-                    <Route path="/student" render={() => <Profile/>}/>
+                    <Route path="/student" component={Profile}/>
                     <Route path="/teacher" component={TeacherPage}/>
                     <Route path="/course" component={CourseList}/>
                     <Route path="/exercises" component={Exercises}/>

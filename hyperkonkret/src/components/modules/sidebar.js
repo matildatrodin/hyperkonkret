@@ -30,21 +30,32 @@ class SideBar extends React.Component {
         this.setState({menuOpen: !this.state.menuOpen})
     }
 
-    getInitialState () {
 
-    }
 
 
     render() {
-      if (this.props.student){
-        SidebarContent = StudentSidebarContent;
-      }
-      else if (this.props.teacher){
-        SidebarContent = TeacherSidebarContent;
-      }
-      else {
-        SidebarContent = LoggedOutSidebarContent;
-      }
+
+        const isTeacher = this.props.teacher;
+        console.log(isTeacher);
+
+        const isStudent = this.props.student;
+        console.log(isStudent);
+
+
+        if (isTeacher == 1){
+            SidebarContent = TeacherSidebarContent;
+            console.log("valde lärare")
+        }
+
+        else if (isStudent == 1){
+            SidebarContent = StudentSidebarContent;
+            console.log("valde elev")
+        }
+        else {
+            SidebarContent = LoggedOutSidebarContent;
+            console.log("valde ingen")
+        }
+
 
         return (
             <div>
