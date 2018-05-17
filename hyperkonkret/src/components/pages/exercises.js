@@ -47,7 +47,7 @@ export default class Exercises extends React.Component{
                     <div className="subjects">
                         <CardDeck>
                             <Card className="card-box">
-                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.geografi}/>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '2%', width: '50%'}} src={img.geografi}/>
                                 <CardBody>
                                     <CardTitle>{course[0].title}</CardTitle>
                                     <CardLink >
@@ -56,7 +56,7 @@ export default class Exercises extends React.Component{
                                 </CardBody>
                             </Card>
                             <Card>
-                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.samhalle}/>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '2%', width: '50%'}} src={img.samhalle}/>
                                 <CardBody>
                                     <CardTitle>{course[1].title}</CardTitle>
                                     <CardLink >
@@ -65,7 +65,7 @@ export default class Exercises extends React.Component{
                                 </CardBody>
                             </Card>
                             <Card>
-                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.historia}/>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '2%', width: '50%'}} src={img.historia}/>
                                 <CardBody>
                                     <CardTitle>{course[2].title}</CardTitle>
                                     <CardLink >
@@ -74,7 +74,7 @@ export default class Exercises extends React.Component{
                                 </CardBody>
                             </Card>
                             <Card>
-                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.plus}/>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '2%', width: '50%'}} src={img.plus}/>
                                 <CardBody>
                                     <CardLink >
                                         <Button style={{marginBottom: '2%'}} onClick={this.handleClick}>Skapa ny övning</Button>

@@ -4,10 +4,16 @@
 }
 
 .Teacher-header {
+    background-color: #005858;
     text-align: left;
     margin-left: 10%;
+    margin-right: 10%;
     margin-top: 1%;
-    color: black;
+    margin-bottom: 1%;
+    padding: 1%;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
 }
 
 .Teacher-body {
@@ -92,7 +98,7 @@
 }
 
 .Correct-button {
-    background-color: #008B8B;
+    background-color: #005858;
     color: white;
     border: none;
     text-align: center;
@@ -104,7 +110,7 @@
 }
 
 .Correct-button:hover {
-    background-color: grey;
+    background-color: #008B8B;
     color: white;
 }
 

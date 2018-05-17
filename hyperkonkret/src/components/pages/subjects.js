@@ -46,12 +46,12 @@ export default class Subjects extends React.Component{
             return (
                 <div>
                     <Header/>
-                    <div className="title-subjects">
+                    <div className="title-box">
                         <h2>Dina övningar</h2>
                     </div>
                     <div className="subjects">
                         <CardDeck>
-                            <Card style={{minWidth: '300px', maxWidth: '300px', marginTop: '2%'}}>
+                            <Card style={{minWidth: '300px', maxWidth: '300px', marginBottom: '2%', boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'}}>
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
                                          src={img.svenska}/>
                                 <CardBody>
@@ -62,7 +62,7 @@ export default class Subjects extends React.Component{
                                     </CardLink>
                                 </CardBody>
                             </Card>
-                            <Card style={{minWidth: '300px', maxWidth: '300px', marginTop: '2%'}}>
+                            <Card style={{minWidth: '300px', maxWidth: '300px', marginBottom: '2%', boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'}}>
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
                                               src={img.geografi}/>
                                 <CardBody>
@@ -73,7 +73,7 @@ export default class Subjects extends React.Component{
                                     </CardLink>
                                 </CardBody>
                             </Card>
-                            <Card style={{minWidth: '300px', maxWidth: '300px', marginTop: '2%'}}>
+                            <Card style={{minWidth: '300px', maxWidth: '300px', marginBottom: '2%', boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'}}>
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
                                          src={img.historia}/>
                                 <CardBody>
@@ -84,7 +84,7 @@ export default class Subjects extends React.Component{
                                     </CardLink>
                                 </CardBody>
                             </Card >
-                            <Card style={{minWidth: '300px', maxWidth: '300px', marginTop: '2%'}}>
+                            <Card style={{minWidth: '300px', maxWidth: '300px', marginBottom: '2%', boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'}}>
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
                                          src={img.samhalle}/>
                                 <CardBody>
@@ -95,7 +95,7 @@ export default class Subjects extends React.Component{
                                     </CardLink>
                                 </CardBody>
                             </Card>
-                            <Card style={{minWidth: '300px', maxWidth: '300px', marginTop: '2%'}}>
+                            <Card style={{minWidth: '300px', maxWidth: '300px', marginBottom: '2%', boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'}}>
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
                                          src={img.plus}/>
                                 <CardBody>
