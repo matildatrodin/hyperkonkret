@@ -10,6 +10,7 @@ import FirstPage from '../pages/firstPage';
 import {LoggedOutSidebarContent, TeacherSidebarContent, StudentSidebarContent} from '../data/sidebarContent';
 
 let SidebarContent;
+
 class SideBar extends React.Component {
 
     constructor(props) {

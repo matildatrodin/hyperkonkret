@@ -7,16 +7,17 @@ import SideBar from './components/modules/sidebar';
 import {Header} from "./components/modules/header";
 import {Footer} from "./components/modules/footer";
 import { BrowserRouter as Router } from 'react-router-dom';
+import {user} from "./components/data/user-data";
 /*import SideBarLogin from './sidebarLogin';*/
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-              currentState: false,
               isStudent: false,
               isTeacher: false
           };
+
         this.loginState = this.loginState.bind(this);
         this.changeSidebarContent=this.changeSidebarContent.bind(this);
         /*  this.state =  {alt: 1};
@@ -27,13 +28,47 @@ class App extends React.Component {
         this.setState({currentState: newState});
     }
 
+    componentWillMount(){
+        this.getInitialStudent();
+        this.getInitialTeacher()
+
+    }
+
+
+    getInitialStudent () {
+        localStorage.getItem('currentStudent');
+        this.setState({isStudent: 'currentStudent'});
+    }
+
+    getInitialTeacher () {
+        localStorage.getItem('isTeacher');
+        this.setState({isTeacher: 'currentTeacher'});
+    }
+
+
+    saveStudent() {
+        localStorage.setItem('currentStudent', JSON.parse(true));
+        localStorage.setItem('currentTeacher', JSON.parse(false));
+        this.setState({isStudent: true, isTeacher: false});
+        console.log(localStorage);
+        console.log(this.state);
+    }
+
+    saveTeacher() {
+        localStorage.setItem('currentTeacher', JSON.parse(true));
+        localStorage.setItem('currentStudent', JSON.parse(false));
+        this.setState({isStudent: false, isTeacher: true});
+        console.log(localStorage);
+        console.log(this.state);
+    }
+
     changeSidebarContent(user) {
       console.log("Går in i App:s changeContent");
       if (user == "student"){
-        this.setState({isStudent: true, isTeacher: false});
+          this.saveStudent();
       }
       else if (user == "teacher"){
-        this.setState({isStudent: false, isTeacher: true});
+          this.saveTeacher()
       }
       else {
         this.setState({isStudent: false, isTeacher: false});
