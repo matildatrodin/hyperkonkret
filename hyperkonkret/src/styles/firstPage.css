@@ -53,6 +53,26 @@
     background-color: #007272;
 }
 
+.Button-log-out {
+    background-color: #grey;
+    float: right;
+    color: black;
+    border: none;
+    text-align: center;
+    padding: 1%;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 1%;
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 10%;
+    font-weight: bold;
+}
+
+.Button-log-out:hover{
+    background-color: darkgrey;
+}
+
 .FirstPage-content{
     float: left;
     width: 100%;

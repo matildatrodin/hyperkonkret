@@ -2,18 +2,22 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import '../../styles/createQuiz.css';
 import CreateQuestion from "./createQuestion";
-import TypeOfQuestion from './typeOfQuestion';
+import TypeOfSubject from './typeOfSubject';
 import {Header} from "../modules/header";
 
-export default class CreateQuiz extends React.Component {
+export default class CreateSubject extends React.Component {
+
+    handleClick(){
+
+    }
 
     render(){
         return(
             <div>
                 <Header/>
                 <div className="quiz-body">
-                    <h2>Skapa en övning</h2>
-                    <div className="info">Här skapar du en ny övning. I de översta fälten fyller du i vad övningen heter och en beskrivning av vad ämnet handlar om. Sedan lägger du till olika typer av frågor genom att trycka på knappen "välj typ av fråga"</div>
+                    <h2>Skapa ett ämne</h2>
+                    <div className="info">Här skapar du ett nytt ämne. I de översta fälten fyller du i vad ämnet heter och en beskrivning av vad ämnet handlar om. Sedan väljer du vilket huvudämne det ska tillhöra genom att trycka på knappen "välj huvudämne".</div>
                     <Form className="quiz">
                         <FormGroup>
                             <br/>
@@ -25,16 +29,15 @@ export default class CreateQuiz extends React.Component {
                             <Input type="textarea" name="text" id="exampleText" />
                         </FormGroup>
                         <FormGroup>
-                            <TypeOfQuestion/>
+                            <TypeOfSubject/>
                         </FormGroup>
 
-                        <button className="create-question-button">Skapa övning</button>
-                        <button className="create-question-button">Avbryt</button>
-
+                        <button className="create-question-button" onClick={this.handleClick}>Skapa Ämne</button>
+                        <button className="create-question-button" onClick={this.handleClick}>Avbryt</button>
                     </Form>
                 </div>
             </div>
         );
-}
+    }
 
 }

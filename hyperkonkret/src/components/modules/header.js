@@ -19,11 +19,16 @@ export class Header extends React.Component{
         this.props.history.push('/');
     }
 
+    logout(){
+      // Lägg till funktionalitet för att logga ut (alt återvända till hemskärmen)
+    }
+
     render(){
 
         return(
             <header className="App-header">
                 <img src={images.image} className="App-header-logo" onClick={this.returnHome}/>
+                <button className="Button-log-out" onClick={this.logout}>Logga ut</button>
             </header>
         );
     }

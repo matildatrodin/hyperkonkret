@@ -15,11 +15,7 @@ export class QuizApp extends Component {
       maxQuestions: 0,
       step: 1,
       score: 0,
-      modal: {
-        state: 'hide',
-        praise: '',
-        points: ''
-      }
+      modal: {state: 'hide'}
     };
 
     this.handleAnswerClick = this.handleAnswerClick.bind(this);
@@ -63,7 +59,7 @@ export class QuizApp extends Component {
         userAnswers: userAnswers
       });
 
-      setTimeout(() => this.showModal(tries), 750);
+      setTimeout(() => this.showModal(), 750);
 
       setTimeout(this.nextStep, 2750);
 
@@ -85,7 +81,7 @@ export class QuizApp extends Component {
   }
 
   showModal(tries) {
-    let praise;
+/*    let praise;
     let points;
 
     switch (tries) {
@@ -109,13 +105,9 @@ export class QuizApp extends Component {
         points = '+1';
       }
     }
-
+*/
     this.setState({
-      modal: {
-        state: 'show',
-        praise,
-        points
-      }
+      modal: {state: 'show'}
     });
 
   }
@@ -141,10 +133,6 @@ export class QuizApp extends Component {
     });
   }
 
-  //måste ändra så att denna funktion gör rätt!
-  restartQuiz() {
-    window.location.reload();
-  }
 
   render() {
     const { step, questions, userAnswers, maxQuestions, score, modal } = this.state;
@@ -152,7 +140,7 @@ export class QuizApp extends Component {
       return (
         <Results
           score={score}
-          restartQuiz={this.restartQuiz}
+          restartQuiz={this.props.restart}
           userAnswers={userAnswers}
         />
       );
