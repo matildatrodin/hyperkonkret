@@ -13,7 +13,7 @@ export const exerciseexample = [
     id: 2,
     course_id: 2,
     title: "Ekonomiska system",
-    description: "I den här övningen --",
+    description: "I den här övningen tränar du på ekonomiska termer",
     ingress: "",
     created_by: 1,
     created_at: "2018-02-10",
