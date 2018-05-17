@@ -1,9 +1,21 @@
 import { QuizApp } from '../modules/QuizApp';
 import React from 'react';
-import { Button } from 'reactstrap';
 import { GetQuiz } from '../modules/getQuiz';
 import '../../styles/quizButtons.css';
 import { Header } from '../modules/header';
+import {course, exerciseexample} from "../data/exerciseexample";
+import { Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button, Col, CardColumns, Row, Container, CardDeck, CardLink } from 'reactstrap';
+
+
+const img = {
+    svenska: require('../../images/icons/samhalle.png'),
+    geografi: require('../../images/icons/geografi-green.png'),
+    historia: require('../../images/icons/historia-brun.png'),
+    religion: require('../../images/icons/religion-orange.png'),
+    samhalle: require('../../images/icons/so_lila.png'),
+    plus: require('../../images/icons/plus.png')
+};
 
 export default class Course extends React.Component {
 
@@ -36,10 +48,38 @@ export default class Course extends React.Component {
             return(
                 <div>
                     <Header/>
-                    <h2>Övningar i {this.props.title}</h2>
-                    <button id="multiplechoice" onClick={() => this.handleClick(1)}>Gör en flervalsövning</button>
-                    <button id="drag-and-drop" onClick={() => this.handleClick(2)}>Gör en drag-and-drop övning</button>
-                    <button id="exit" onClick={() => this.props.goBackToCourseList(0)}>Gå tillbaka till kurser</button>
+                    < div className="title-subjects">
+                        <h2>Övningar inom {this.props.title}
+                        <Button id="exit" onClick={() => this.props.goBackToCourseList(0)}>Gå tillbaka till kurser</Button>
+                        </h2>
+                    </div>
+                    <div className="subjects">
+                        <CardDeck>
+                            <Card style={{minWidth: '250px', maxWidth: '350px', marginTop: '2%'}}>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.geografi}/>
+                                <CardBody>
+                                    <CardTitle>{exerciseexample[0].title}</CardTitle>
+                                    <CardText>
+                                        {exerciseexample[0].description}
+                                    </CardText>
+                                    <CardLink >
+                                        <Button id="multiplechoice" onClick={() => this.handleClick(1)}>Starta övning</Button>                                    </CardLink>
+                                </CardBody>
+                            </Card>
+                            <Card style={{minWidth: '250px', maxWidth: '350px', marginTop: '2%'}}>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.samhalle}/>
+                                <CardBody>
+                                    <CardTitle>{exerciseexample[1].title}</CardTitle>
+                                    <CardText>
+                                        {exerciseexample[1].description}
+                                    </CardText>
+                                    <CardLink >
+                                        <Button id="drag-and-drop" onClick={() => this.handleClick(2)}>Starta övning</Button>
+                                    </CardLink>
+                                </CardBody>
+                            </Card>
+                        </CardDeck>
+                    </div>
                 </div>
 
         );
