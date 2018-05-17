@@ -65,11 +65,13 @@ html, body {
   vertical-align: middle;
   text-align: center;
   margin-top: 20px;
+  min-height: 120px;
 }
 
 .App-footer-text {
   width: 50%;
   background-color: rgba(255, 255, 255, 0.8);
+  float: left;
 }
 
 .App-footer-button {

@@ -24,11 +24,11 @@ export default class FirstPage extends React.Component {
     }
 
     openTeacher() {
-        this.props.changeState(false, true);
+        this.props.changeContent("teacher");
     }
 
     openStudent() {
-        this.props.changeState(true, false);
+        this.props.changeContent("student");
     }
 
     render() {

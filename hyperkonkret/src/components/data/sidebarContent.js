@@ -35,7 +35,6 @@ export const StudentSidebarContent =
           </Link>
           <li className="bm-item-list">
               <Link to="/student" className="LinkS" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Profil</Link>
-
               <br/>
               <Link to="/course" className="LinkS" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Ämnen</Link>
           </li>
