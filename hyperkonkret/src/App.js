@@ -7,16 +7,17 @@ import SideBar from './components/modules/sidebar';
 import {Header} from "./components/modules/header";
 import {Footer} from "./components/modules/footer";
 import { BrowserRouter as Router } from 'react-router-dom';
+import {user} from "./components/data/user-data";
 /*import SideBarLogin from './sidebarLogin';*/
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-              currentState: false,
-              isStudent: false,
-              isTeacher: false
+              isStudent: 0,
+              isTeacher: 0
           };
+
         this.loginState = this.loginState.bind(this);
         this.changeSidebarContent=this.changeSidebarContent.bind(this);
         /*  this.state =  {alt: 1};
@@ -27,16 +28,48 @@ class App extends React.Component {
         this.setState({currentState: newState});
     }
 
+    componentWillMount(){
+        this.getInitialStudent();
+        this.getInitialTeacher()
+
+    }
+
+
+    getInitialStudent () {
+        this.setState({isStudent: localStorage.getItem('currentStudent')});
+    }
+
+    getInitialTeacher () {
+        this.setState({isTeacher: localStorage.getItem('currentTeacher')});
+    }
+
+
+    saveStudent() {
+        localStorage.setItem('currentStudent', 1);
+        localStorage.setItem('currentTeacher', 0);
+        this.setState({isStudent: 1, isTeacher: 0});
+        console.log(localStorage);
+        console.log(this.state);
+    }
+
+    saveTeacher() {
+        localStorage.setItem('currentStudent', 0);
+        localStorage.setItem('currentTeacher', 1);
+        this.setState({isStudent: 0, isTeacher: 1});
+        console.log(localStorage);
+        console.log(this.state);
+    }
+
     changeSidebarContent(user) {
       console.log("Går in i App:s changeContent");
       if (user == "student"){
-        this.setState({isStudent: true, isTeacher: false});
+          this.saveStudent();
       }
       else if (user == "teacher"){
-        this.setState({isStudent: false, isTeacher: true});
+          this.saveTeacher()
       }
       else {
-        this.setState({isStudent: false, isTeacher: false});
+        this.setState({isStudent: 0, isTeacher: 0});
       }
     }
 
