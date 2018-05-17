@@ -12,11 +12,6 @@ export class Header extends React.Component{
 
     constructor(props) {
         super(props);
-        this.returnHome = this.returnHome.bind(this);
-    }
-
-    returnHome(props) {
-        this.props.history.push('/');
     }
 
     logout(){
@@ -27,7 +22,7 @@ export class Header extends React.Component{
 
         return(
             <header className="App-header">
-                <img src={images.image} className="App-header-logo" onClick={this.returnHome}/>
+                <Link to="/"><img src={images.image} className="App-header-logo"/></Link>
                 <button className="Button-log-out" onClick={this.logout}>Logga ut</button>
             </header>
         );
