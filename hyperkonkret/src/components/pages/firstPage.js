@@ -5,8 +5,7 @@ import '../../styles/firstPage.css';
 import Routes from '../modules/routes';
 import { Link, Redirect, browserHistory } from 'react-router-dom';
 import {logo} from '../../images/logo shadow/hyperkonkret-black.png';
-import PropTypes from 'prop-types';
-
+import { Footer } from '../modules/footer';
 
 
 const images = {
@@ -50,6 +49,7 @@ export default class FirstPage extends React.Component {
                 <div className="FirstPage-catch">
                     - Inkludering får aldrig bli exkludering -
                 </div>
+                <Footer/>
             </div>
         )
     }

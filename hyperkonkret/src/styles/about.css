@@ -1,0 +1,98 @@
+.about-Body {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.Header-img {
+    width: 50%;
+}
+
+.Button-log-out {
+    background-color: #grey;
+    float: right;
+    color: black;
+    border: none;
+    text-align: center;
+    padding: 1%;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 1%;
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 10%;
+    font-weight: bold;
+}
+
+.Button-log-out:hover{
+    background-color: darkgrey;
+}
+
+.headline-container{
+    width: 100%;
+    background-color: #D3D3D3;
+    padding: 2%;
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+
+.text-container{
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.text-box1{
+    background-color: #D3D3D3;
+    padding: 2%;
+    border-radius: 15px;
+    width: 49%;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+    float: left;
+    text-align: left;
+
+}
+
+.text-box2{
+    text-align: left;
+    overflow: hidden;
+    float:right;
+    background-color: #D3D3D3;
+    padding: 2%;
+    border-radius: 15px;
+    width: 49%;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+}
+
+.info-text{
+    color: #5d5d5d;
+    font-size: 140%;
+}
+.info-logo-text{
+    margin-top: 1%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: #F09A9D; /* Red */
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        background-color: #F5CF8E; /* Yellow */
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    body {
+        background-color: #B2D6FF; /* Blue */
+    }
+}

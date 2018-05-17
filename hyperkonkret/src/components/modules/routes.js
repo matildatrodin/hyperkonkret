@@ -9,6 +9,7 @@ import CourseList from '../pages/courseList';
 import Exercises from '../pages/exercises';
 import Subjects from '../pages/subjects';
 import CreateSubject from '../pages/createSubject';
+import About from '../pages/About';
 
 
 class Routes extends React.Component {
@@ -40,6 +41,7 @@ class Routes extends React.Component {
                     <Route path="/quiz" component={CreateQuiz}/>
                     <Route path="/subjects" component={Subjects}/>
                     <Route path="/create-subject" component={CreateSubject}/>
+                    <Route path="/about" component={About}/>
                 </Switch>
             </div>
         )
