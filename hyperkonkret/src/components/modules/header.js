@@ -20,8 +20,8 @@ export class Header extends React.Component{
     render(){
 
         return(
-          <header className="App-header">
-                <img src={images.image} className="App-header-logo"/>
+            <header className="App-header">
+                <Link to="/"><img src={images.image} className="App-header-logo"/></Link>
             </header>
         );
     }

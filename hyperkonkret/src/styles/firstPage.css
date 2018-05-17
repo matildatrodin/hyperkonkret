@@ -32,6 +32,8 @@
 
 .Button-teacher:hover{
     background-color: #007272;
+    text-decoration: none;
+    color: white;
 }
 
 .Button-student {
@@ -51,10 +53,12 @@
 
 .Button-student:hover{
     background-color: #007272;
+    text-decoration: none;
+    color: white;
 }
 
 .Button-log-out {
-    background-color: #grey;
+    background-color: grey;
     float: right;
     color: black;
     border: none;
