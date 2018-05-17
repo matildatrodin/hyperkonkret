@@ -94,6 +94,7 @@ class App extends React.Component {
 
         return (
           <div>
+            <Header/>
             <Router>
                 <div className="App-body">
                     <SideBar changeContent={this.changeSidebarContent} loginState={this.state.currentState} student={this.state.isStudent} teacher={this.state.isTeacher}/>

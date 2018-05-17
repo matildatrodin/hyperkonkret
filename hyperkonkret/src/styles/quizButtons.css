@@ -1,27 +1,29 @@
 #exit{
-    background-color: #373a47;
-    color: aliceblue;
-    padding: 1% 1% 1% 1%;
-    text-align: center;
-    margin-top: 2%;
-    margin-left: 40%;
-    margin-right: 40%;
+    float: right;
+    margin-bottom: 2%;
+    background-color: white;
+    color: #00676f;
 }
-#exit:hover {
-    background-color: #4b4d59;
+
+.subjects{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+.title-subjects{
+    background-color: #00676f;
     color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: left;
+    border-radius: 10px;
+    margin-top: 10%;
 }
-#multiplechoice, #drag-and-drop{
-    width: 20%;
-    background-color: #373a47;
-    color: aliceblue;
-    padding: 1% 1% 1% 1%;
-    text-align: center;
-    margin-top: 2%;
-    margin-left: 40%;
-    margin-right: 40%;
-}
-#multiplechoice:hover, #drag-and-drop:hover{
-    background-color: #4b4d59;
-    color: white;
+
+.pic-subject{
+    top-width: "50%";
+    align-content: center;
+
+
 }
