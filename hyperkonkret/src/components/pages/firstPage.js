@@ -45,8 +45,8 @@ export default class FirstPage extends React.Component {
                     <img className="pic" src={images.student} />
                     <img className="pic" src={images.teacher} />
                 </div>
-                <button onClick={this.openStudent}>Elever börjar här</button>
-                <button onClick={this.openTeacher}>Lärare börjar här</button>
+                <button className="Button-student" onClick={this.openStudent}>Elever börjar här</button>
+                <button className="Button-teacher" onClick={this.openTeacher}>Lärare börjar här</button>
                 <div className="FirstPage-catch">
                     - Inkludering får aldrig bli exkludering -
                 </div>
