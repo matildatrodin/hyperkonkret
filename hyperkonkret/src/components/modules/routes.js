@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch, Redirect, withRouter } from 'react-router-dom';
 import TeacherPage from '../pages/teacherPage';
 import FirstPage from '../pages/firstPage';
 import Profile from '../pages/profile';
@@ -12,8 +12,7 @@ import CreateSubject from '../pages/createSubject';
 import About from '../pages/About';
 
 
-
-export default class Routes extends React.Component {
+class Routes extends React.Component {
 
     constructor(props) {
         super(props);
@@ -30,9 +29,10 @@ export default class Routes extends React.Component {
   }
 
     render () {
+
         return (
             <div>
-                <Route exact path="/" render={()=><FirstPage changeState={this.changeState}/>}/>
+                <Route exact path="/" render={() => <FirstPage changeState={this.changeState}/>}/>
                 <Switch>
                     <Route path="/student" component={Profile}/>
                     <Route path="/teacher" component={TeacherPage}/>
@@ -47,3 +47,5 @@ export default class Routes extends React.Component {
         )
     }
 }
+
+export default withRouter(Routes);

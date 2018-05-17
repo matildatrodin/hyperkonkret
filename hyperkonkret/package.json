@@ -25,6 +25,7 @@
     "react-icons-kit": "^1.0.7",
     "react-motion": "^0.5.2",
     "react-motion-drawer": "^3.1.0",
+    "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
