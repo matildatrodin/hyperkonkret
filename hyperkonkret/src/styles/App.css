@@ -58,8 +58,16 @@ html, body {
 .App-footer {
   left: 0;
   margin-bottom: 0;
+<<<<<<< HEAD
   width: 100%;
   background-color: rgb(216,216,216);
+=======
+  margin-top: 5px;
+  width: 100%;/*
+  background-color: rgba(25, 55, 55, 0.5);*/
+  background-color: #d8d8d8;
+  color: black;
+>>>>>>> 6a399c9931d022e44c9baa1ba831d105c965962c
   vertical-align: middle;
   text-align: center;
   margin-top: 20px;

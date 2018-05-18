@@ -39,7 +39,7 @@ class SideBar extends React.Component {
     }
 
     render() {
-        let LogOutButton = <button className="Button-log-out" onClick={this.logout}>Logga ut</button>;
+        let LogOutButton = <button className="Button-logout" onClick={this.logout}>Logga ut</button>;
         const isTeacher = this.props.teacher;
         const isStudent = this.props.student;
 
