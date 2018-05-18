@@ -145,6 +145,8 @@ export class QuizApp extends Component {
         />
       );
     } else return (
+        <div>
+            <br></br>
         <div className="cardbox">
         <div id={"card"}>
           <Quiz
@@ -158,7 +160,8 @@ export class QuizApp extends Component {
         { modal.state === 'show' && <Modal modal={modal} /> }
         </div>
       </div>
-    );
+        </div>
+            );
   }
 }
 /*

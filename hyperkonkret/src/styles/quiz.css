@@ -8,7 +8,7 @@ html, body, #app, div[data-reactroot] {
 
 #card{
   height: 100%;
-  width: 90%;
+  width: 80%;
   margin: auto;
   background-color: white;
 }
@@ -20,6 +20,7 @@ html, body, #app, div[data-reactroot] {
     border-radius: 10px;
     background-color: white;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+    margin-top: 5%;
 
 }
 
