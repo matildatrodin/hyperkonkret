@@ -16,6 +16,8 @@ class SideBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {menuOpen: false}
+
+    this.logout = this.logout.bind(this);
     }
 
     handleStateChange (state) {
@@ -32,7 +34,7 @@ class SideBar extends React.Component {
 
     logout() {
       this.closeMenu;
-      this.props.changeSidebarContent; ;
+      console.log("loggar ut");
     }
 
 
@@ -65,7 +67,7 @@ class SideBar extends React.Component {
             <div>
                 <Menu isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
                     {SidebarContent}
-                    <Link to="/" className="Button-log-out" onClick={this.logout}>Logga ut</Link>
+                    <button className="Button-log-out" onClick={this.logout}>Logga ut</button>
                 </Menu>
                 <Routes changeContent={this.props.changeContent}/>
             </div>
