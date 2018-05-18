@@ -61,7 +61,6 @@ class App extends React.Component {
     }
 
     changeSidebarContent(user) {
-      console.log("Går in i App:s changeContent");
       if (user == "student"){
           this.saveStudent();
       }
@@ -97,7 +96,7 @@ class App extends React.Component {
             <Header/>
             <Router>
                 <div className="App-body">
-                    <SideBar changeContent={this.changeSidebarContent} loginState={this.state.currentState} student={this.state.isStudent} teacher={this.state.isTeacher}/>
+                    <SideBar changeContent={this.changeSidebarContent} student={this.state.isStudent} teacher={this.state.isTeacher}/>
                     <br/>
                 </div>
             </Router>

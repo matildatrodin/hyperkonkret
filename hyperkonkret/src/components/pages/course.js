@@ -40,7 +40,7 @@ export default class Course extends React.Component {
                 <div>
                     <Header/>
                     <GetQuiz course={this.props.id} id={this.state.show} />
-                    <button id="exit" onClick={() => this.handleClick(0)}>Avsluta övning</button>
+                    <Button style={{marginTop: '2%'}} onClick={() => this.handleClick(0)}>Avsluta övning</Button>
                 </div>
             )
         }
@@ -50,7 +50,7 @@ export default class Course extends React.Component {
                     <Header/>
                     < div className="title-subjects">
                         <h2>Övningar inom {this.props.title}
-                        <Button id="exit" onClick={() => this.props.goBackToCourseList(0)}>Gå tillbaka till kurser</Button>
+                        <Button id="go-back" onClick={() => this.props.goBackToCourseList(0)}>Gå tillbaka till kurser</Button>
                         </h2>
                     </div>
                     <div className="subjects">

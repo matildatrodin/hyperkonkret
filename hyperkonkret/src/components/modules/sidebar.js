@@ -16,6 +16,8 @@ class SideBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {menuOpen: false}
+
+    this.logout = this.logout.bind(this);
     }
 
     handleStateChange (state) {
@@ -32,7 +34,7 @@ class SideBar extends React.Component {
 
     logout() {
       this.closeMenu;
-      this.props.changeSidebarContent; ;
+      console.log("loggar ut");
     }
 
 
@@ -40,24 +42,16 @@ class SideBar extends React.Component {
     render() {
 
         const isTeacher = this.props.teacher;
-        console.log(isTeacher);
-
         const isStudent = this.props.student;
-        console.log(isStudent);
-
 
         if (isTeacher == 1){
             SidebarContent = TeacherSidebarContent;
-            console.log("valde lärare")
         }
-
         else if (isStudent == 1){
             SidebarContent = StudentSidebarContent;
-            console.log("valde elev")
         }
         else {
             SidebarContent = LoggedOutSidebarContent;
-            console.log("valde ingen")
         }
 
 
@@ -65,7 +59,7 @@ class SideBar extends React.Component {
             <div>
                 <Menu isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
                     {SidebarContent}
-                    <Link to="/" className="Button-log-out" onClick={this.logout}>Logga ut</Link>
+                    <button className="Button-log-out" onClick={this.logout}>Logga ut</button>
                 </Menu>
                 <Routes changeContent={this.props.changeContent}/>
             </div>
