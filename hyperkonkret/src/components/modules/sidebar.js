@@ -35,6 +35,7 @@ class SideBar extends React.Component {
     logout() {
       this.closeMenu();
       this.props.changeContent();
+      window.location = '/';
     }
 
     render() {
@@ -58,7 +59,7 @@ class SideBar extends React.Component {
             <div>
                 <Menu isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
                     {SidebarContent}
-                    {LogOutButton }
+                    {LogOutButton}
                 </Menu>
                 <Routes changeContent={this.props.changeContent}/>
             </div>
