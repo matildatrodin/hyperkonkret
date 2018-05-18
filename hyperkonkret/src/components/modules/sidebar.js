@@ -33,14 +33,12 @@ class SideBar extends React.Component {
     }
 
     logout() {
-      this.closeMenu;
-      console.log("loggar ut");
+      this.closeMenu();
+      this.props.changeContent();
     }
 
-
-
     render() {
-
+        let LogOutButton = <button className="Button-log-out" onClick={this.logout}>Logga ut</button>;
         const isTeacher = this.props.teacher;
         const isStudent = this.props.student;
 
@@ -52,6 +50,7 @@ class SideBar extends React.Component {
         }
         else {
             SidebarContent = LoggedOutSidebarContent;
+            LogOutButton = <div></div>
         }
 
 

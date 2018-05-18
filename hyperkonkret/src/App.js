@@ -61,6 +61,7 @@ class App extends React.Component {
     }
 
     changeSidebarContent(user) {
+      console.log("Går in i App:s changeContent");
       if (user == "student"){
           this.saveStudent();
       }
@@ -72,25 +73,8 @@ class App extends React.Component {
       }
     }
 
-    /*  changeState(oldState) {
-          if (oldState == 1) {
-              this.setState({
-                  alt: 2
-              })
-
-          }
-          else {
-              this.setState({
-                  alt: 1
-              })
-
-          }
-
-      }*/
-
 
     render() {
-
         return (
           <div>
             <Header/>
@@ -104,39 +88,5 @@ class App extends React.Component {
         )
     }
 }
-
-
- /*
- render() {
-
-        if (this.state.alt == 1) {
-            return (
-                <div className="App-body">
-                    <SideBar/>
-                    <header className="App-header">
-                        <img src={logo} className="App-logo" alt="logo"/>
-                        <h1 className="App-title">Hyperkonkret!</h1>
-                    </header>
-                    <Knapp name={"Logga in med google"} alternative={this.state.alt} onClick={this.changeState}/>
-                    <br/>
-                    <button className="App-button-register">Registrera</button>
-                    <footer className="App-footer">Hej jag är en footer tjoho</footer>
-                </div>
-            );
-        }
-        if (this.state.alt == 2) {
-            return (
-                <div className="App-body">
-                    <SideBarLogin/>
-                    <header className="App-header">
-                        <img src={logo} className="App-logo" alt="logo"/>
-                        <h1 className="App-title">Välkommen!</h1>
-                    </header>
-                    <Knapp name={"Logga ut"} alternative={this.state.alt} onClick={this.changeState}/>
-                    <footer className="App-footer">Hej jag är en footer tjoho</footer>
-                </div>
-            );
-        }
-    }*/
 
 export default App;

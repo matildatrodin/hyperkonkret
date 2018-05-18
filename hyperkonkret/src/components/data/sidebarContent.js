@@ -12,7 +12,6 @@ export const LoggedOutSidebarContent =
             <Link to="/" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Hem</Link>
             <br/>
             <Link to="/about" className="Link" style={{textDecoration: 'none'}} onClick={() => this.closeMenu()}>Om oss</Link>
-            <br/>
         </li>
     </div>;
 
