@@ -47,15 +47,26 @@ Color/shape of close button cross
 
 /* Wrapper for item list */
 .bm-item-list {
-    text-align: left;
-    display: block;
+    text-align: center;
+    display: inline-block;
     text-decoration: none;
+    margin-top: 4%;
 
 }
 
 /* Styling of overlay */
 .bm-overlay {
     background: rgba(0, 0, 0, 0.1);
+}
+
+.H-logo {
+    display:inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.H-logo:hover {
+    color: #007272;
 }
 
 .Link:any-link {
@@ -96,3 +107,28 @@ Color/shape of close button cross
     background-position: center center;
     display: inline-block;
 }
+
+.Button-logout {
+    color: white;
+    background-color: #005858;
+    padding: 4%;
+    text-align: center;
+    border-radius: 5px;
+    width: 100px;
+    height: auto;
+    font-size: 16px;
+    margin-top: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.Button-logout:hover {
+    background-color: #007272;
+    text-decoration: none;
+    color: white;
+}
+

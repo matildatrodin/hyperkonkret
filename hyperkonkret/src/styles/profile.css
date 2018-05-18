@@ -4,10 +4,16 @@
 }
 
 .Profile-header {
+    background-color: #005858;
     text-align: left;
     margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
     margin-bottom: 1%;
-    color: black;
+    padding: 1%;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
 }
 
 .Profile-img {

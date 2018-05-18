@@ -42,24 +42,16 @@ class SideBar extends React.Component {
     render() {
 
         const isTeacher = this.props.teacher;
-        console.log(isTeacher);
-
         const isStudent = this.props.student;
-        console.log(isStudent);
-
 
         if (isTeacher == 1){
             SidebarContent = TeacherSidebarContent;
-            console.log("valde lärare")
         }
-
         else if (isStudent == 1){
             SidebarContent = StudentSidebarContent;
-            console.log("valde elev")
         }
         else {
             SidebarContent = LoggedOutSidebarContent;
-            console.log("valde ingen")
         }
 
 
