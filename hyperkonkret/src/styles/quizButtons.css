@@ -1,9 +1,11 @@
-#exit{
+#go-back{
     float: right;
     margin-bottom: 2%;
     background-color: white;
     color: #00676f;
 }
+
+
 
 .subjects{
     margin-right: 10%;
