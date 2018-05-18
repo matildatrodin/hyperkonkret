@@ -65,7 +65,7 @@ class SideBar extends React.Component {
             <div>
                 <Menu isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
                     {SidebarContent}
-                    <Link to="/" className="Button-log-out" onClick={this.logout}>Logga ut</Link>
+                    <Link to="/" className="Button-logout" onClick={this.logout}>Logga ut</Link>
                 </Menu>
                 <Routes changeContent={this.props.changeContent}/>
             </div>
