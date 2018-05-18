@@ -8,10 +8,19 @@ html, body, #app, div[data-reactroot] {
 
 #card{
   height: 100%;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
   background-color: white;
+}
+
+.cardbox{
+    align: center;
+    margin: auto;
+    width: 80%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
+
 }
 
 .question-field {

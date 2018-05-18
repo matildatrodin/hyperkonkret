@@ -1,0 +1,15 @@
+.results-container{
+    width: 60%;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+.bottom-text{
+    margin-bottom: 2em;
+}
+
+.resultpic{
+    margin-top: 5%;
+    width: 30%;
+}

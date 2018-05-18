@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import tally from '../helpers/tally';
+import '../../styles/results.css';
+
+const images = {
+    thumb: require('../../images/icons/tummeupp.png')
+}
 
 const Results = ({ userAnswers, score, restartQuiz }) => {
   const triesTotal = tally(userAnswers);
@@ -11,9 +16,9 @@ const Results = ({ userAnswers, score, restartQuiz }) => {
 
   return (
     <div className="results-container">
-      <h2>Resultat</h2>
-      <div>Du klarade övningen.</div>
-      <div>Bra jobbat!</div>
+        <img src={images.thumb} className="resultpic" />
+      <div>Du klarade övningen,</div>
+      <div className="bottom-text">bra jobbat!</div>
     </div>
   );
 }

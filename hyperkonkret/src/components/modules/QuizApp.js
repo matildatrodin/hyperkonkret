@@ -145,8 +145,9 @@ export class QuizApp extends Component {
         />
       );
     } else return (
-      <div id={"card"}>
-        <Quiz
+        <div className="cardbox">
+        <div id={"card"}>
+          <Quiz
           step={step}
           questions={questions}
           totalQuestions={maxQuestions}
@@ -155,6 +156,7 @@ export class QuizApp extends Component {
           handleAnswerClick={this.handleAnswerClick}
         />
         { modal.state === 'show' && <Modal modal={modal} /> }
+        </div>
       </div>
     );
   }
