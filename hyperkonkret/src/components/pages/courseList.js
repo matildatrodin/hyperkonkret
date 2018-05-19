@@ -44,7 +44,12 @@ export default class CourseList extends React.Component{
                     </div>
                     <div className="subjects">
                         <CardDeck>
-                            <Card style={{minWidth: '250px', maxWidth: '350px', marginTop: '2%'}}>
+                            <Card style={{
+                                minWidth: '300px',
+                                maxWidth: '300px',
+                                marginBottom: '2%',
+                                boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'
+                            }}>
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.geografi}/>
                                 <CardBody>
                                     <CardTitle>{course[0].title}</CardTitle>
@@ -56,7 +61,12 @@ export default class CourseList extends React.Component{
                                     </CardLink>
                                 </CardBody>
                             </Card>
-                            <Card style={{minWidth: '250px', maxWidth: '350px', marginTop: '2%'}}>
+                            <Card style={{
+                                minWidth: '300px',
+                                maxWidth: '300px',
+                                marginBottom: '2%',
+                                boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'
+                            }}>
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.samhalle}/>
                                 <CardBody>
                                     <CardTitle>{course[1].title}</CardTitle>
@@ -68,7 +78,12 @@ export default class CourseList extends React.Component{
                                     </CardLink>
                                 </CardBody>
                             </Card>
-                            <Card style={{minWidth: '250px', maxWidth: '350px', marginTop: '2%'}}>
+                            <Card style={{
+                                minWidth: '300px',
+                                maxWidth: '300px',
+                                marginBottom: '2%',
+                                boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'
+                            }}>
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}} src={img.historia}/>
                                 <CardBody>
                                     <CardTitle>{course[2].title}</CardTitle>
@@ -76,7 +91,7 @@ export default class CourseList extends React.Component{
                                         {course[2].description}
                                     </CardText>
                                     <CardLink >
-                                        <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(3)}>Gör en övning</Button>
+                                        <Button style={{marginBottom: '2%'}} >Gör en övning</Button>
                                     </CardLink>
                                 </CardBody>
                             </Card>
@@ -87,9 +102,11 @@ export default class CourseList extends React.Component{
             )
 
         }
-        else {
+        else if(this.state.show==1){
             return(<Course id={id} title={course[id-1].title} goBackToCourseList={this.handleClick}/>);
-
+        }
+        else if(this.state.show==2){
+            return(<Course id={id} title={course[id-1].title} goBackToCourseList={this.handleClick}/>);
         }
     }
 }

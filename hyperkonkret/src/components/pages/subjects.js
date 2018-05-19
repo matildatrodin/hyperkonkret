@@ -5,6 +5,8 @@ import {course} from '../data/course-data';
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Col, CardColumns, Row, Container, CardDeck, CardLink } from 'reactstrap';
 import '../../styles/subjects.css';
+import Exercises from '../pages/exercises';
+import CreateSubject from "./createSubject";
 
 
 const img = {
@@ -30,12 +32,7 @@ export default class Subjects extends React.Component{
     }
 
     handleClick(id){
-        if(id == null) {
-            this.props.history.push("/create-subject")
-
-        }else{
-            this.props.history.push("/exercises");
-        }
+        this.setState({ show: id});
     }
 
 
@@ -47,60 +44,85 @@ export default class Subjects extends React.Component{
                 <div>
                     <Header/>
                     <div className="title-box">
-                        <h2>Dina övningar</h2>
+                        <h2>Dina Ämnen</h2>
                     </div>
                     <div className="subjects">
                         <CardDeck>
-                            <Card style={{minWidth: '300px', maxWidth: '300px', marginBottom: '2%', boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'}}>
+                            <Card style={{
+                                minWidth: '300px',
+                                maxWidth: '300px',
+                                marginBottom: '2%',
+                                boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'
+                            }}>
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
                                          src={img.svenska}/>
                                 <CardBody>
-                                    <CardTitle>{course[4-1].title}</CardTitle>
+                                    <CardTitle>{course[4 - 1].title}</CardTitle>
+                                    <CardLink>
+                                        <Button style={{marginBottom: '2%'}}
+                                                onClick={(id) => this.handleClick(1)}>Redigera</Button>
+                                    </CardLink>
+                                </CardBody>
+                            </Card>
+                            <Card style={{
+                                minWidth: '300px',
+                                maxWidth: '300px',
+                                marginBottom: '2%',
+                                boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'
+                            }}>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
+                                         src={img.geografi}/>
+                                <CardBody>
+                                    <CardTitle>{course[5 - 1].title}</CardTitle>
+                                    <CardLink>
+                                        <Button style={{marginBottom: '2%'}}
+                                                onClick={(id) => this.handleClick(2)}>Redigera</Button>
+                                    </CardLink>
+                                </CardBody>
+                            </Card>
+                            <Card style={{
+                                minWidth: '300px',
+                                maxWidth: '300px',
+                                marginBottom: '2%',
+                                boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'
+                            }}>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
+                                         src={img.historia}/>
+                                <CardBody>
+                                    <CardTitle>{course[6 - 1].title}</CardTitle>
+                                    <CardLink>
+                                        <Button style={{marginBottom: '2%'}}
+                                                onClick={(id) => this.handleClick(3)}>Redigera</Button>
+                                    </CardLink>
+                                </CardBody>
+                            </Card>
+                            <Card style={{
+                                minWidth: '300px',
+                                maxWidth: '300px',
+                                marginBottom: '2%',
+                                boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'
+                            }}>
+                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
+                                         src={img.samhalle}/>
+                                <CardBody>
+                                    <CardTitle>{course[7 - 1].title}</CardTitle>
                                     <CardLink>
                                         <Button style={{marginBottom: '2%'}}
                                                 onClick={(id) => this.handleClick(4)}>Redigera</Button>
                                     </CardLink>
                                 </CardBody>
                             </Card>
-                            <Card style={{minWidth: '300px', maxWidth: '300px', marginBottom: '2%', boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'}}>
-                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
-                                              src={img.geografi}/>
-                                <CardBody>
-                                    <CardTitle>{course[5-1].title}</CardTitle>
-                                    <CardLink>
-                                        <Button style={{marginBottom: '2%'}}
-                                                onClick={(id) => this.handleClick(5)}>Redigera</Button>
-                                    </CardLink>
-                                </CardBody>
-                            </Card>
-                            <Card style={{minWidth: '300px', maxWidth: '300px', marginBottom: '2%', boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'}}>
-                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
-                                         src={img.historia}/>
-                                <CardBody>
-                                    <CardTitle>{course[6-1].title}</CardTitle>
-                                    <CardLink>
-                                        <Button style={{marginBottom: '2%'}}
-                                                onClick={(id) => this.handleClick(6)}>Redigera</Button>
-                                    </CardLink>
-                                </CardBody>
-                            </Card >
-                            <Card style={{minWidth: '300px', maxWidth: '300px', marginBottom: '2%', boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'}}>
-                                <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
-                                         src={img.samhalle}/>
-                                <CardBody>
-                                    <CardTitle>{course[7-1].title}</CardTitle>
-                                    <CardLink>
-                                        <Button style={{marginBottom: '2%'}}
-                                                onClick={(id) => this.handleClick(7)}>Redigera</Button>
-                                    </CardLink>
-                                </CardBody>
-                            </Card>
-                            <Card style={{minWidth: '300px', maxWidth: '300px', marginBottom: '2%', boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'}}>
+                            <Card style={{
+                                minWidth: '300px',
+                                maxWidth: '300px',
+                                marginBottom: '2%',
+                                boxShadow: '4px 4px 4px 0px rgba(0, 0, 0, .2)'
+                            }}>
                                 <CardImg style={{marginLeft: '25%', marginRight: '25%', marginTop: '6%', width: '50%'}}
                                          src={img.plus}/>
                                 <CardBody>
                                     <CardLink>
-                                        <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(null)}>Skapa
+                                        <Button style={{marginBottom: '2%'}} onClick={(id) => this.handleClick(5)}>Skapa
                                             nytt ämne</Button>
                                     </CardLink>
                                 </CardBody>
@@ -110,9 +132,13 @@ export default class Subjects extends React.Component{
                 </div>
 
             )
+        }else if(this.state.show == 5){
+            return(
+                <CreateSubject />
+            );
         }
-        else {
-            return(<Course id={id} title={course[id-1].title} goBackToCourseList={this.handleClick}/>);
+        else{
+            return(<Exercises id={this.state.show} title={course[this.state.show].title} goBackToSubjects={this.handleClick}/>);
 
         }
     }

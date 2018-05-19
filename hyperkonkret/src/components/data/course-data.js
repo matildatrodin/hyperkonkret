@@ -1,7 +1,7 @@
 export const course =
         [{
             id: 1,
-            title: 'Landskap',
+            title: 'Sverige',
             description: 'Landskap är geografiska områden som vanligen bygger på en äldre politisk indelning och är grundad på kulturella och geografiska särdrag som många människor starkt identifierar sig med än i dag. Här lär du dig om en del av Sveriges uppdelning av mark, de så kallade landskapen.',
             subject: 'Geografi',
             created_by: 'Björn',
@@ -10,7 +10,7 @@ export const course =
         },
         {
             id: 2,
-            title: 'Ekonomiska system',
+            title: 'Ekonomi',
             description: 'Ekonomi är läran om att hantera pengar då man inte har hur mycket som helst. Detta ämne tar dig igenom allt du behöver veta för att klara av att hantera pengar.',
             subject: 'Ekonomi',
             created_by: 'Björn',
@@ -28,7 +28,7 @@ export const course =
         },
         {
             id: 4,
-            title: 'Svenska ordklasser',
+            title: 'Ordklasser',
             description: 'Här kan du utöka din kunskap inom det svenska språket då vi fördjupar oss om ordklasser.',
             subject: 'Svenska',
             created_by: 'Natalie85',
@@ -37,7 +37,7 @@ export const course =
         },
         {
             id: 5,
-            title: 'Sveriges geografi',
+            title: 'Sverige',
             description: 'Geografi är den vetenskap som beskriver hur jordytan ser ut, förklarar varför den ser ut som den gör och sätter detta i relation till hur mänsklig aktivitet påverkar och påverkas av jorden',
             subject: 'Geografi',
             created_by: 'Natalie85',
