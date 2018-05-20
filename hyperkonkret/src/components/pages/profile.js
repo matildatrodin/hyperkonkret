@@ -71,42 +71,36 @@ export default class Profile extends React.Component {
                 <div className='Profile-progress-body'>
                     {/*{this.state.users.map(user => */ } {/* detta ska med när vi har API*/}
                     <div className='Profile-progress-box'>
-                        <h3>Svenska ordklasser</h3>
+                        <h3>Sverige</h3>
                         <h6>Skapad av {course.created_by}</h6>
                         <br/>
                         <Line className='Profile-progress-bar' percent="30" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
-                        <p align="left">Adjektiv</p>
+                        <p align="left">Landskap</p>
                         <Line className='Profile-progress-bar' percent="60" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
-                        <p align="left">Verb</p>
-                        <Line className='Profile-progress-bar' percent="100" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Substantiv</p>
+                        <p align="left">Städer</p>
                     </div>
                     { /* )} */} {/* detta ska med när vi har API*/}
 
                     <div className='Profile-progress-box'>
-                        <h3>Matematik</h3>
+                        <h3>Ekonomi</h3>
                         <h6>Skapad av Robert</h6>
                         <br/>
                         <Line className='Profile-progress-bar' percent="90" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
-                        <p align="left">Multiplikation</p>
+                        <p align="left">Ekonomiska termer</p>
                         <Line className='Profile-progress-bar' percent="100" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Division</p>
-                        <Line className='Profile-progress-bar' percent="60" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
-                        <p align="left">Bråktal</p>
-                        <Line className='Profile-progress-bar' percent="20" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
-                        <p align="left">Procenträkning</p>
+                        <p align="left">Vad gör en bank</p>
                     </div>
 
                     <div className='Profile-progress-box'>
-                        <h3>Religion</h3>
+                        <h3>Medeltiden</h3>
                         <h6>Skapad av Jan</h6>
                         <br/>
                         <Line className='Profile-progress-bar' percent="100" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Symboler</p>
+                        <p align="left">Att leva på medeltiden</p>
                         <Line className='Profile-progress-bar' percent="100" strokeWidth="2" trailWidth="2" strokeColor="#99ff99"/>
-                        <p align="left">Gudar</p>
+                        <p align="left">Kalmarunionen</p>
                         <Line className='Profile-progress-bar' percent="20" strokeWidth="2" trailWidth="2" strokeColor="#008B8B"/>
-                        <p align="left">Religiösa byggnader</p>
+                        <p align="left">Från asatro till kristendom</p>
                     </div>
                 </div>
 

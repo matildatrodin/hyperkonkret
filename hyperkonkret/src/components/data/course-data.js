@@ -20,7 +20,7 @@ export const course =
         {
             id: 3,
             title: 'Medeltiden',
-            description: 'Med medeltiden avses perioden från antikens slut till renässansens början, ungefär från 500 e.Kr till 1500 e.Kr (men Nordens medeltid räknas från ca 1050 till 1520). Här lär du dig om dena historiska tid',
+            description: 'Med medeltiden avses perioden från antikens slut till renässansens början, ungefär från 500 e.Kr till 1500 e.Kr (men nordens medeltid räknas från ca 1050 till 1520). Här lär du dig om denna historiska tid',
             subject: 'Historia',
             created_by: 'Björn',
             created_at: '20180213',
