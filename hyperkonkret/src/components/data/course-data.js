@@ -1,7 +1,7 @@
 export const course =
         [{
             id: 1,
-            title: 'Sverige',
+            title: 'Sveriges landskap',
             description: 'Landskap är geografiska områden som vanligen bygger på en äldre politisk indelning och är grundad på kulturella och geografiska särdrag som många människor starkt identifierar sig med än i dag. Här lär du dig om en del av Sveriges uppdelning av mark, de så kallade landskapen.',
             subject: 'Geografi',
             created_by: 'Björn',

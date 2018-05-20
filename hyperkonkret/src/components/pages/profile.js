@@ -47,7 +47,7 @@ export default class Profile extends React.Component {
             <div className='Profile'>
                 <Header/>
                 <div className="Profile-header">
-                    <h2>Min sida</h2>
+                    <h2>Profil</h2>
                 </div>
                     <div className="Profile-top-content">
                         <div style={{backgroundImage: "url(" +  Student  + ")"}} className="Profile-img"/>

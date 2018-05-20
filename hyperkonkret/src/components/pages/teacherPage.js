@@ -81,7 +81,7 @@ export default class TeacherPage extends React.Component {
                 <div className="Teacher">
                     <Header/>
                     <div className="Teacher-header">
-                        <h2>Min sida</h2>
+                        <h2>Profil</h2>
                     </div>
                     <div className="Teacher-body">
                     <div className="Teacher-card">
