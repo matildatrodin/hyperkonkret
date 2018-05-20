@@ -19,6 +19,14 @@
     color: #92dbe8;
 }
 
+.hr-style{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+
 /* Position and sizing of clickable cross button
 .bm-cross-button {
     height: 24px;
@@ -70,6 +78,7 @@ Color/shape of close button cross
 }
 
 .Link:any-link {
+    font-size: 1.5em;
     color: grey;
     text-decoration: none;
 }
@@ -78,6 +87,7 @@ Color/shape of close button cross
 }
 
 .LinkT:any-link {
+    font-size: 1.5em;
     color: grey;
     text-decoration: none;
 }
@@ -86,6 +96,7 @@ Color/shape of close button cross
 }
 
 .LinkS:any-link {
+    font-size: 1.5em;
     color: grey;
     text-decoration: none;
 }
