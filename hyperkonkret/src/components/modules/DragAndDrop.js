@@ -2,6 +2,7 @@ import * as React from "react";
 import Dragula from 'react-dragula';
 import Concrete from './Concrete';
 import '../../styles/quiz.css';
+import {Footer} from './footer';
 
 function $(id) {
     return document.getElementById(id);

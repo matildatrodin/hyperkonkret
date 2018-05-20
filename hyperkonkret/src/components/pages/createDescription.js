@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import FaClose from 'react-icons/lib/fa/close';
-import '../../styles/createQuiz.css'
+import '../../styles/createQuiz.css';
+
 
 export default class CreateDescription extends React.Component {
 

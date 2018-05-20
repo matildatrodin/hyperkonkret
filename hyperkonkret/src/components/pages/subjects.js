@@ -7,6 +7,7 @@ import { Card, CardImg, CardText, CardBody,
 import '../../styles/subjects.css';
 import Exercises from '../pages/exercises';
 import CreateSubject from "./createSubject";
+import {Footer} from '../modules/footer';
 
 
 const img = {
@@ -129,6 +130,7 @@ export default class Subjects extends React.Component{
                             </Card>
                         </CardDeck>
                     </div>
+                    <Footer/>
                 </div>
 
             )

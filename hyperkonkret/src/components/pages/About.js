@@ -5,6 +5,7 @@ import { Link, Redirect } from 'react-router-dom';
 import {logo} from '../../images/logo shadow/hyperkonkret-black.png';
 import {Jessica} from '../../images/jessica.png';
 import {Calle} from '../../images/Calle.jpg';
+import {Footer} from '../modules/footer';
 
 
 
@@ -51,6 +52,8 @@ export default class About extends React.Component {
                         <div className="info-text"> {text2 }</div>
                     </div>
                 </div>
+                <Footer/>
+
             </div>
         )
     }

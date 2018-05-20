@@ -65,11 +65,12 @@ html, body {
   color: black;
   vertical-align: middle;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 5%;
   height: 5%;
   min-height: 3em;
   bottom: 0px;
-
+  position: relative;
+  opacity: .8;
 }
 
 .App-footer-text {

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Quiz from './Quiz';
 import Modal from './Modal';
 import Results from './Results';
+import {Footer} from './footer';
+
 //import './getQuiz';
 
 export class QuizApp extends Component {
@@ -160,6 +162,7 @@ export class QuizApp extends Component {
         { modal.state === 'show' && <Modal modal={modal} /> }
         </div>
       </div>
+          <Footer/>
         </div>
             );
   }

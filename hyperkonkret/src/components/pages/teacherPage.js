@@ -10,6 +10,8 @@ import FaAngleUp from 'react-icons/lib/fa/angle-up';
 import { Button } from 'react-bootstrap';
 import {user} from "../data/user-data";
 import { Header } from '../modules/header';
+import {Footer} from '../modules/footer';
+
 
 
 const course = {
@@ -202,6 +204,7 @@ export default class TeacherPage extends React.Component {
                         </div>
                         </div>
                     </div>
+                    <Footer/>
                     </div>
         )
     }

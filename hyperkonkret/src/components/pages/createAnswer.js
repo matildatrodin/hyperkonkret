@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/createQuiz.css'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import FaClose from 'react-icons/lib/fa/close';
+
 export default class CreateAnswer extends React.Component {
 
     render(){

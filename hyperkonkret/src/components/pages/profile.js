@@ -5,6 +5,8 @@ import { Line } from 'rc-progress';
 import { user } from '../data/user-data';
 import { course } from '../data/course-data';
 import { Header } from '../modules/header';
+import {Footer} from '../modules/footer';
+
 
 /* Vi kommer här behöva implementera props, så att vi varje gång vi öppnar profilen
 skickar med id för kurs och quiz och får ut data på hur långt
@@ -105,6 +107,7 @@ export default class Profile extends React.Component {
                 </div>
 
                 </div>
+                <Footer/>
             </div>
         )
     }

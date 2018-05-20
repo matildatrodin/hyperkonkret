@@ -3,6 +3,8 @@ import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Col, CardColumns, Row, Container, CardDeck, CardLink } from 'reactstrap';
 import '../../images/bild2.jpg';
 import '../../styles/teacherPage.css';
+import {Footer} from '../modules/footer';
+
 
 export default class CoursePage extends React.Component {
 
@@ -40,6 +42,7 @@ export default class CoursePage extends React.Component {
                         </CardBody>
                     </Card>
                 </CardDeck>
+                <Footer/>
             </div>
         )
     }
