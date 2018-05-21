@@ -42,7 +42,6 @@ export default class CoursePage extends React.Component {
                         </CardBody>
                     </Card>
                 </CardDeck>
-                <Footer/>
             </div>
         )
     }

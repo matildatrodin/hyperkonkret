@@ -52,7 +52,6 @@ export default class About extends React.Component {
                         <div className="info-text"> {text2 }</div>
                     </div>
                 </div>
-                <Footer/>
 
             </div>
         )

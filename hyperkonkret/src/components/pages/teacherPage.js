@@ -204,7 +204,6 @@ export default class TeacherPage extends React.Component {
                         </div>
                         </div>
                     </div>
-                    <Footer/>
                     </div>
         )
     }

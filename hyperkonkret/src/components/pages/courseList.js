@@ -99,7 +99,6 @@ export default class CourseList extends React.Component{
                             </Card>
                         </CardDeck>
                     </div>
-                    <Footer/>
                 </div>
 
             )

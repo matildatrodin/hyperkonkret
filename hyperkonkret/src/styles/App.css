@@ -43,34 +43,33 @@ html, body {
 
 
 .App-body {
-  text-align: center;
-  background-color: whitesmoke;
-  min-height: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: auto;
+    text-align: center;
+    background-color: whitesmoke;
+    height: 100%;
+    top: 0;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    position: fixed;
 }
 
 .App-footer {
-  left: 0;
-  margin-bottom: 0;
-  width: 100%;
-  background-color: rgb(216,216,216);
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(216,216,216);
   /*
   background-color: rgba(25, 55, 55, 0.5);*/
-  color: black;
-  vertical-align: middle;
-  text-align: center;
-  margin-top: 5%;
-  height: 5%;
-  min-height: 3em;
-  bottom: 0px;
-  position: relative;
-  opacity: .8;
+    color: lightgrey;
+    text-align: center;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.Footer-wrapper {
+  height: 100%;
+    margin-top: 50px;
 }
 
 .App-footer-text {

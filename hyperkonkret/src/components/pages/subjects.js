@@ -130,7 +130,6 @@ export default class Subjects extends React.Component{
                             </Card>
                         </CardDeck>
                     </div>
-                    <Footer/>
                 </div>
 
             )

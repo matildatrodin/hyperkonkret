@@ -90,7 +90,6 @@ export default class Course extends React.Component {
                             </Card>
                         </CardDeck>
                     </div>
-                    <Footer/>
 
                 </div>
 
@@ -142,7 +141,6 @@ export default class Course extends React.Component {
                           </Card>
                       </CardDeck>
                   </div>
-                  <Footer/>
 
               </div>
 
