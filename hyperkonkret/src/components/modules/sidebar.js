@@ -33,9 +33,9 @@ class SideBar extends React.Component {
     }
 
     logout() {
-      this.closeMenu();
-      this.props.changeContent();
-      window.location = '/';
+      this.closeMenu(); // funkar inte
+      this.props.changeContent(); // funkar inte
+      window.location = '/'; // funkar 
     }
 
     render() {
