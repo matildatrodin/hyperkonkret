@@ -339,7 +339,6 @@ export default class Exercises extends React.Component{
                             </Card>
                         </CardDeck>
                     </div>
-                    <Footer/>
                 </div>
             )
         }else if(this.state.show == 1){

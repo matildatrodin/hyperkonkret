@@ -8,7 +8,6 @@ import {Header} from "./components/modules/header";
 import {Footer} from "./components/modules/footer";
 import { BrowserRouter as Router } from 'react-router-dom';
 import {user} from "./components/data/user-data";
-/*import SideBarLogin from './sidebarLogin';*/
 
 class App extends React.Component {
     constructor(props) {
@@ -76,15 +75,15 @@ class App extends React.Component {
 
     render() {
         return (
-          <div>
-            <Header/>
-            <Router>
-                <div className="App-body">
-                    <SideBar changeContent={this.changeSidebarContent} student={this.state.isStudent} teacher={this.state.isTeacher}/>
-                    <br/>
-                </div>
-            </Router>
-          </div>
+              <div>
+                  <Router>
+                      <div className="App-body">
+                          <SideBar changeContent={this.changeSidebarContent} student={this.state.isStudent} teacher={this.state.isTeacher}/>
+                          <br/>
+                      </div>
+                  </Router>
+                  <Footer/>
+              </div>
         )
     }
 }
