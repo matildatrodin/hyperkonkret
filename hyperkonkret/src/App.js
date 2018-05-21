@@ -19,6 +19,7 @@ class App extends React.Component {
 
         this.loginState = this.loginState.bind(this);
         this.changeSidebarContent=this.changeSidebarContent.bind(this);
+        this.setDefaultState = this.setDefaultState.bind(this);
         /*  this.state =  {alt: 1};
           this.changeState = this.changeState.bind(this);*/
     }
@@ -29,8 +30,11 @@ class App extends React.Component {
 
     componentWillMount(){
         this.getInitialStudent();
-        this.getInitialTeacher()
+        this.getInitialTeacher();
 
+    }
+    setDefaultState () {
+        this.setState({isStudent: 0, isTeacher: 0});
     }
 
 
@@ -78,7 +82,7 @@ class App extends React.Component {
               <div>
                   <Router>
                       <div className="App-body">
-                          <SideBar changeContent={this.changeSidebarContent} student={this.state.isStudent} teacher={this.state.isTeacher}/>
+                          <SideBar changeContent={this.changeSidebarContent} student={this.state.isStudent} teacher={this.state.isTeacher} resetState={this.setDefaultState}/>
                           <br/>
                       </div>
                   </Router>

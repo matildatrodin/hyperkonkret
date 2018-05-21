@@ -40,10 +40,8 @@ Color/shape of close button cross
 */
 /* General sidebar styles */
 .bm-menu {
-    height: 100%;
     background-color: white;
     padding: 2.5em;
-    font-size: 20px;
     color: white;
     width: 80%;
 }
@@ -57,8 +55,6 @@ Color/shape of close button cross
 .bm-item-list {
     text-align: center;
     display: inline-block;
-    text-decoration: none;
-    margin-top: 4%;
 
 }
 
@@ -77,30 +73,15 @@ Color/shape of close button cross
     color: #007272;
 }
 
-.Link:any-link {
-    font-size: 1.5em;
+.Link {
+    font-size: 25px;
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 30%;
     color: grey;
     text-decoration: none;
 }
 .Link:hover{
-    color: darkgray;
-}
-
-.LinkT:any-link {
-    font-size: 1.5em;
-    color: grey;
-    text-decoration: none;
-}
-.LinkT:hover{
-    color: #007272;
-}
-
-.LinkS:any-link {
-    font-size: 1.5em;
-    color: grey;
-    text-decoration: none;
-}
-.LinkS:hover{
     color: #007272;
 }
 
@@ -129,7 +110,7 @@ Color/shape of close button cross
     height: auto;
     font-size: 16px;
     margin-top: 80%;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-right: 10%;
     border: none;
     text-decoration: none;

@@ -64,12 +64,10 @@ html, body {
     color: lightgrey;
     text-align: center;
     height: 50px;
-    margin-top: 50px;
 }
 
 .Footer-wrapper {
   height: 100%;
-    margin-top: 50px;
 }
 
 .App-footer-text {
