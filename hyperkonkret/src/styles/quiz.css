@@ -14,18 +14,17 @@ html, body, #app, div[data-reactroot] {
 }
 
 .cardbox{
-    align: center;
-    margin: auto;
-    width: 80%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
     border-radius: 10px;
     background-color: white;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, .2);
-    margin-top: 5%;
+    margin-top: 1%;
 
 }
 
 .question-field {
-  overflow: hidden;
   width: 100%;
 }
 

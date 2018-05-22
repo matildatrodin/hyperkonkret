@@ -79,15 +79,17 @@ class App extends React.Component {
 
     render() {
         return (
-              <div>
+            <div>
+              <div className="App">
                   <Router>
                       <div className="App-body">
                           <SideBar changeContent={this.changeSidebarContent} student={this.state.isStudent} teacher={this.state.isTeacher} resetState={this.setDefaultState}/>
                           <br/>
                       </div>
                   </Router>
-                  <Footer/>
               </div>
+                <Footer/>
+            </div>
         )
     }
 }

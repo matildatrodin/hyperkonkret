@@ -162,7 +162,6 @@ export class QuizApp extends Component {
         { modal.state === 'show' && <Modal modal={modal} /> }
         </div>
       </div>
-          <Footer/>
         </div>
             );
   }

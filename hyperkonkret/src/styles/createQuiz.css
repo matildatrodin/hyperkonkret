@@ -34,7 +34,7 @@
 }
 
 .removeDescription{
-    float: right;
+    margin-left: 80%;
 }
 
 .remove-answer-button {
@@ -44,10 +44,10 @@
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    margin-top: 10px;
+    margin-bottom: 40px;
     margin-right: 180px;
     border-radius: 10%;
-    float: right;
+
     width: 20px;
     height: 20px;
 
@@ -60,10 +60,9 @@
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    margin-top: 35px;
+    margin-bottom: 40px;
     margin-right: 180px;
     border-radius: 10%;
-    float: right;
     width: 20px;
     height: 20px;
 
