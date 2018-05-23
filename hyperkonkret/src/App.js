@@ -35,6 +35,8 @@ class App extends React.Component {
     }
     setDefaultState () {
         this.setState({isStudent: 0, isTeacher: 0});
+        localStorage.setItem('currentStudent', 0);
+        localStorage.setItem('currentTeacher', 0);
     }
 
 
