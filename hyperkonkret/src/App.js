@@ -88,7 +88,6 @@ class App extends React.Component {
                       </div>
                   </Router>
               </div>
-                <Footer/>
             </div>
         )
     }
