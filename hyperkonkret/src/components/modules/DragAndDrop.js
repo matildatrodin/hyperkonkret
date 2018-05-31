@@ -51,12 +51,12 @@ dragulaCreator = (container) => {
               el.id = 'el-correct';
 
               if (counts==4) {
-                //// AVSLUTA ÖVNING
+                // END EXERCISE //
               }
-      }
-      else {
-        drake.cancel();
-      }
+        }
+        else {
+          drake.cancel();
+        }
       });
   };
 

@@ -20,7 +20,6 @@ const Results = ({ userAnswers, score, restartQuiz }) => {
         <img src={images.thumb} className="resultpic" />
       <div>Du klarade övningen,</div>
       <div className="bottom-text">bra jobbat!</div>
-        <Footer/>
     </div>
   );
 }
