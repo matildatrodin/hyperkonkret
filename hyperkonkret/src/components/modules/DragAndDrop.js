@@ -19,6 +19,8 @@ constructor() {
     answers2: [],
     counts: 0
   }
+
+  this.dragulaCreator=this.dragulaCreator.bind(this);
 };
 
 componentDidMount() {
@@ -51,7 +53,7 @@ dragulaCreator = (container) => {
               el.id = 'el-correct';
 
               if (counts==4) {
-                // END EXERCISE //
+                this.setState({counts: 4});
               }
         }
         else {

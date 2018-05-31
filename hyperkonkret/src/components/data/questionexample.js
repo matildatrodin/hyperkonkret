@@ -78,7 +78,7 @@ export const questionexample = [
         image: "",
         question: "Ordet ekonomi kommer från grekiskan och betyder hushållning. Para ihop de olika meningarna",
         concrete: "",
-        answer: "Inkomsterna måste balanseras mot utgifterna[=]Det ska gå jämnt upp\nGör av med mer pengar än man har[=]Underskottet\nPlanera inköp utifrån de tillgångar[=]Budget\nHushålla med sina resurser[=]Ha koll på sina pengar",
+        answer: "Inkomsterna måste balanseras mot utgifterna[=]Det ska gå jämnt upp\nGör av med mer pengar än man har[=]Underskottet\nPlanera inköp utifrån de tillgångar man har[=]Budget\nHushålla med sina resurser[=]Ha koll på sina pengar",
         order: 1,
     }
 ];
