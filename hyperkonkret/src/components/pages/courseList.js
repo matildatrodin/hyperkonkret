@@ -5,7 +5,6 @@ import {course} from '../data/course-data';
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Col, CardColumns, Row, Container, CardDeck, CardLink } from 'reactstrap';
 import '../../styles/myCourses.css';
-import {Footer} from '../modules/footer';
 
 
 const img = {

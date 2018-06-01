@@ -49,7 +49,6 @@ export default class FirstPage extends React.Component {
                 <div className="FirstPage-catch">
                     - Inkludering får aldrig bli exkludering -
                 </div>
-                <Footer/>
             </div>
         )
     }

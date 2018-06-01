@@ -6,7 +6,6 @@ import { Header } from '../modules/header';
 import {course, exerciseexample} from "../data/exerciseexample";
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Col, CardColumns, Row, Container, CardDeck, CardLink } from 'reactstrap';
-import {Footer} from '../modules/footer';
 
 const img = {
     svenska: require('../../images/icons/samhalle.png'),

@@ -6,8 +6,6 @@ import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Col, CardColumns, Row, Container, CardDeck, CardLink } from 'reactstrap';
 import '../../styles/exercises.css';
 import CreateQuiz from '../pages/createQuiz';
-import {Footer} from '../modules/footer';
-
 
 
 const img = {
@@ -110,7 +108,6 @@ export default class Exercises extends React.Component{
                             </Card>
                         </CardDeck>
                     </div>
-                    <Footer />
                 </div>
 
             )
@@ -196,7 +193,6 @@ export default class Exercises extends React.Component{
                             </Card>
                         </CardDeck>
                     </div>
-                    <Footer/>
                 </div>
 
             )
@@ -268,7 +264,6 @@ export default class Exercises extends React.Component{
                             </Card>
                         </CardDeck>
                     </div>
-                    <Footer/>
                 </div>
             )
         }else if(this.props.id == 4 && this.state.show==0){
